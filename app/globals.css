@@ -1,26 +1,342 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Design Tokens ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #0a0f1e;
+  --bg-card: #111827;
+  --bg-surface: #1a2235;
+  --yellow: #f5c518;
+  --yellow-dark: #d4a800;
+  --blue: #1a56db;
+  --blue-light: #3b82f6;
+  --text: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --radius: 12px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Base ─── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+/* ─── Buttons ─── */
+.btn-yellow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--yellow);
+  color: #0a0f1e;
+  font-weight: 800;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(245, 197, 24, 0.35);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-yellow:hover {
+  background: var(--yellow-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(245, 197, 24, 0.5);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--yellow);
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--yellow);
+  color: #0a0f1e;
+  transform: translateY(-2px);
+}
+
+.btn-blue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  padding: 13px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(26, 86, 219, 0.35);
+}
+
+.btn-blue:hover {
+  background: var(--blue-light);
+  transform: translateY(-2px);
+}
+
+/* ─── Cards ─── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(245, 197, 24, 0.25);
+}
+
+/* ─── Section Labels ─── */
+.section-label {
+  display: inline-block;
+  background: rgba(245, 197, 24, 0.12);
+  color: var(--yellow);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(245, 197, 24, 0.25);
+}
+
+/* ─── Gradient Text ─── */
+.gradient-text {
+  background: linear-gradient(135deg, #f5c518 0%, #fbbf24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Hero gradient overlay ─── */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(26, 86, 219, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 30% 80%, rgba(245, 197, 24, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, #0a0f1e 0%, #060d1f 100%);
+}
+
+/* ─── Divider ─── */
+.section-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 3px;
+}
+
+/* ─── Input ─── */
+.input-field {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: var(--text-muted);
+}
+
+.input-field:focus {
+  border-color: var(--yellow);
+}
+
+/* ─── Floating Call Button ─── */
+.floating-buttons {
+  position: fixed;
+  bottom: 28px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.floating-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.floating-btn-call {
+  background: var(--yellow);
+  color: #0a0f1e;
+}
+
+.floating-btn-wa {
+  background: #25D366;
+  color: #fff;
+}
+
+/* Pulse ring on call button */
+.floating-btn-call::after {
+  content: '';
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--yellow);
+  opacity: 0.4;
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* ─── Media ─── */
+@media (max-width: 1100px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-btn-call::after {
+    width: 48px;
+    height: 48px;
+  }
+
+  .floating-buttons {
+    bottom: 18px;
+    right: 14px;
+    gap: 10px;
+  }
+
+  .desktop-call {
+    padding: 8px !important;
+  }
+
+  .desktop-call span {
+    display: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* ─── Small mobile (≤480px) ─── */
+@media (max-width: 480px) {
+  .floating-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .floating-btn-call::after {
+    width: 44px;
+    height: 44px;
+  }
+
+  .floating-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .floating-buttons {
+    bottom: 14px;
+    right: 10px;
+    gap: 8px;
+  }
+
+  .btn-yellow,
+  .btn-outline,
+  .btn-blue {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    padding: 4px 12px;
+  }
 }

@@ -1,0 +1,161 @@
+import type { Dictionary } from "./ka";
+
+export const en: Dictionary = {
+    lang: "en",
+    meta: {
+        title: "SaveDrive — Sober Driver & Driver On Call in Georgia",
+        description:
+            "SaveDrive offers professional sober driver and driver-on-call services in Georgia. Available 24/7. Call us: +995 511 55 36 60",
+        keywords:
+            "sober driver Georgia, driver on call, personal driver Tbilisi, SaveDrive, designated driver",
+    },
+    nav: {
+        home: "Home",
+        soberDriver: "Sober Driver",
+        personalDriver: "Personal Driver",
+        evacuator: "Tow Truck",
+        carWash: "Car Wash",
+        airportTransfer: "Airport Transfer",
+        batteryTire: "Battery / Tire",
+        pricing: "Pricing",
+        about: "About Us",
+        contact: "Contact",
+        callNow: "Call Now",
+    },
+    hero: {
+        badge: "24/7 Service • Georgia",
+        h1: "Sober Driver & Driver On Call in Georgia",
+        subtitle:
+            "Enjoy your evening — we drive you home in your own car. Professional, fast, and reliable, 24 hours a day.",
+        cta: "☎ Call Now",
+        ctaWa: "WhatsApp",
+        phone: "+995 511 55 36 60",
+        trust: "2,000+ happy customers • Avg. arrival 30–40 min",
+    },
+    services: {
+        label: "Our Services",
+        heading: "What does SaveDrive offer?",
+        subtitle:
+            "Choose the service that fits your situation — we'll handle the rest.",
+        items: [
+            {
+                slug: "sober-driver",
+                icon: "🍷",
+                title: "Sober Driver",
+                desc: "Drink without worry — call a sober driver anytime, we take you home safely in your own car. Driver on call 24/7.",
+            },
+            {
+                slug: "personal-driver",
+                icon: "🧑‍✈️",
+                title: "Personal Driver",
+                desc: "Full-time or part-time personal driver service tailored to your schedule, from business trips to family errands.",
+            },
+            {
+                slug: "evacuator",
+                icon: "🚛",
+                title: "Tow Truck / Evacuator",
+                desc: "Car broke down or had an accident? Our tow truck arrives quickly and safely transports your vehicle to any location.",
+            },
+            {
+                slug: "car-wash",
+                icon: "🚿",
+                title: "Car Wash",
+                desc: "Professional interior and exterior car wash. Mobile service available at your location.",
+            },
+            {
+                slug: "airport-transfer",
+                icon: "✈️",
+                title: "Airport Transfer / Intercity",
+                desc: "Punctual transfers to the airport and intercity routes. Comfortable and reliable.",
+            },
+            {
+                slug: "battery-tire",
+                icon: "🔋",
+                title: "Battery / Tire Change",
+                desc: "Dead battery or flat tire? Our specialist comes to your location and fixes the problem on the spot.",
+            },
+        ],
+        readMore: "Learn more →",
+    },
+    why: {
+        label: "Why SaveDrive",
+        heading: "Georgia's Most Trusted Driver Service",
+        items: [
+            { icon: "🕐", title: "24/7 Availability", desc: "Night, day, weekends — we're always here." },
+            { icon: "👨‍✈️", title: "Professional Drivers", desc: "Every driver passes thorough background checks." },
+            { icon: "⚡", title: "Fast Arrival", desc: "Average 30–40 minutes — no long waiting." },
+            { icon: "🛡️", title: "Safe Journey", desc: "Your comfort and safety are our top priority." },
+            { icon: "💸", title: "Affordable Pricing", desc: "Transparent rates, no hidden charges." },
+            { icon: "🚗", title: "Your Own Car", desc: "Our driver uses your car — both of you arrive home." },
+        ],
+    },
+    howItWorks: {
+        label: "How It Works",
+        heading: "3 Simple Steps",
+        steps: [
+            { num: "01", title: "Call Us", desc: "Call or message us on WhatsApp — our operator responds immediately." },
+            { num: "02", title: "Driver Arrives", desc: "A certified driver arrives within 30–40 minutes." },
+            { num: "03", title: "Ride Home Safely", desc: "Relax while our driver takes you home in your own car." },
+        ],
+    },
+    pricing: {
+        label: "Pricing",
+        heading: "Transparent Pricing",
+        subtitle: "All prices include driver service. No hidden fees.",
+        note: "* Final pricing can be discussed with our operator. All prices in GEL.",
+        plans: [
+            {
+                name: "Standard",
+                price: "30",
+                unit: "₾ / trip",
+                desc: "Within Tbilisi city limits",
+                features: ["1 Driver", "1 Vehicle", "City routes", "Available at night"],
+                highlighted: false,
+            },
+            {
+                name: "Premium",
+                price: "50",
+                unit: "₾ / trip",
+                desc: "Suburbs & long routes",
+                features: ["1 Driver", "Long distance", "Out of city", "Enhanced comfort"],
+                highlighted: true,
+            },
+            {
+                name: "Corporate",
+                price: "Custom",
+                unit: "Monthly package",
+                desc: "For companies",
+                features: ["Multiple drivers", "Monthly contract", "Invoicing", "Priority service"],
+                highlighted: false,
+            },
+        ],
+        cta: "Call us for pricing details",
+        choosePlan: "Choose this plan",
+    },
+    contact: {
+        label: "Contact",
+        heading: "Get in Touch",
+        phone: "+995 511 55 36 60",
+        email: "info@savedrive.ge",
+        hours: "24/7 — Every day",
+        address: "Tbilisi, Georgia",
+        formName: "Name",
+        formPhone: "Phone",
+        formMsg: "Message",
+        formSubmit: "Send Message",
+        formNote: "We'll respond within 30 minutes.",
+        callBtn: "☎ Call Now",
+        waBtn: "WhatsApp",
+    },
+    floating: {
+        call: "☎",
+        wa: "💬",
+    },
+    footer: {
+        tagline: "Georgia's most trusted driver service.",
+        rights: "© 2026 SaveDrive. All rights reserved.",
+        links: "Quick Links",
+        contact: "Contact",
+        hours: "24/7",
+    },
+};
