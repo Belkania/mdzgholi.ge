@@ -7,7 +7,7 @@ export const config = {
 const LOCALES = ["ka", "en", "ru"];
 const DEFAULT = "ka";
 
-export function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
     const { pathname } = req.nextUrl;
 
     // Check if path starts with a locale prefix
