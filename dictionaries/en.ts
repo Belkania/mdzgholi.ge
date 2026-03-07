@@ -60,7 +60,7 @@ export const en: Dictionary = {
                 slug: "car-wash",
                 icon: "🚿",
                 title: "Car Wash",
-                desc: "We pick up your car, wash it inside and out to perfection, and return it to your location. You don't lift a finger.",
+                desc: "We pick up your car, wash it inside and out to perfection, and deliver it to any location you choose.",
             },
             {
                 slug: "airport-transfer",
