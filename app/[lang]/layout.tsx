@@ -16,23 +16,23 @@ export async function generateMetadata({
     const { lang } = await params;
     const d = getDictionary(lang);
     return {
-        metadataBase: new URL("https://savedrive.ge"),
+        metadataBase: new URL("https://safedrive.ge"),
         title: d.meta.title,
         description: d.meta.description,
         keywords: d.meta.keywords,
         robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
         alternates: {
-            canonical: `https://savedrive.ge/${lang}`,
+            canonical: `https://safedrive.ge/${lang}`,
             languages: {
-                ka: "https://savedrive.ge/ka",
-                en: "https://savedrive.ge/en",
-                ru: "https://savedrive.ge/ru",
+                ka: "https://safedrive.ge/ka",
+                en: "https://safedrive.ge/en",
+                ru: "https://safedrive.ge/ru",
             },
         },
         openGraph: {
             title: d.meta.title,
             description: d.meta.description,
-            url: `https://savedrive.ge/${lang}`,
+            url: `https://safedrive.ge/${lang}`,
             siteName: "SafeDrive",
             locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",

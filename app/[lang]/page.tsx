@@ -4,7 +4,7 @@ import { JsonLd, localBusinessSchema, breadcrumbSchema } from "@/components/Json
 
 const PHONE_RAW = "+995568834707";
 const PHONE_DISPLAY = "+995 568 83 47 07";
-const BASE = "https://savedrive.ge";
+const BASE = "https://safedrive.ge";
 
 export function generateStaticParams() {
     return locales.map((lang) => ({ lang }));
@@ -149,7 +149,7 @@ export default async function HomePage({
                 </div>
             </section>
 
-            {/* ─── WHY SAVEDRIVE ─── */}
+            {/* ─── WHY SAFEDRIVE ─── */}
             <section id="why-us" style={{ background: "#080d1a", padding: "70px 16px" }}>
                 <div style={{ maxWidth: 1100, margin: "0 auto" }}>
                     <div style={{ textAlign: "center", marginBottom: 56 }}>

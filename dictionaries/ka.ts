@@ -134,7 +134,7 @@ export const ka = {
         label: "კონტაქტი",
         heading: "დაგვიკავშირდით",
         phone: "+995 568 83 47 07",
-        email: "info@savedrive.ge",
+        email: "info@safedrive.ge",
         hours: "24/7 — ყოველდღე",
         address: "თბილისი, საქართველო",
         formName: "სახელი",

@@ -136,7 +136,7 @@ export const ru: Dictionary = {
         label: "Контакты",
         heading: "Свяжитесь с нами",
         phone: "+995 568 83 47 07",
-        email: "info@savedrive.ge",
+        email: "info@safedrive.ge",
         hours: "24/7 — Ежедневно",
         address: "Тбилиси, Грузия",
         formName: "Имя",

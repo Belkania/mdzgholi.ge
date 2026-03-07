@@ -14,7 +14,7 @@ export function JsonLd({ data }: JsonLdProps) {
 /* ─── Schema Helpers ─── */
 
 const PHONE = "+995568834707";
-const BASE = "https://savedrive.ge";
+const BASE = "https://safedrive.ge";
 
 export function localBusinessSchema(lang: string) {
     return {
@@ -31,7 +31,7 @@ export function localBusinessSchema(lang: string) {
                     : "SafeDrive — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",
         url: `${BASE}/${lang}`,
         telephone: PHONE,
-        email: "info@savedrive.ge",
+        email: "info@safedrive.ge",
         address: {
             "@type": "PostalAddress",
             addressLocality: "Tbilisi",

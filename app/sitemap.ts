@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://savedrive.ge";
+const BASE_URL = "https://safedrive.ge";
 
 const locales = ["ka", "en", "ru"];
 
