@@ -34,7 +34,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
             "ოპერატორი ქართულად, ინგლისურად და რუსულად",
         ],
         faq: [
-            { q: "რამდენ ხანში ჩამოვა ევაკუატორი?", a: "ქალაქში საშუალოდ 30-40 წუთში, გარეუბანში ოდნავ მეტი დრო დასჭირდება." },
+            { q: "რამდენ ხანში ჩამოვა ევაკუატორი?", a: "ქალაქში საშუალოდ 15-20 წუთში, გარეუბანში ოდნავ მეტი დრო დასჭირდება." },
             { q: "ნებისმიერი ტიპის მანქანას ევაკუაცია შეიძლება?", a: "დიახ, ჩვენ ვემსახურებით ყველა ტიპის ავტომობილს — მსუბუქი, ჯიპი, მინივენი." },
             { q: "ფასი ფიქსირებულია?", a: "ფასი დამოკიდებულია მანძილზე. ოპერატორი წინასწარ გეტყვით ზუსტ ღირებულებას." },
             { q: "ღამის საათებშიც მუშაობთ?", a: "დიახ, ჩვენ ვმუშაობთ 24 საათი, 7 დღე კვირაში." },
@@ -52,7 +52,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
             "Support in Georgian, English, and Russian",
         ],
         faq: [
-            { q: "How quickly does the tow truck arrive?", a: "On average 30-40 minutes in the city, slightly longer for suburban areas." },
+            { q: "How quickly does the tow truck arrive?", a: "On average 15-20 minutes in the city, slightly longer for suburban areas." },
             { q: "Can you tow any type of vehicle?", a: "Yes, we service all vehicle types — sedans, SUVs, minivans." },
             { q: "Is the price fixed?", a: "Pricing depends on distance. Our operator will quote you the exact cost upfront." },
             { q: "Do you operate at night?", a: "Yes, we operate 24 hours a day, 7 days a week." },
@@ -70,7 +70,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
             "Поддержка на грузинском, английском и русском языках",
         ],
         faq: [
-            { q: "Как быстро приедет эвакуатор?", a: "В среднем за 30-40 минут в городе, чуть дольше за городом." },
+            { q: "Как быстро приедет эвакуатор?", a: "В среднем за 15-20 минут в городе, чуть дольше за городом." },
             { q: "Можете эвакуировать любой автомобиль?", a: "Да, мы обслуживаем все типы автомобилей — седаны, внедорожники, минивэны." },
             { q: "Цена фиксированная?", a: "Цена зависит от расстояния. Оператор назовёт точную стоимость заранее." },
             { q: "Работаете ли ночью?", a: "Да, мы работаем 24 часа в сутки, 7 дней в неделю." },

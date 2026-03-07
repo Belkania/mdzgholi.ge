@@ -30,7 +30,7 @@ export const en: Dictionary = {
         cta: "☎ Call Now",
         ctaWa: "WhatsApp",
         phone: "+995 568 83 47 07",
-        trust: "2,000+ happy customers • Avg. arrival 30–40 min",
+        trust: "2,000+ happy customers • Avg. arrival 15–20 min",
     },
     services: {
         label: "Our Services",
@@ -83,7 +83,7 @@ export const en: Dictionary = {
         items: [
             { icon: "🕐", title: "24/7 Availability", desc: "Night, day, weekends — we're always here." },
             { icon: "👨‍✈️", title: "Professional Drivers", desc: "Every driver passes thorough background checks." },
-            { icon: "⚡", title: "Fast Arrival", desc: "Average 30–40 minutes — no long waiting." },
+            { icon: "⚡", title: "Fast Arrival", desc: "Average 15–20 minutes — no long waiting." },
             { icon: "🛡️", title: "Safe Journey", desc: "Your comfort and safety are our top priority." },
             { icon: "💸", title: "Affordable Pricing", desc: "Transparent rates, no hidden charges." },
             { icon: "🚗", title: "Your Own Car", desc: "Our driver uses your car — both of you arrive home." },
@@ -94,7 +94,7 @@ export const en: Dictionary = {
         heading: "3 Simple Steps",
         steps: [
             { num: "01", title: "Call Us", desc: "Call or message us on WhatsApp — our operator responds immediately." },
-            { num: "02", title: "Driver Arrives", desc: "A certified driver arrives within 30–40 minutes." },
+            { num: "02", title: "Driver Arrives", desc: "A certified driver arrives within 15–20 minutes." },
             { num: "03", title: "Ride Home Safely", desc: "Relax while our driver takes you home in your own car." },
         ],
     },
