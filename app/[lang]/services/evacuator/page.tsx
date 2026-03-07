@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         ru: "Эвакуатор в Тбилиси | SaveDrive",
     };
     const descs: Record<string, string> = {
-        ka: "SaveDrive ევაკუატორი — მანქანა გაფუჭდა? სწრაფი და უსაფრთხო ევაკუაცია 24/7. დაგვირეკეთ: +995 511 55 36 60",
-        en: "SaveDrive tow truck service — car broke down? Fast and safe evacuation 24/7. Call us: +995 511 55 36 60",
-        ru: "Эвакуатор SaveDrive — машина сломалась? Быстрая и безопасная эвакуация 24/7. Звоните: +995 511 55 36 60",
+        ka: "SaveDrive ევაკუატორი — მანქანა გაფუჭდა? სწრაფი და უსაფრთხო ევაკუაცია 24/7. დაგვირეკეთ: +995 568 83 47 07",
+        en: "SaveDrive tow truck service — car broke down? Fast and safe evacuation 24/7. Call us: +995 568 83 47 07",
+        ru: "Эвакуатор SaveDrive — машина сломалась? Быстрая и безопасная эвакуация 24/7. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }

@@ -143,7 +143,7 @@ export const ru: Dictionary = {
         formPhone: "Телефон",
         formMsg: "Сообщение",
         formSubmit: "Отправить",
-        formNote: "Мы ответим в течение 30 минут.",
+        formNote: "Мы свяжемся с вами в ближайшее время.",
         callBtn: "☎ Позвонить",
         waBtn: "WhatsApp",
     },

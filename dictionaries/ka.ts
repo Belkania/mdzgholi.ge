@@ -141,7 +141,7 @@ export const ka = {
         formPhone: "ტელეფონი",
         formMsg: "შეტყობინება",
         formSubmit: "გაგზავნა",
-        formNote: "ჩვენ 30 წუთში გიპასუხებთ.",
+        formNote: "მალე დაგიკავშირდებით.",
         callBtn: "☎ დაგვირეკეთ ახლავე",
         waBtn: "WhatsApp",
     },

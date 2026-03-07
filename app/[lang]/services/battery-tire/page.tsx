@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         ru: "Аккумулятор и замена шин | SaveDrive",
     };
     const descs: Record<string, string> = {
-        ka: "SaveDrive აკუმულატორი და საბურავის შეცვლა — სპეციალისტი ადგილზე მოვა. 24/7. დაგვირეკეთ: +995 511 55 36 60",
-        en: "SaveDrive battery and tire change — specialist comes to your location. 24/7. Call: +995 511 55 36 60",
-        ru: "Аккумулятор и замена шин SaveDrive — специалист приедет на место. 24/7. Звоните: +995 511 55 36 60",
+        ka: "SaveDrive აკუმულატორი და საბურავის შეცვლა — სპეციალისტი ადგილზე მოვა. 24/7. დაგვირეკეთ: +995 568 83 47 07",
+        en: "SaveDrive battery and tire change — specialist comes to your location. 24/7. Call: +995 568 83 47 07",
+        ru: "Аккумулятор и замена шин SaveDrive — специалист приедет на место. 24/7. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }

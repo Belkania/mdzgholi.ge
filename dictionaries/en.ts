@@ -143,7 +143,7 @@ export const en: Dictionary = {
         formPhone: "Phone",
         formMsg: "Message",
         formSubmit: "Send Message",
-        formNote: "We'll respond within 30 minutes.",
+        formNote: "We'll get back to you shortly.",
         callBtn: "☎ Call Now",
         waBtn: "WhatsApp",
     },

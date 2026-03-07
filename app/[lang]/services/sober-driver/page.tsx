@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         ru: "Трезвый водитель в Грузии | SaveDrive",
     };
     const descs: Record<string, string> = {
-        ka: "SaveDrive-ის ფხიზელი მძღოლი: დალიე უზრუნველად, ჩვენ შენი მანქანით მიგიყვანთ სახლამდე. 24/7. +995 511 55 36 60",
-        en: "SaveDrive sober driver service: enjoy your evening, we drive you home in your own car. 24/7. +995 511 55 36 60",
-        ru: "Трезвый водитель SaveDrive: отдыхайте, мы довезём вас домой на вашей машине. 24/7. +995 511 55 36 60",
+        ka: "SaveDrive-ის ფხიზელი მძღოლი: დალიე უზრუნველად, ჩვენ შენი მანქანით მიგიყვანთ სახლამდე. 24/7. +995 568 83 47 07",
+        en: "SaveDrive sober driver service: enjoy your evening, we drive you home in your own car. 24/7. +995 568 83 47 07",
+        ru: "Трезвый водитель SaveDrive: отдыхайте, мы довезём вас домой на вашей машине. 24/7. +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
@@ -29,12 +29,12 @@ const content: Record<string, { h1: string; description: string; benefits: strin
             "შენი მანქანა დარჩება სახლთან — ორივე მოხვდება სახლში",
             "გამოცდილი, სერტიფიცირებული მძღოლები",
             "24/7 ხელმისაწვდომობა — ყოველდღე, ღამე-ღამობით",
-            "40 წუთი შეყოვნება — სწრაფი პასუხი",
+            "სწრაფი გამოძახება — მძღოლი 15-20 წუთში ჩამოდის",
             "გამჭვირვალე ფასი — ფარული დანახარჯის გარეშე",
             "ოპერატორი ქართულად, ინგლისურად და რუსულად",
         ],
         faq: [
-            { q: "როგორ შეიძლება ფხიზელი მძღოლის დაჯავშნა?", a: "უბრალოდ დაგვიკავშირდით — +995 511 55 36 60. ოპერატორი გეხმაურება 2-3 წუთში და გამოგიგზავნით მძღოლს." },
+            { q: "როგორ შეიძლება ფხიზელი მძღოლის დაჯავშნა?", a: "უბრალოდ დაგვიკავშირდით — +995 568 83 47 07. ოპერატორი გეხმაურება 2-3 წუთში და გამოგიგზავნით მძღოლს." },
             { q: "მძღოლი ჩამოდება ჩემს მანქანაში?", a: "დიახ! ჩვენი მძღოლი ისარგებლებს შენი მანქანით და სახლამდე მიგიყვანს. მძღოლი კი ჩვენი კოლეგის მანქანით დაბრუნდება." },
             { q: "ხელმისაწვდომია 3 საათზე?", a: "დიახ, ჩვენ ვმუშაობთ 24 საათი, 7 დღე კვირაში, მათ შორის შაბათ-კვირასა და დღესასწაულებში." },
             { q: "სად ვმოქმედებ?", a: "ძირითადად თბილისსა და მიმდებარე ტერიტორიებზე. გარეუბნებისთვის გთხოვთ წინასწარ დაგვიკავშირდეთ." },
@@ -52,7 +52,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
             "Support in Georgian, English, and Russian",
         ],
         faq: [
-            { q: "How do I book a sober driver?", a: "Simply call us at +995 511 55 36 60. Our operator will respond within 2-3 minutes and dispatch a driver to you." },
+            { q: "How do I book a sober driver?", a: "Simply call us at +995 568 83 47 07. Our operator will respond within 2-3 minutes and dispatch a driver to you." },
             { q: "Does the driver use my car?", a: "Yes! Our driver uses your vehicle to take you home safely. The driver then returns separately in a colleague's car." },
             { q: "Are you available at 3am?", a: "Yes, we operate 24 hours a day, 7 days a week, including weekends and public holidays." },
             { q: "Where do you operate?", a: "Primarily in Tbilisi and surrounding areas. For suburbs and long distances, please contact us in advance." },
@@ -70,7 +70,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
             "Поддержка на грузинском, английском и русском языках",
         ],
         faq: [
-            { q: "Как заказать трезвого водителя?", a: "Просто позвоните нам: +995 511 55 36 60. Оператор ответит в течение 2-3 минут и отправит водителя." },
+            { q: "Как заказать трезвого водителя?", a: "Просто позвоните нам: +995 568 83 47 07. Оператор ответит в течение 2-3 минут и отправит водителя." },
             { q: "Водитель едет на моей машине?", a: "Да! Наш водитель использует вашу машину, чтобы доставить вас домой. Затем он возвращается отдельно на машине коллеги." },
             { q: "Работаете ли вы в 3 ночи?", a: "Да, мы работаем 24 часа в сутки, 7 дней в неделю, включая выходные и праздники." },
             { q: "В каких районах работаете?", a: "В основном в Тбилиси и окрестностях. Для пригородов свяжитесь с нами заранее." },

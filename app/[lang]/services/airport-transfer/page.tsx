@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         ru: "Трансфер в аэропорт / Междугородний | SaveDrive",
     };
     const descs: Record<string, string> = {
-        ka: "SaveDrive აეროპორტის ტრანსფერი და საქალაქთაშორისო მარშრუტები — ბათუმი, ქუთაისი. პუნქტუალური, კომფორტული. 24/7. დაგვირეკეთ: +995 511 55 36 60",
-        en: "SaveDrive airport transfer & intercity routes — Batumi, Kutaisi. Punctual, comfortable. 24/7. Call: +995 511 55 36 60",
-        ru: "Трансфер в аэропорт и междугородний SaveDrive — Батуми, Кутаиси. Пунктуальный, комфортный. 24/7. Звоните: +995 511 55 36 60",
+        ka: "SaveDrive აეროპორტის ტრანსფერი და საქალაქთაშორისო მარშრუტები — ბათუმი, ქუთაისი. პუნქტუალური, კომფორტული. 24/7. დაგვირეკეთ: +995 568 83 47 07",
+        en: "SaveDrive airport transfer & intercity routes — Batumi, Kutaisi. Punctual, comfortable. 24/7. Call: +995 568 83 47 07",
+        ru: "Трансфер в аэропорт и междугородний SaveDrive — Батуми, Кутаиси. Пунктуальный, комфортный. 24/7. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
