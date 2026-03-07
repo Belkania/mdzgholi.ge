@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
-        h1: "ევაკუატორი თბილისში — SaveDrive",
+        h1: "ევაკუატორი თბილისში",
         description: "მანქანა გაფუჭდა ან ავარიაში მოხვდა? SaveDrive-ის ევაკუატორი ჩამოვა სწრაფად და უსაფრთხოდ გადაგიყვანს შენს ავტომობილს სასურველ ადგილას. 24/7 ხელმისაწვდომი.",
         benefits: [
             "სწრაფი ჩამოსვლა — ქალაქში და გარეუბანში",
@@ -41,7 +41,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     en: {
-        h1: "Tow Truck / Evacuator in Tbilisi — SaveDrive",
+        h1: "Tow Truck / Evacuator in Tbilisi",
         description: "Car broke down or had an accident? SaveDrive's tow truck arrives quickly and safely transports your vehicle to any location. Available 24/7.",
         benefits: [
             "Fast arrival — in the city and suburbs",
@@ -59,7 +59,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     ru: {
-        h1: "Эвакуатор в Тбилиси — SaveDrive",
+        h1: "Эвакуатор в Тбилиси",
         description: "Машина сломалась или попала в аварию? Эвакуатор SaveDrive приедет быстро и безопасно доставит ваш автомобиль в нужное место. Работаем 24/7.",
         benefits: [
             "Быстрый приезд — в городе и пригороде",

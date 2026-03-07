@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
-        h1: "მანქანის რეცხვა — SaveDrive თბილისი",
+        h1: "მანქანის რეცხვა",
         description: "SaveDrive მანქანის რეცხვის სერვისი მუშაობს მარტივად: დაგვირეკეთ, ჩვენ მოვდივართ თქვენს მისამართზე და ავტომობილს წავიყვანთ ჩვენს სარეცხ ლოკაციაზე. ვრეცხავთ შიგნიდან და გარედან იდეალურად, ხოლო შემდეგ მანქანას მივიყვანთ თქვენს მიერ მითითებულ ნებისმიერ მისამართზე. არ გჭირდება არსად წასვლა — უბრალოდ დაგვირეკეთ და ყველაფერს ჩვენ მოვაგვარებთ.",
         benefits: [
             "ავტომობილს ადგილზე მოვდივართ და ვიყვანთ — შენ არ გჭირდება არსად წასვლა",
@@ -44,7 +44,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     en: {
-        h1: "Car Wash Service — SaveDrive Tbilisi",
+        h1: "Car Wash Service",
         description: "SaveDrive car wash works simply: call us and we come to your location, pick up your car, and take it to our washing facility. We wash it inside and out to perfection, then deliver it to any address you specify. You don't have to do a thing — just call and we handle everything.",
         benefits: [
             "We come to your location and pick up the car — no need to go anywhere",
@@ -65,7 +65,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     ru: {
-        h1: "Мойка машин — SaveDrive Тбилиси",
+        h1: "Мойка машин",
         description: "Мойка машин SaveDrive работает просто: вы звоните, мы приезжаем на вашу локацию и забираем автомобиль. Везём на нашу моечную базу, моем снаружи и внутри до идеального состояния, а затем доставляем автомобиль по указанному вами адресу. Вам ничего не нужно делать — просто позвоните, и мы сделаем всё сами.",
         benefits: [
             "Приезжаем на вашу локацию и забираем автомобиль — вам никуда не нужно ехать",

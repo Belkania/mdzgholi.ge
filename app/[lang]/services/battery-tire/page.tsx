@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
-        h1: "აკუმულატორი / საბურავის შეცვლა — SaveDrive",
+        h1: "აკუმულატორი / საბურავის შეცვლა",
         description: "აკუმულატორი დაჯდა ან საბურავი გაგიფუჭდა? SaveDrive-ის სპეციალისტი ადგილზე მოვა და პრობლემას სწრაფად მოაგვარებს. არ არის საჭირო ევაკუატორის ლოდინი — ჩვენ ადგილზე ვწყვეტთ.",
         benefits: [
             "ადგილზე მოსვლა — არ არის საჭირო ევაკუაცია",
@@ -41,7 +41,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     en: {
-        h1: "Battery Jump Start & Tire Change — SaveDrive",
+        h1: "Battery Jump Start & Tire Change",
         description: "Dead battery or flat tire? SaveDrive's specialist comes to your location and fixes the problem quickly. No need to wait for a tow truck — we solve it on the spot.",
         benefits: [
             "On-site service — no need for evacuation",
@@ -59,7 +59,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     ru: {
-        h1: "Аккумулятор / Замена шин — SaveDrive",
+        h1: "Аккумулятор / Замена шин",
         description: "Сел аккумулятор или пробито колесо? Специалист SaveDrive приедет на место и быстро решит проблему. Не нужно ждать эвакуатор — решаем на месте.",
         benefits: [
             "Выезд на место — эвакуация не нужна",

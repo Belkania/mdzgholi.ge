@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
-        h1: "პირადი მძღოლი — SaveDrive Georgia",
+        h1: "პირადი მძღოლი",
         description: "გჭირდება პირადი მძღოლი ყოველდღიურ ცხოვრებაში? SaveDrive-ი გთავაზობთ სრულ და ნახევარ განაკვეთზე პირადი მძღოლის მომსახურებას, ბიზნეს-ვიზიტებিდან ოჯახური გადაადგილების ჩათვლით.",
         benefits: [
             "სრული ან ნახევარი განაკვეთი — შენი განრიგი",
@@ -36,7 +36,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     en: {
-        h1: "Personal Driver Service — SaveDrive Georgia",
+        h1: "Personal Driver Service",
         description: "Need a personal driver for your daily life? SaveDrive offers full-time or part-time personal driver services, from business meetings to family errands.",
         benefits: [
             "Full-time or part-time — your schedule",
@@ -54,7 +54,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     ru: {
-        h1: "Личный водитель — SaveDrive Грузия",
+        h1: "Личный водитель",
         description: "Нужен личный водитель для повседневной жизни? SaveDrive предоставляет услуги личного водителя на полную или частичную занятость — от деловых встреч до семейных поездок.",
         benefits: [
             "Полная или частичная занятость — ваш график",

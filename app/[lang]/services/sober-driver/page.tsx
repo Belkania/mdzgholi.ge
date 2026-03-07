@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
-        h1: "ფხიზელი მძღოლი საქართველოში — SaveDrive",
+        h1: "ფხიზელი მძღოლი საქართველოში",
         description: "გაინაბეთ სიამოვნებით — SaveDrive-ის ფხიზელი მძღოლი ჩამოდის სადაც ხართ და შენი მანქანით გიყვანს სახლამდე. უსაფრთხო, პროფესიონალური, 24 საათი.",
         benefits: [
             "შენი მანქანა დარჩება სახლთან — ორივე მოხვდება სახლში",
@@ -41,7 +41,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     en: {
-        h1: "Sober Driver Service in Georgia — SaveDrive",
+        h1: "Sober Driver Service in Georgia",
         description: "Enjoy your night out — SaveDrive's sober driver comes to you and drives you home safely in your own car. Professional, fast, available 24/7.",
         benefits: [
             "Your car comes home with you — no car left behind",
@@ -59,7 +59,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     ru: {
-        h1: "Трезвый водитель в Грузии — SaveDrive",
+        h1: "Трезвый водитель в Грузии",
         description: "Отдыхайте с удовольствием — трезвый водитель SaveDrive приедет к вам и доставит домой на вашей машине. Профессионально, быстро, 24/7.",
         benefits: [
             "Ваша машина едет домой вместе с вами",

@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
-        h1: "აეროპორტის ტრანსფერი / საქალაქთაშორისო — SaveDrive",
+        h1: "აეროპორტის ტრანსფერი / საქალაქთაშორისო",
         description: "პუნქტუალური და კომფორტული ტრანსფერი თბილისის საერთაშორისო აეროპორტამდე და საქალაქთაშორისო მარშრუტებზე. სტრესის გარეშე მგზავრობა ნებისმიერი მიმართულებით.",
         benefits: [
             "დროული ჩამოსვლა — ფრენის განრიგზე დაყრდნობით",
@@ -41,7 +41,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     en: {
-        h1: "Airport Transfer & Intercity — SaveDrive",
+        h1: "Airport Transfer & Intercity",
         description: "Punctual and comfortable transfers to Tbilisi International Airport and intercity routes. Travel stress-free in any direction.",
         benefits: [
             "On-time pickup — based on your flight schedule",
@@ -59,7 +59,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
         ],
     },
     ru: {
-        h1: "Трансфер в аэропорт / Междугородний — SaveDrive",
+        h1: "Трансфер в аэропорт / Междугородний",
         description: "Пунктуальный и комфортный трансфер до аэропорта Тбилиси и по междугородним маршрутам. Путешествуйте без стресса в любом направлении.",
         benefits: [
             "Своевременный выезд — по расписанию рейса",
