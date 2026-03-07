@@ -5,7 +5,7 @@ export const en: Dictionary = {
     meta: {
         title: "SaveDrive — Sober Driver & Driver On Call in Georgia",
         description:
-            "SaveDrive offers professional sober driver and driver-on-call services in Georgia. Available 24/7. Call us: +995 511 55 36 60",
+            "SaveDrive offers professional sober driver and driver-on-call services in Georgia. Available 24/7. Call us: +995 568 83 47 07",
         keywords:
             "sober driver Georgia, driver on call, personal driver Tbilisi, SaveDrive, designated driver",
     },
@@ -29,7 +29,7 @@ export const en: Dictionary = {
             "Enjoy your evening — we drive you home in your own car. Professional, fast, and reliable, 24 hours a day.",
         cta: "☎ Call Now",
         ctaWa: "WhatsApp",
-        phone: "+995 511 55 36 60",
+        phone: "+995 568 83 47 07",
         trust: "2,000+ happy customers • Avg. arrival 30–40 min",
     },
     services: {
@@ -135,7 +135,7 @@ export const en: Dictionary = {
     contact: {
         label: "Contact",
         heading: "Get in Touch",
-        phone: "+995 511 55 36 60",
+        phone: "+995 568 83 47 07",
         email: "info@savedrive.ge",
         hours: "24/7 — Every day",
         address: "Tbilisi, Georgia",

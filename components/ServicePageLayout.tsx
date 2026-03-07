@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { Dictionary } from "@/dictionaries";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/components/JsonLd";
 
-const PHONE_RAW = "+995511553660";
-const PHONE_DISPLAY = "+995 511 55 36 60";
+const PHONE_RAW = "+995568834707";
+const PHONE_DISPLAY = "+995 568 83 47 07";
 const BASE = "https://savedrive.ge";
 
 const ALL_SERVICES: Record<string, { slug: string; icon: string; ka: string; en: string; ru: string }> = {

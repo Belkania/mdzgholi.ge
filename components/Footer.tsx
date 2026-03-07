@@ -6,8 +6,8 @@ interface FooterProps {
     lang: string;
 }
 
-const PHONE_DISPLAY = "+995 511 55 36 60";
-const PHONE_RAW = "+995511553660";
+const PHONE_DISPLAY = "+995 568 83 47 07";
+const PHONE_RAW = "+995568834707";
 
 export default function Footer({ d, lang }: FooterProps) {
     const navLinks = [

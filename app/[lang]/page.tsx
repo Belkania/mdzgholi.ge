@@ -2,8 +2,8 @@ import { getDictionary, locales } from "@/dictionaries";
 import Link from "next/link";
 import { JsonLd, localBusinessSchema, breadcrumbSchema } from "@/components/JsonLd";
 
-const PHONE_RAW = "+995511553660";
-const PHONE_DISPLAY = "+995 511 55 36 60";
+const PHONE_RAW = "+995568834707";
+const PHONE_DISPLAY = "+995 568 83 47 07";
 const BASE = "https://savedrive.ge";
 
 export function generateStaticParams() {

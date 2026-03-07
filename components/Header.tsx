@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Dictionary } from "@/dictionaries";
 
-const PHONE_RAW = "+995511553660";
+const PHONE_RAW = "+995568834707";
 const LOCALES = ["ka", "en", "ru"] as const;
 
 interface HeaderProps {

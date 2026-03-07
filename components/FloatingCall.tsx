@@ -1,6 +1,6 @@
 "use client";
 
-const PHONE = "+995511553660";
+const PHONE = "+995568834707";
 const WA_URL = `https://wa.me/${PHONE}`;
 const TEL_URL = `tel:${PHONE}`;
 

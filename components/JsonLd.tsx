@@ -13,7 +13,7 @@ export function JsonLd({ data }: JsonLdProps) {
 
 /* ─── Schema Helpers ─── */
 
-const PHONE = "+995511553660";
+const PHONE = "+995568834707";
 const BASE = "https://savedrive.ge";
 
 export function localBusinessSchema(lang: string) {
