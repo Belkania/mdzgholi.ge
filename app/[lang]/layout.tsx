@@ -16,24 +16,24 @@ export async function generateMetadata({
     const { lang } = await params;
     const d = getDictionary(lang);
     return {
-        metadataBase: new URL("https://safedrive.ge"),
+        metadataBase: new URL("https://mdzgholi.ge"),
         title: d.meta.title,
         description: d.meta.description,
         keywords: d.meta.keywords,
         robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
         alternates: {
-            canonical: `https://safedrive.ge/${lang}`,
+            canonical: `https://mdzgholi.ge/${lang}`,
             languages: {
-                ka: "https://safedrive.ge/ka",
-                en: "https://safedrive.ge/en",
-                ru: "https://safedrive.ge/ru",
+                ka: "https://mdzgholi.ge/ka",
+                en: "https://mdzgholi.ge/en",
+                ru: "https://mdzgholi.ge/ru",
             },
         },
         openGraph: {
             title: d.meta.title,
             description: d.meta.description,
-            url: `https://safedrive.ge/${lang}`,
-            siteName: "SafeDrive",
+            url: `https://mdzgholi.ge/${lang}`,
+            siteName: "mdzgholi.ge",
             locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },

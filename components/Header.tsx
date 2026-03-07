@@ -110,7 +110,7 @@ export default function Header({ d, lang }: HeaderProps) {
                         </svg>
                     </div>
                     <span style={{ fontWeight: 800, fontSize: "1.1rem", color: "#fff", letterSpacing: "-0.02em" }}>
-                        Safe<span style={{ color: "var(--yellow)" }}>Drive</span>
+                        mdzgholi<span style={{ color: "var(--yellow)" }}>.ge</span>
                     </span>
                 </Link>
 

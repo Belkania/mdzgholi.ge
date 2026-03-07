@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "ევაკუატორი თბილისში | SafeDrive",
-        en: "Tow Truck / Evacuator in Tbilisi | SafeDrive",
-        ru: "Эвакуатор в Тбилиси | SafeDrive",
+        ka: "ევაკუატორი თბილისში | mdzgholi.ge",
+        en: "Tow Truck / Evacuator in Tbilisi | mdzgholi.ge",
+        ru: "Эвакуатор в Тбилиси | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "SafeDrive ევაკუატორი — მანქანა გაფუჭდა? სწრაფი და უსაფრთხო ევაკუაცია 24/7. დაგვირეკეთ: +995 568 83 47 07",
-        en: "SafeDrive tow truck service — car broke down? Fast and safe evacuation 24/7. Call us: +995 568 83 47 07",
-        ru: "Эвакуатор SafeDrive — машина сломалась? Быстрая и безопасная эвакуация 24/7. Звоните: +995 568 83 47 07",
+        ka: "mdzgholi.ge ევაკუატორი — მანქანა გაფუჭდა? სწრაფი და უსაფრთხო ევაკუაცია 24/7. დაგვირეკეთ: +995 568 83 47 07",
+        en: "mdzgholi.ge tow truck service — car broke down? Fast and safe evacuation 24/7. Call us: +995 568 83 47 07",
+        ru: "Эвакуатор mdzgholi.ge — машина сломалась? Быстрая и безопасная эвакуация 24/7. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
         h1: "ევაკუატორი თბილისში",
-        description: "მანქანა გაფუჭდა ან ავარიაში მოხვდა? SafeDrive-ის ევაკუატორი ჩამოვა სწრაფად და უსაფრთხოდ გადაგიყვანს შენს ავტომობილს სასურველ ადგილას. 24/7 ხელმისაწვდომი.",
+        description: "მანქანა გაფუჭდა ან ავარიაში მოხვდა? mdzgholi.ge-ის ევაკუატორი ჩამოვა სწრაფად და უსაფრთხოდ გადაგიყვანს შენს ავტომობილს სასურველ ადგილას. 24/7 ხელმისაწვდომი.",
         benefits: [
             "სწრაფი ჩამოსვლა — ქალაქში და გარეუბანში",
             "უსაფრთხო ტრანსპორტირება — ნებისმიერი ტიპის მანქანა",
@@ -42,7 +42,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     en: {
         h1: "Tow Truck / Evacuator in Tbilisi",
-        description: "Car broke down or had an accident? SafeDrive's tow truck arrives quickly and safely transports your vehicle to any location. Available 24/7.",
+        description: "Car broke down or had an accident? mdzgholi.ge's tow truck arrives quickly and safely transports your vehicle to any location. Available 24/7.",
         benefits: [
             "Fast arrival — in the city and suburbs",
             "Safe transportation — any vehicle type",
@@ -60,7 +60,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     ru: {
         h1: "Эвакуатор в Тбилиси",
-        description: "Машина сломалась или попала в аварию? Эвакуатор SafeDrive приедет быстро и безопасно доставит ваш автомобиль в нужное место. Работаем 24/7.",
+        description: "Машина сломалась или попала в аварию? Эвакуатор mdzgholi.ge приедет быстро и безопасно доставит ваш автомобиль в нужное место. Работаем 24/7.",
         benefits: [
             "Быстрый приезд — в городе и пригороде",
             "Безопасная транспортировка — любой тип автомобиля",

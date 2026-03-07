@@ -3,11 +3,11 @@ import type { Dictionary } from "./ka";
 export const en: Dictionary = {
     lang: "en",
     meta: {
-        title: "SafeDrive — Sober Driver & Driver On Call in Georgia",
+        title: "mdzgholi.ge — Sober Driver & Driver On Call in Georgia",
         description:
-            "SafeDrive offers professional sober driver and driver-on-call services in Georgia. Available 24/7. Call us: +995 568 83 47 07",
+            "mdzgholi.ge offers professional sober driver and driver-on-call services in Georgia. Available 24/7. Call us: +995 568 83 47 07",
         keywords:
-            "sober driver Georgia, driver on call, personal driver Tbilisi, SafeDrive, designated driver",
+            "sober driver Georgia, driver on call, personal driver Tbilisi, mdzgholi.ge, designated driver",
     },
     nav: {
         home: "Home",
@@ -34,7 +34,7 @@ export const en: Dictionary = {
     },
     services: {
         label: "Our Services",
-        heading: "What does SafeDrive offer?",
+        heading: "What does mdzgholi.ge offer?",
         subtitle:
             "Choose the service that fits your situation — we'll handle the rest.",
         items: [
@@ -78,7 +78,7 @@ export const en: Dictionary = {
         readMore: "Learn more →",
     },
     why: {
-        label: "Why SafeDrive",
+        label: "Why mdzgholi.ge",
         heading: "Georgia's Most Trusted Driver Service",
         items: [
             { icon: "🕐", title: "24/7 Availability", desc: "Night, day, weekends — we're always here." },
@@ -136,7 +136,7 @@ export const en: Dictionary = {
         label: "Contact",
         heading: "Get in Touch",
         phone: "+995 568 83 47 07",
-        email: "info@safedrive.ge",
+        email: "info@mdzgholi.ge",
         hours: "24/7 — Every day",
         address: "Tbilisi, Georgia",
         formName: "Name",
@@ -153,7 +153,7 @@ export const en: Dictionary = {
     },
     footer: {
         tagline: "Georgia's most trusted driver service.",
-        rights: "© 2026 SafeDrive. All rights reserved.",
+        rights: "© 2026 mdzgholi.ge. All rights reserved.",
         links: "Quick Links",
         contact: "Contact",
         hours: "24/7",

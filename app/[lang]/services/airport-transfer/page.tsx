@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "აეროპორტის ტრანსფერი / საქალაქთაშორისო | SafeDrive",
-        en: "Airport Transfer & Intercity | SafeDrive",
-        ru: "Трансфер в аэропорт / Междугородний | SafeDrive",
+        ka: "აეროპორტის ტრანსფერი / საქალაქთაშორისო | mdzgholi.ge",
+        en: "Airport Transfer & Intercity | mdzgholi.ge",
+        ru: "Трансфер в аэропорт / Междугородний | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "SafeDrive აეროპორტის ტრანსფერი და საქალაქთაშორისო მარშრუტები — ბათუმი, ქუთაისი. პუნქტუალური, კომფორტული. 24/7. დაგვირეკეთ: +995 568 83 47 07",
-        en: "SafeDrive airport transfer & intercity routes — Batumi, Kutaisi. Punctual, comfortable. 24/7. Call: +995 568 83 47 07",
-        ru: "Трансфер в аэропорт и междугородний SafeDrive — Батуми, Кутаиси. Пунктуальный, комфортный. 24/7. Звоните: +995 568 83 47 07",
+        ka: "mdzgholi.ge აეროპორტის ტრანსფერი და საქალაქთაშორისო მარშრუტები — ბათუმი, ქუთაისი. პუნქტუალური, კომფორტული. 24/7. დაგვირეკეთ: +995 568 83 47 07",
+        en: "mdzgholi.ge airport transfer & intercity routes — Batumi, Kutaisi. Punctual, comfortable. 24/7. Call: +995 568 83 47 07",
+        ru: "Трансфер в аэропорт и междугородний mdzgholi.ge — Батуми, Кутаиси. Пунктуальный, комфортный. 24/7. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }

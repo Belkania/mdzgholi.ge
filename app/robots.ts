@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ["/api/", "/_next/", "/static/"],
             },
         ],
-        sitemap: "https://safedrive.ge/sitemap.xml",
-        host: "https://safedrive.ge",
+        sitemap: "https://mdzgholi.ge/sitemap.xml",
+        host: "https://mdzgholi.ge",
     };
 }

@@ -14,24 +14,24 @@ export function JsonLd({ data }: JsonLdProps) {
 /* ─── Schema Helpers ─── */
 
 const PHONE = "+995568834707";
-const BASE = "https://safedrive.ge";
+const BASE = "https://mdzgholi.ge";
 
 export function localBusinessSchema(lang: string) {
     return {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": `${BASE}/${lang}#business`,
-        name: "SafeDrive",
-        alternateName: "SafeDrive Georgia",
+        name: "mdzgholi.ge",
+        alternateName: "mdzgholi.ge Georgia",
         description:
             lang === "ka"
-                ? "SafeDrive — ფხიზელი მძღოლი, ევაკუატორი, მანქანის რეცხვა, აეროპორტის ტრანსფერი თბილისში. 24/7."
+                ? "mdzgholi.ge — ფხიზელი მძღოლი, ევაკუატორი, მანქანის რეცხვა, აეროპორტის ტრანსფერი თბილისში. 24/7."
                 : lang === "ru"
-                    ? "SafeDrive — трезвый водитель, эвакуатор, мойка машин, трансфер в аэропорт в Тбилиси. 24/7."
-                    : "SafeDrive — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",
+                    ? "mdzgholi.ge — трезвый водитель, эвакуатор, мойка машин, трансфер в аэропорт в Тбилиси. 24/7."
+                    : "mdzgholi.ge — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",
         url: `${BASE}/${lang}`,
         telephone: PHONE,
-        email: "info@safedrive.ge",
+        email: "info@mdzgholi.ge",
         address: {
             "@type": "PostalAddress",
             addressLocality: "Tbilisi",
@@ -88,7 +88,7 @@ export function serviceSchema(opts: {
         description: opts.description,
         provider: {
             "@type": "LocalBusiness",
-            name: "SafeDrive",
+            name: "mdzgholi.ge",
             telephone: PHONE,
             address: { "@type": "PostalAddress", addressLocality: "Tbilisi", addressCountry: "GE" },
         },

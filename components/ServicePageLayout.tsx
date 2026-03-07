@@ -4,7 +4,7 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/components
 
 const PHONE_RAW = "+995568834707";
 const PHONE_DISPLAY = "+995 568 83 47 07";
-const BASE = "https://safedrive.ge";
+const BASE = "https://mdzgholi.ge";
 
 const ALL_SERVICES: Record<string, { slug: string; icon: string; ka: string; en: string; ru: string }> = {
     "sober-driver": { slug: "sober-driver", icon: "🍷", ka: "ფხიზელი მძღოლი", en: "Sober Driver", ru: "Трезвый водитель" },
@@ -40,7 +40,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             <JsonLd data={serviceSchema({ lang, slug: content.slug, name: content.h1, description: content.description })} />
             <JsonLd data={faqSchema(content.faq)} />
             <JsonLd data={breadcrumbSchema([
-                { name: "SafeDrive", url: `${BASE}/${lang}` },
+                { name: "mdzgholi.ge", url: `${BASE}/${lang}` },
                 { name: content.h1, url: `${BASE}/${lang}/services/${content.slug}` },
             ])} />
             {/* Hero */}
@@ -96,7 +96,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         {lang === "ka" ? "უპირატესობები" : lang === "ru" ? "Преимущества" : "Benefits"}
                     </span>
                     <h2 style={{ color: "#fff", fontWeight: 800, fontSize: "1.8rem", marginBottom: 36 }}>
-                        {lang === "ka" ? "რატომ SafeDrive?" : lang === "ru" ? "Почему SafeDrive?" : "Why SafeDrive?"}
+                        {lang === "ka" ? "რატომ mdzgholi.ge?" : lang === "ru" ? "Почему mdzgholi.ge?" : "Why mdzgholi.ge?"}
                     </h2>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
                         {content.benefits.map((benefit, i) => (

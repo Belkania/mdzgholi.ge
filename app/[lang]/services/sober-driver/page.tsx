@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "ფხიზელი მძღოლი საქართველოში | SafeDrive",
-        en: "Sober Driver in Georgia | SafeDrive",
-        ru: "Трезвый водитель в Грузии | SafeDrive",
+        ka: "ფხიზელი მძღოლი საქართველოში | mdzgholi.ge",
+        en: "Sober Driver in Georgia | mdzgholi.ge",
+        ru: "Трезвый водитель в Грузии | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "SafeDrive-ის ფხიზელი მძღოლი: დალიე უზრუნველად, ჩვენ შენი მანქანით მიგიყვანთ სახლამდე. 24/7. +995 568 83 47 07",
-        en: "SafeDrive sober driver service: enjoy your evening, we drive you home in your own car. 24/7. +995 568 83 47 07",
-        ru: "Трезвый водитель SafeDrive: отдыхайте, мы довезём вас домой на вашей машине. 24/7. +995 568 83 47 07",
+        ka: "mdzgholi.ge-ის ფხიზელი მძღოლი: დალიე უზრუნველად, ჩვენ შენი მანქანით მიგიყვანთ სახლამდე. 24/7. +995 568 83 47 07",
+        en: "mdzgholi.ge sober driver service: enjoy your evening, we drive you home in your own car. 24/7. +995 568 83 47 07",
+        ru: "Трезвый водитель mdzgholi.ge: отдыхайте, мы довезём вас домой на вашей машине. 24/7. +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
         h1: "ფხიზელი მძღოლი საქართველოში",
-        description: "გაინაბეთ სიამოვნებით — SafeDrive-ის ფხიზელი მძღოლი ჩამოდის სადაც ხართ და შენი მანქანით გიყვანს სახლამდე. უსაფრთხო, პროფესიონალური, 24 საათი.",
+        description: "გაინაბეთ სიამოვნებით — mdzgholi.ge-ის ფხიზელი მძღოლი ჩამოდის სადაც ხართ და შენი მანქანით გიყვანს სახლამდე. უსაფრთხო, პროფესიონალური, 24 საათი.",
         benefits: [
             "შენი მანქანა დარჩება სახლთან — ორივე მოხვდება სახლში",
             "გამოცდილი, სერტიფიცირებული მძღოლები",
@@ -42,7 +42,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     en: {
         h1: "Sober Driver Service in Georgia",
-        description: "Enjoy your night out — SafeDrive's sober driver comes to you and drives you home safely in your own car. Professional, fast, available 24/7.",
+        description: "Enjoy your night out — mdzgholi.ge's sober driver comes to you and drives you home safely in your own car. Professional, fast, available 24/7.",
         benefits: [
             "Your car comes home with you — no car left behind",
             "Experienced, certified drivers",
@@ -60,7 +60,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     ru: {
         h1: "Трезвый водитель в Грузии",
-        description: "Отдыхайте с удовольствием — трезвый водитель SafeDrive приедет к вам и доставит домой на вашей машине. Профессионально, быстро, 24/7.",
+        description: "Отдыхайте с удовольствием — трезвый водитель mdzgholi.ge приедет к вам и доставит домой на вашей машине. Профессионально, быстро, 24/7.",
         benefits: [
             "Ваша машина едет домой вместе с вами",
             "Опытные, сертифицированные водители",
