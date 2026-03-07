@@ -23,7 +23,7 @@ export default async function HomePage({
             {/* Structured Data */}
             <JsonLd data={localBusinessSchema(lang)} />
             <JsonLd data={breadcrumbSchema([
-                { name: "SaveDrive", url: `${BASE}/${lang}` },
+                { name: "SafeDrive", url: `${BASE}/${lang}` },
             ])} />
             {/* ─── HERO ─── */}
             <section

@@ -33,7 +33,7 @@ export async function generateMetadata({
             title: d.meta.title,
             description: d.meta.description,
             url: `https://savedrive.ge/${lang}`,
-            siteName: "SaveDrive",
+            siteName: "SafeDrive",
             locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },

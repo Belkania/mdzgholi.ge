@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "SaveDrive",
-  description: "SaveDrive — Professional driver services in Georgia",
+  title: "SafeDrive",
+  description: "SafeDrive — Professional driver services in Georgia",
 };
 
 export default function RootLayout({

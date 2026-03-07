@@ -25,7 +25,7 @@ export default function FloatingCall() {
             <a
                 href={TEL_URL}
                 className="floating-btn floating-btn-call"
-                aria-label="Call SaveDrive"
+                aria-label="Call SafeDrive"
                 title="Call Now"
                 style={{ position: "relative" }}
             >

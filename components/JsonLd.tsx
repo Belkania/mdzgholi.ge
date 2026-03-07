@@ -21,14 +21,14 @@ export function localBusinessSchema(lang: string) {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": `${BASE}/${lang}#business`,
-        name: "SaveDrive",
-        alternateName: "SaveDrive Georgia",
+        name: "SafeDrive",
+        alternateName: "SafeDrive Georgia",
         description:
             lang === "ka"
-                ? "SaveDrive — ფხიზელი მძღოლი, ევაკუატორი, მანქანის რეცხვა, აეროპორტის ტრანსფერი თბილისში. 24/7."
+                ? "SafeDrive — ფხიზელი მძღოლი, ევაკუატორი, მანქანის რეცხვა, აეროპორტის ტრანსფერი თბილისში. 24/7."
                 : lang === "ru"
-                    ? "SaveDrive — трезвый водитель, эвакуатор, мойка машин, трансфер в аэропорт в Тбилиси. 24/7."
-                    : "SaveDrive — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",
+                    ? "SafeDrive — трезвый водитель, эвакуатор, мойка машин, трансфер в аэропорт в Тбилиси. 24/7."
+                    : "SafeDrive — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",
         url: `${BASE}/${lang}`,
         telephone: PHONE,
         email: "info@savedrive.ge",
@@ -88,7 +88,7 @@ export function serviceSchema(opts: {
         description: opts.description,
         provider: {
             "@type": "LocalBusiness",
-            name: "SaveDrive",
+            name: "SafeDrive",
             telephone: PHONE,
             address: { "@type": "PostalAddress", addressLocality: "Tbilisi", addressCountry: "GE" },
         },

@@ -9,9 +9,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "პირადი მძღოლი თბილისში | SaveDrive",
-        en: "Personal Driver in Tbilisi | SaveDrive",
-        ru: "Личный водитель в Тбилиси | SaveDrive",
+        ka: "პირადი მძღოლი თბილისში | SafeDrive",
+        en: "Personal Driver in Tbilisi | SafeDrive",
+        ru: "Личный водитель в Тбилиси | SafeDrive",
     };
     return { title: titles[lang] ?? titles.ka };
 }
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
         h1: "პირადი მძღოლი",
-        description: "გჭირდება პირადი მძღოლი ყოველდღიურ ცხოვრებაში? SaveDrive-ი გთავაზობთ სრულ და ნახევარ განაკვეთზე პირადი მძღოლის მომსახურებას, ბიზნეს-ვიზიტებিდან ოჯახური გადაადგილების ჩათვლით.",
+        description: "გჭირდება პირადი მძღოლი ყოველდღიურ ცხოვრებაში? SafeDrive-ი გთავაზობთ სრულ და ნახევარ განაკვეთზე პირადი მძღოლის მომსახურებას, ბიზნეს-ვიზიტებিდან ოჯახური გადაადგილების ჩათვლით.",
         benefits: [
             "სრული ან ნახევარი განაკვეთი — შენი განრიგი",
             "ერთი კონკრეტული, სანდო მძღოლი",
@@ -37,7 +37,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     en: {
         h1: "Personal Driver Service",
-        description: "Need a personal driver for your daily life? SaveDrive offers full-time or part-time personal driver services, from business meetings to family errands.",
+        description: "Need a personal driver for your daily life? SafeDrive offers full-time or part-time personal driver services, from business meetings to family errands.",
         benefits: [
             "Full-time or part-time — your schedule",
             "One dedicated, trusted driver",
@@ -55,7 +55,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     ru: {
         h1: "Личный водитель",
-        description: "Нужен личный водитель для повседневной жизни? SaveDrive предоставляет услуги личного водителя на полную или частичную занятость — от деловых встреч до семейных поездок.",
+        description: "Нужен личный водитель для повседневной жизни? SafeDrive предоставляет услуги личного водителя на полную или частичную занятость — от деловых встреч до семейных поездок.",
         benefits: [
             "Полная или частичная занятость — ваш график",
             "Один постоянный, проверенный водитель",

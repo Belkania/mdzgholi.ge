@@ -40,7 +40,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             <JsonLd data={serviceSchema({ lang, slug: content.slug, name: content.h1, description: content.description })} />
             <JsonLd data={faqSchema(content.faq)} />
             <JsonLd data={breadcrumbSchema([
-                { name: "SaveDrive", url: `${BASE}/${lang}` },
+                { name: "SafeDrive", url: `${BASE}/${lang}` },
                 { name: content.h1, url: `${BASE}/${lang}/services/${content.slug}` },
             ])} />
             {/* Hero */}
@@ -96,7 +96,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         {lang === "ka" ? "უპირატესობები" : lang === "ru" ? "Преимущества" : "Benefits"}
                     </span>
                     <h2 style={{ color: "#fff", fontWeight: 800, fontSize: "1.8rem", marginBottom: 36 }}>
-                        {lang === "ka" ? "რატომ SaveDrive?" : lang === "ru" ? "Почему SaveDrive?" : "Why SaveDrive?"}
+                        {lang === "ka" ? "რატომ SafeDrive?" : lang === "ru" ? "Почему SafeDrive?" : "Why SafeDrive?"}
                     </h2>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
                         {content.benefits.map((benefit, i) => (

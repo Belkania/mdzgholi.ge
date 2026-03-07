@@ -3,11 +3,11 @@ import type { Dictionary } from "./ka";
 export const ru: Dictionary = {
     lang: "ru",
     meta: {
-        title: "SaveDrive — Трезвый водитель и водитель по вызову в Грузии",
+        title: "SafeDrive — Трезвый водитель и водитель по вызову в Грузии",
         description:
-            "SaveDrive предоставляет профессиональные услуги трезвого водителя и водителя по вызову в Грузии. Работаем 24/7. Звоните: +995 568 83 47 07",
+            "SafeDrive предоставляет профессиональные услуги трезвого водителя и водителя по вызову в Грузии. Работаем 24/7. Звоните: +995 568 83 47 07",
         keywords:
-            "трезвый водитель, водитель по вызову, личный водитель Тбилиси, SaveDrive Georgia",
+            "трезвый водитель, водитель по вызову, личный водитель Тбилиси, SafeDrive Georgia",
     },
     nav: {
         home: "Главная",
@@ -34,7 +34,7 @@ export const ru: Dictionary = {
     },
     services: {
         label: "Наши услуги",
-        heading: "Что предлагает SaveDrive?",
+        heading: "Что предлагает SafeDrive?",
         subtitle:
             "Выберите подходящую услугу — мы позаботимся об остальном.",
         items: [
@@ -78,7 +78,7 @@ export const ru: Dictionary = {
         readMore: "Подробнее →",
     },
     why: {
-        label: "Почему SaveDrive",
+        label: "Почему SafeDrive",
         heading: "Самый надёжный водительский сервис Грузии",
         items: [
             { icon: "🕐", title: "Работаем 24/7", desc: "Ночь, день, выходные — мы всегда на связи." },
@@ -153,7 +153,7 @@ export const ru: Dictionary = {
     },
     footer: {
         tagline: "Самый надёжный водительский сервис Грузии.",
-        rights: "© 2026 SaveDrive. Все права защищены.",
+        rights: "© 2026 SafeDrive. Все права защищены.",
         links: "Быстрые ссылки",
         contact: "Контакты",
         hours: "24/7",

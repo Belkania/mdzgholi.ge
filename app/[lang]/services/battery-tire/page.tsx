@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "აკუმულატორი და საბურავის შეცვლა | SaveDrive",
-        en: "Battery Jump Start & Tire Change | SaveDrive",
-        ru: "Аккумулятор и замена шин | SaveDrive",
+        ka: "აკუმულატორი და საბურავის შეცვლა | SafeDrive",
+        en: "Battery Jump Start & Tire Change | SafeDrive",
+        ru: "Аккумулятор и замена шин | SafeDrive",
     };
     const descs: Record<string, string> = {
-        ka: "SaveDrive აკუმულატორი და საბურავის შეცვლა — სპეციალისტი ადგილზე მოვა. 24/7. დაგვირეკეთ: +995 568 83 47 07",
-        en: "SaveDrive battery and tire change — specialist comes to your location. 24/7. Call: +995 568 83 47 07",
-        ru: "Аккумулятор и замена шин SaveDrive — специалист приедет на место. 24/7. Звоните: +995 568 83 47 07",
+        ka: "SafeDrive აკუმულატორი და საბურავის შეცვლა — სპეციალისტი ადგილზე მოვა. 24/7. დაგვირეკეთ: +995 568 83 47 07",
+        en: "SafeDrive battery and tire change — specialist comes to your location. 24/7. Call: +995 568 83 47 07",
+        ru: "Аккумулятор и замена шин SafeDrive — специалист приедет на место. 24/7. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
         h1: "აკუმულატორი / საბურავის შეცვლა",
-        description: "აკუმულატორი დაჯდა ან საბურავი გაგიფუჭდა? SaveDrive-ის სპეციალისტი ადგილზე მოვა და პრობლემას სწრაფად მოაგვარებს. არ არის საჭირო ევაკუატორის ლოდინი — ჩვენ ადგილზე ვწყვეტთ.",
+        description: "აკუმულატორი დაჯდა ან საბურავი გაგიფუჭდა? SafeDrive-ის სპეციალისტი ადგილზე მოვა და პრობლემას სწრაფად მოაგვარებს. არ არის საჭირო ევაკუატორის ლოდინი — ჩვენ ადგილზე ვწყვეტთ.",
         benefits: [
             "ადგილზე მოსვლა — არ არის საჭირო ევაკუაცია",
             "აკუმულატორის გაცოცხლება ან შეცვლა",
@@ -42,7 +42,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     en: {
         h1: "Battery Jump Start & Tire Change",
-        description: "Dead battery or flat tire? SaveDrive's specialist comes to your location and fixes the problem quickly. No need to wait for a tow truck — we solve it on the spot.",
+        description: "Dead battery or flat tire? SafeDrive's specialist comes to your location and fixes the problem quickly. No need to wait for a tow truck — we solve it on the spot.",
         benefits: [
             "On-site service — no need for evacuation",
             "Battery jump start or replacement",
@@ -60,7 +60,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     ru: {
         h1: "Аккумулятор / Замена шин",
-        description: "Сел аккумулятор или пробито колесо? Специалист SaveDrive приедет на место и быстро решит проблему. Не нужно ждать эвакуатор — решаем на месте.",
+        description: "Сел аккумулятор или пробито колесо? Специалист SafeDrive приедет на место и быстро решит проблему. Не нужно ждать эвакуатор — решаем на месте.",
         benefits: [
             "Выезд на место — эвакуация не нужна",
             "Подзарядка или замена аккумулятора",

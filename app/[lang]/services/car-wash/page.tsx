@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "მანქანის რეცხვა თბილისში | SaveDrive",
-        en: "Car Wash Service in Tbilisi | SaveDrive",
-        ru: "Мойка машин в Тбилиси | SaveDrive",
+        ka: "მანქანის რეცხვა თბილისში | SafeDrive",
+        en: "Car Wash Service in Tbilisi | SafeDrive",
+        ru: "Мойка машин в Тбилиси | SafeDrive",
     };
     const descs: Record<string, string> = {
-        ka: "SaveDrive მანქანის რეცხვის სერვისი თბილისში — მოვდივართ თქვენს ლოკაციაზე, წავიყვანთ ავტომობილს, ვრეცხავთ შიგნიდან და გარედან იდეალურად და მივიყვანთ თქვენს მიერ მითითებულ მისამართზე. დაგვირეკეთ: +995 568 83 47 07",
-        en: "SaveDrive car wash service in Tbilisi — we pick up your car, wash it inside and out to perfection, and deliver it to any location you specify. Call us: +995 568 83 47 07",
-        ru: "Мойка машин SaveDrive в Тбилиси — забираем автомобиль, моем внутри и снаружи до идеала и доставляем по указанному вами адресу. Звоните: +995 568 83 47 07",
+        ka: "SafeDrive მანქანის რეცხვის სერვისი თბილისში — მოვდივართ თქვენს ლოკაციაზე, წავიყვანთ ავტომობილს, ვრეცხავთ შიგნიდან და გარედან იდეალურად და მივიყვანთ თქვენს მიერ მითითებულ მისამართზე. დაგვირეკეთ: +995 568 83 47 07",
+        en: "SafeDrive car wash service in Tbilisi — we pick up your car, wash it inside and out to perfection, and deliver it to any location you specify. Call us: +995 568 83 47 07",
+        ru: "Мойка машин SafeDrive в Тбилиси — забираем автомобиль, моем внутри и снаружи до идеала и доставляем по указанному вами адресу. Звоните: +995 568 83 47 07",
     };
     return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
     ka: {
         h1: "მანქანის რეცხვა",
-        description: "SaveDrive მანქანის რეცხვის სერვისი მუშაობს მარტივად: დაგვირეკეთ, ჩვენ მოვდივართ თქვენს მისამართზე და ავტომობილს წავიყვანთ ჩვენს სარეცხ ლოკაციაზე. ვრეცხავთ შიგნიდან და გარედან იდეალურად, ხოლო შემდეგ მანქანას მივიყვანთ თქვენს მიერ მითითებულ ნებისმიერ მისამართზე. არ გჭირდება არსად წასვლა — უბრალოდ დაგვირეკეთ და ყველაფერს ჩვენ მოვაგვარებთ.",
+        description: "SafeDrive მანქანის რეცხვის სერვისი მუშაობს მარტივად: დაგვირეკეთ, ჩვენ მოვდივართ თქვენს მისამართზე და ავტომობილს წავიყვანთ ჩვენს სარეცხ ლოკაციაზე. ვრეცხავთ შიგნიდან და გარედან იდეალურად, ხოლო შემდეგ მანქანას მივიყვანთ თქვენს მიერ მითითებულ ნებისმიერ მისამართზე. არ გჭირდება არსად წასვლა — უბრალოდ დაგვირეკეთ და ყველაფერს ჩვენ მოვაგვარებთ.",
         benefits: [
             "ავტომობილს ადგილზე მოვდივართ და ვიყვანთ — შენ არ გჭირდება არსად წასვლა",
             "სრული შიდა და გარე რეცხვა — საბარგული, სალონი, კარები, ძარა, დისკები",
@@ -45,7 +45,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     en: {
         h1: "Car Wash Service",
-        description: "SaveDrive car wash works simply: call us and we come to your location, pick up your car, and take it to our washing facility. We wash it inside and out to perfection, then deliver it to any address you specify. You don't have to do a thing — just call and we handle everything.",
+        description: "SafeDrive car wash works simply: call us and we come to your location, pick up your car, and take it to our washing facility. We wash it inside and out to perfection, then deliver it to any address you specify. You don't have to do a thing — just call and we handle everything.",
         benefits: [
             "We come to your location and pick up the car — no need to go anywhere",
             "Full interior and exterior wash — trunk, cabin, doors, body, rims",
@@ -66,7 +66,7 @@ const content: Record<string, { h1: string; description: string; benefits: strin
     },
     ru: {
         h1: "Мойка машин",
-        description: "Мойка машин SaveDrive работает просто: вы звоните, мы приезжаем на вашу локацию и забираем автомобиль. Везём на нашу моечную базу, моем снаружи и внутри до идеального состояния, а затем доставляем автомобиль по указанному вами адресу. Вам ничего не нужно делать — просто позвоните, и мы сделаем всё сами.",
+        description: "Мойка машин SafeDrive работает просто: вы звоните, мы приезжаем на вашу локацию и забираем автомобиль. Везём на нашу моечную базу, моем снаружи и внутри до идеального состояния, а затем доставляем автомобиль по указанному вами адресу. Вам ничего не нужно делать — просто позвоните, и мы сделаем всё сами.",
         benefits: [
             "Приезжаем на вашу локацию и забираем автомобиль — вам никуда не нужно ехать",
             "Полная мойка снаружи и внутри — багажник, салон, двери, кузов, диски",
