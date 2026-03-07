@@ -63,7 +63,7 @@ export default function Footer({ d, lang }: FooterProps) {
                                 </svg>
                             </div>
                             <span style={{ fontWeight: 800, fontSize: "1.2rem", color: "#fff" }}>
-                                Save<span style={{ color: "var(--yellow)" }}>Drive</span>
+                                Safe<span style={{ color: "var(--yellow)" }}>Drive</span>
                             </span>
                         </Link>
                         <p style={{ fontSize: "0.9rem", lineHeight: 1.7, marginBottom: 18 }}>
