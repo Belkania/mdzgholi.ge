@@ -14,7 +14,7 @@ const services = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const lastModified = new Date("2026-03-02");
+    const lastModified = new Date("2026-03-09");
     const entries: MetadataRoute.Sitemap = [];
 
     // Homepage per language
@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                     ka: `${BASE_URL}/ka`,
                     en: `${BASE_URL}/en`,
                     ru: `${BASE_URL}/ru`,
+                    "x-default": `${BASE_URL}/ka`,
                 },
             },
         });
@@ -47,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
                         ka: `${BASE_URL}/ka/services/${service}`,
                         en: `${BASE_URL}/en/services/${service}`,
                         ru: `${BASE_URL}/ru/services/${service}`,
+                        "x-default": `${BASE_URL}/ka/services/${service}`,
                     },
                 },
             });
