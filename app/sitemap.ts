@@ -55,5 +55,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
         }
     }
 
+    // Blog index
+    for (const lang of locales) {
+        entries.push({
+            url: `${BASE_URL}/${lang}/blog`,
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        });
+    }
+
+    // Blog articles
+    const blogSlugs = ["sober-driver-safety-guarantee"];
+    for (const slug of blogSlugs) {
+        for (const lang of locales) {
+            entries.push({
+                url: `${BASE_URL}/${lang}/blog/${slug}`,
+                lastModified,
+                changeFrequency: "monthly",
+                priority: 0.6,
+                alternates: {
+                    languages: {
+                        ka: `${BASE_URL}/ka/blog/${slug}`,
+                        en: `${BASE_URL}/en/blog/${slug}`,
+                        ru: `${BASE_URL}/ru/blog/${slug}`,
+                        "x-default": `${BASE_URL}/ka/blog/${slug}`,
+                    },
+                },
+            });
+        }
+    }
+
     return entries;
 }

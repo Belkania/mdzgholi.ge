@@ -17,6 +17,7 @@ export const ka = {
         batteryTire: "აკუმულატორი / საბურავი",
         pricing: "ფასები",
         about: "ჩვენს შესახებ",
+        blog: "ბლოგი",
         contact: "კონტაქტი",
         callNow: "დაგვიკავშირდით",
     },

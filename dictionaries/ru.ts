@@ -19,6 +19,7 @@ export const ru: Dictionary = {
         batteryTire: "Аккумулятор / Шины",
         pricing: "Цены",
         about: "О нас",
+        blog: "Блог",
         contact: "Контакты",
         callNow: "Позвонить",
     },

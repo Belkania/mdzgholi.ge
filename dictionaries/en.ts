@@ -19,6 +19,7 @@ export const en: Dictionary = {
         batteryTire: "Battery / Tire",
         pricing: "Pricing",
         about: "About Us",
+        blog: "Blog",
         contact: "Contact",
         callNow: "Call Now",
     },

@@ -46,6 +46,7 @@ export default function Header({ d, lang }: HeaderProps) {
         { label: d.nav.airportTransfer, href: localePath("/services/airport-transfer") },
         { label: d.nav.batteryTire, href: localePath("/services/battery-tire") },
         { label: d.nav.about, href: `${localePath("")}#why-us` },
+        { label: d.nav.blog, href: localePath("/blog") },
         { label: d.nav.contact, href: `${localePath("")}#contact` },
     ];
 

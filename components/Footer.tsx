@@ -17,6 +17,7 @@ export default function Footer({ d, lang }: FooterProps) {
         { label: d.nav.carWash, href: `/${lang}/services/car-wash` },
         { label: d.nav.airportTransfer, href: `/${lang}/services/airport-transfer` },
         { label: d.nav.batteryTire, href: `/${lang}/services/battery-tire` },
+        { label: d.nav.blog, href: `/${lang}/blog` },
     ];
 
     return (
