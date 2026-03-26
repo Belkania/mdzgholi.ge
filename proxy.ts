@@ -4,33 +4,38 @@ export const config = {
     matcher: ["/((?!_next|.*\\..*|api).*)"],
 };
 
-const LOCALES = ["ka", "en", "ru"];
-const DEFAULT = "ka";
+const LOCALES = ["ka", "en", "ru"] as const;
+type Locale = typeof LOCALES[number];
+const DEFAULT: Locale = "ka";
 
 export function proxy(req: NextRequest) {
     const { pathname } = req.nextUrl;
 
-    // Check if path starts with a locale prefix
     const pathnameLocale = LOCALES.find(
         (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)
     );
 
-    // If path starts with /ka (default locale), redirect to remove the prefix
-    // e.g. /ka/services/sober-driver → /services/sober-driver
+    // /ka/... → permanent 308 redirect to /... (clean canonical URL, fixes 91 "307 temporary redirect" SEO warnings)
     if (pathnameLocale === DEFAULT) {
         const rest = pathname.replace(/^\/ka/, "") || "/";
         const url = req.nextUrl.clone();
         url.pathname = rest;
-        return NextResponse.redirect(url);
+        const response = NextResponse.redirect(url, 308);
+        response.headers.set("x-lang", DEFAULT);
+        return response;
     }
 
-    // If path starts with /en or /ru, keep as-is
+    // /en/... or /ru/... → pass through, set lang header for root layout
     if (pathnameLocale) {
-        return NextResponse.next();
+        const response = NextResponse.next();
+        response.headers.set("x-lang", pathnameLocale);
+        return response;
     }
 
-    // No locale prefix → internally rewrite to /ka/... (Georgian, default)
+    // No locale prefix → internally rewrite to /ka/... (serves Georgian at clean URL)
     const url = req.nextUrl.clone();
     url.pathname = `/${DEFAULT}${pathname}`;
-    return NextResponse.rewrite(url);
+    const response = NextResponse.rewrite(url);
+    response.headers.set("x-lang", DEFAULT);
+    return response;
 }

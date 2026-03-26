@@ -14,13 +14,18 @@ export function JsonLd({ data }: JsonLdProps) {
 /* ─── Schema Helpers ─── */
 
 const PHONE = "+995568834707";
-const BASE = "https://mdzgholi.ge";
+const BASE = "https://www.mdzgholi.ge";
+
+// Middleware strips /ka prefix → canonical Georgian URLs are prefix-free
+function langPath(lang: string, path: string = "/") {
+    return lang === "ka" ? `${BASE}${path === "/" ? "" : path}` : `${BASE}/${lang}${path === "/" ? "" : path}`;
+}
 
 export function localBusinessSchema(lang: string) {
     return {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": `${BASE}/${lang}#business`,
+        "@id": `${langPath(lang)}#business`,
         name: "mdzgholi.ge",
         alternateName: "mdzgholi.ge Georgia",
         description:
@@ -29,7 +34,7 @@ export function localBusinessSchema(lang: string) {
                 : lang === "ru"
                     ? "mdzgholi.ge — трезвый водитель, эвакуатор, мойка машин, трансфер в аэропорт в Тбилиси. 24/7."
                     : "mdzgholi.ge — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",
-        url: `${BASE}/${lang}`,
+        url: langPath(lang),
         telephone: PHONE,
         email: "info@mdzgholi.ge",
         address: {
@@ -83,7 +88,7 @@ export function serviceSchema(opts: {
     return {
         "@context": "https://schema.org",
         "@type": "Service",
-        "@id": `${BASE}/${opts.lang}/services/${opts.slug}#service`,
+        "@id": `${langPath(opts.lang, `/services/${opts.slug}`)}#service`,
         name: opts.name,
         description: opts.description,
         provider: {

@@ -4,7 +4,7 @@ import { JsonLd, localBusinessSchema, breadcrumbSchema } from "@/components/Json
 
 const PHONE_RAW = "+995568834707";
 const PHONE_DISPLAY = "+995 568 83 47 07";
-const BASE = "https://mdzgholi.ge";
+const BASE = "https://www.mdzgholi.ge";
 
 export function generateStaticParams() {
     return locales.map((lang) => ({ lang }));

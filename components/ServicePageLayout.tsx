@@ -4,7 +4,7 @@ import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/components
 
 const PHONE_RAW = "+995568834707";
 const PHONE_DISPLAY = "+995 568 83 47 07";
-const BASE = "https://mdzgholi.ge";
+const BASE = "https://www.mdzgholi.ge";
 
 const ALL_SERVICES: Record<string, { slug: string; icon: string; ka: string; en: string; ru: string }> = {
     "sober-driver": { slug: "sober-driver", icon: "🍷", ka: "ფხიზელი მძღოლი", en: "Sober Driver", ru: "Трезвый водитель" },
