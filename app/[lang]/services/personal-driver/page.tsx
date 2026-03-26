@@ -13,7 +13,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         en: "Personal Driver in Tbilisi | mdzgholi.ge",
         ru: "Личный водитель в Тбилиси | mdzgholi.ge",
     };
-    return { title: titles[lang] ?? titles.ka };
+    const descs: Record<string, string> = {
+        ka: "mdzgholi.ge პირადი მძღოლი თბილისში — სრული ან ნახევარი განაკვეთი. სანდო, გამოცდილი მძღოლები თქვენი კომფორტისთვის. დაგვირეკეთ: +995 568 83 47 07",
+        en: "mdzgholi.ge Personal Driver in Tbilisi — full-time or part-time. Reliable, experienced drivers for your comfort. Call us: +995 568 83 47 07",
+        ru: "mdzgholi.ge Личный водитель в Тбилиси — полная или частичная занятость. Надежные, опытные водители. Звоните: +995 568 83 47 07",
+    };
+    return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
 }
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
