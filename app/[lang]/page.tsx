@@ -2,7 +2,8 @@ import { getDictionary, locales } from "@/dictionaries";
 import Link from "next/link";
 import { JsonLd, localBusinessSchema, breadcrumbSchema } from "@/components/JsonLd";
 
-const PHONE_RAW = "+995568834707";
+const PHONE_WA = "995568834707";
+const PHONE_TEL = "+995568834707";
 const PHONE_DISPLAY = "+995 568 83 47 07";
 const BASE = "https://www.mdzgholi.ge";
 
@@ -74,14 +75,14 @@ export default async function HomePage({
                     {/* CTA Buttons */}
                     <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginBottom: 40, padding: "0 8px" }}>
                         <a
-                            href={`tel:${PHONE_RAW}`}
+                            href={`tel:${PHONE_TEL}`}
                             className="btn-yellow"
                             style={{ fontSize: "1.05rem", padding: "15px 32px" }}
                         >
                             {d.hero.cta}
                         </a>
                         <a
-                            href={`https://wa.me/${PHONE_RAW}`}
+                            href={`https://wa.me/${PHONE_WA}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-outline"
@@ -99,7 +100,7 @@ export default async function HomePage({
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
                         </svg>
-                        <a href={`tel:${PHONE_RAW}`} style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.15rem", textDecoration: "none" }}>
+                        <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.15rem", textDecoration: "none" }}>
                             {PHONE_DISPLAY}
                         </a>
                     </div>
@@ -227,7 +228,7 @@ export default async function HomePage({
                                 "Available 24/7 — Call Us Now"}
                     </h2>
                     <a
-                        href={`tel:${PHONE_RAW}`}
+                        href={`tel:${PHONE_TEL}`}
                         style={{
                             display: "inline-flex",
                             alignItems: "center",
@@ -263,7 +264,7 @@ export default async function HomePage({
                         <div>
                             <div style={{ display: "flex", flexDirection: "column", gap: 22, marginBottom: 36 }}>
                                 {[
-                                    { icon: "📞", label: d.contact.phone, href: `tel:${PHONE_RAW}`, highlight: true },
+                                    { icon: "📞", label: d.contact.phone, href: `tel:${PHONE_TEL}`, highlight: true },
                                     { icon: "📧", label: d.contact.email, href: `mailto:${d.contact.email}`, highlight: false },
                                     { icon: "📍", label: d.contact.address, href: "#", highlight: false },
                                     { icon: "🕐", label: d.contact.hours, href: "#", highlight: false },
@@ -288,11 +289,11 @@ export default async function HomePage({
                             </div>
 
                             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                                <a href={`tel:${PHONE_RAW}`} className="btn-yellow" style={{ flex: 1, justifyContent: "center" }}>
+                                <a href={`tel:${PHONE_TEL}`} className="btn-yellow" style={{ flex: 1, justifyContent: "center" }}>
                                     {d.contact.callBtn}
                                 </a>
                                 <a
-                                    href={`https://wa.me/${PHONE_RAW}`}
+                                    href={`https://wa.me/${PHONE_WA}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn-blue"

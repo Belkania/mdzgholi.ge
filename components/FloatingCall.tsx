@@ -1,8 +1,9 @@
 "use client";
 
-const PHONE = "+995568834707";
+const PHONE = "995568834707";
+const PHONE_PLUS = "+995568834707";
 const WA_URL = `https://wa.me/${PHONE}`;
-const TEL_URL = `tel:${PHONE}`;
+const TEL_URL = `tel:${PHONE_PLUS}`;
 
 export default function FloatingCall() {
     return (

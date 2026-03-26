@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Dictionary } from "@/dictionaries";
 import { JsonLd, serviceSchema, faqSchema, breadcrumbSchema } from "@/components/JsonLd";
 
-const PHONE_RAW = "+995568834707";
+const PHONE_RAW = "995568834707";
+const PHONE_TEL = "+995568834707";
 const PHONE_DISPLAY = "+995 568 83 47 07";
 const BASE = "https://www.mdzgholi.ge";
 
@@ -73,7 +74,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         {content.description}
                     </p>
                     <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", padding: "0 8px" }}>
-                        <a href={`tel:${PHONE_RAW}`} className="btn-yellow" style={{ fontSize: "0.95rem", padding: "13px 24px", minWidth: 160, justifyContent: "center" }}>
+                        <a href={`tel:${PHONE_TEL}`} className="btn-yellow" style={{ fontSize: "0.95rem", padding: "13px 24px", minWidth: 160, justifyContent: "center" }}>
                             ☎ {d.nav.callNow}
                         </a>
                         <a
@@ -138,7 +139,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         {lang === "ka" ? "ახლავე დაგვიკავშირდით — 24/7 ვართ" : lang === "ru" ? "Свяжитесь с нами — работаем 24/7" : "Contact us now — available 24/7"}
                     </h2>
                     <a
-                        href={`tel:${PHONE_RAW}`}
+                        href={`tel:${PHONE_TEL}`}
                         style={{
                             display: "inline-flex",
                             alignItems: "center",
@@ -219,7 +220,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                     <Link href={`/${lang}`} className="btn-outline" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>
                         ← {d.nav.home}
                     </Link>
-                    <a href={`tel:${PHONE_RAW}`} className="btn-yellow" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>
+                    <a href={`tel:${PHONE_TEL}`} className="btn-yellow" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>
                         ☎ {d.contact.callBtn}
                     </a>
                 </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { Dictionary } from "@/dictionaries";
 
-const PHONE_RAW = "+995568834707";
+const PHONE_TEL = "+995568834707";
 const LOCALES = ["ka", "en", "ru"] as const;
 
 interface HeaderProps {
@@ -179,7 +179,7 @@ export default function Header({ d, lang }: HeaderProps) {
 
                     {/* Call CTA - Desktop only / Small icon on mobile */}
                     <a
-                        href={`tel:${PHONE_RAW}`}
+                        href={`tel:${PHONE_TEL}`}
                         className="btn-yellow desktop-call"
                         style={{ padding: "8px 16px", fontSize: "0.82rem", fontWeight: 700, whiteSpace: "nowrap" }}
                     >
@@ -253,7 +253,7 @@ export default function Header({ d, lang }: HeaderProps) {
                         </Link>
                     ))}
                     <a
-                        href={`tel:${PHONE_RAW}`}
+                        href={`tel:${PHONE_TEL}`}
                         className="btn-yellow"
                         style={{ marginTop: 12, justifyContent: "center", fontSize: "1rem" }}
                     >

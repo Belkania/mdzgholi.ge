@@ -7,7 +7,8 @@ interface FooterProps {
 }
 
 const PHONE_DISPLAY = "+995 568 83 47 07";
-const PHONE_RAW = "+995568834707";
+const PHONE_RAW = "995568834707";
+const PHONE_TEL = "+995568834707";
 
 export default function Footer({ d, lang }: FooterProps) {
     const navLinks = [
@@ -126,10 +127,10 @@ export default function Footer({ d, lang }: FooterProps) {
                             {d.footer.contact}
                         </h4>
                         <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: "0.9rem" }}>
-                            <a href={`tel:${PHONE_RAW}`} style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
+                            <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
                                 {PHONE_DISPLAY}
                             </a>
-                            <span>{d.contact.email}</span>
+                            <a href={`mailto:${d.contact.email}`} style={{ color: "inherit", textDecoration: "none" }}>{d.contact.email}</a>
                             <span>📍 {d.contact.address}</span>
                             <span>🕐 {d.footer.hours}</span>
                         </div>
