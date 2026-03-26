@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: ["/api/"],
             },
         ],
-        sitemap: "https://mdzgholi.ge/sitemap.xml",
-        host: "https://mdzgholi.ge",
+        sitemap: "https://www.mdzgholi.ge/sitemap.xml",
+        host: "https://www.mdzgholi.ge",
     };
 }

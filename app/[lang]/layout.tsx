@@ -16,7 +16,7 @@ export async function generateMetadata({
     const { lang } = await params;
     const d = getDictionary(lang);
     return {
-        metadataBase: new URL("https://mdzgholi.ge"),
+        metadataBase: new URL("https://www.mdzgholi.ge"),
         title: d.meta.title,
         description: d.meta.description,
         keywords: d.meta.keywords,
@@ -25,7 +25,7 @@ export async function generateMetadata({
         openGraph: {
             title: d.meta.title,
             description: d.meta.description,
-            url: `https://mdzgholi.ge/${lang}`,
+            url: `https://www.mdzgholi.ge/${lang}`,
             siteName: "mdzgholi.ge",
             locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",

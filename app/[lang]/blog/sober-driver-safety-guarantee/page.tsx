@@ -26,12 +26,12 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         title: titles[lang] ?? titles.ka, 
         description: metaDescs[lang] ?? metaDescs.ka,
         alternates: {
-            canonical: `https://mdzgholi.ge/${lang}/blog/sober-driver-safety-guarantee`,
+            canonical: `https://www.mdzgholi.ge/${lang}/blog/sober-driver-safety-guarantee`,
             languages: {
-                ka: "https://mdzgholi.ge/ka/blog/sober-driver-safety-guarantee",
-                en: "https://mdzgholi.ge/en/blog/sober-driver-safety-guarantee",
-                ru: "https://mdzgholi.ge/ru/blog/sober-driver-safety-guarantee",
-                "x-default": "https://mdzgholi.ge/ka/blog/sober-driver-safety-guarantee",
+                ka: "https://www.mdzgholi.ge/ka/blog/sober-driver-safety-guarantee",
+                en: "https://www.mdzgholi.ge/en/blog/sober-driver-safety-guarantee",
+                ru: "https://www.mdzgholi.ge/ru/blog/sober-driver-safety-guarantee",
+                "x-default": "https://www.mdzgholi.ge/ka/blog/sober-driver-safety-guarantee",
             },
         },
     };
