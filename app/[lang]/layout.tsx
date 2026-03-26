@@ -25,7 +25,7 @@ export async function generateMetadata({
         openGraph: {
             title: d.meta.title,
             description: d.meta.description,
-            url: `https://www.mdzgholi.ge/${lang}`,
+            url: lang === "ka" ? "https://www.mdzgholi.ge/" : `https://www.mdzgholi.ge/${lang}`,
             siteName: "mdzgholi.ge",
             locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",

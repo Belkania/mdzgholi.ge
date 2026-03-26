@@ -1,8 +1,12 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = "https://www.mdzgholi.ge";
+const BASE = "https://www.mdzgholi.ge";
+const locales = ["ka", "en", "ru"] as const;
 
-const locales = ["ka", "en", "ru"];
+// Middleware strips /ka prefix → Georgian canonical has no lang prefix
+function u(lang: string, path: string) {
+    return lang === "ka" ? `${BASE}${path}` : `${BASE}/${lang}${path}`;
+}
 
 const services = [
     "sober-driver",
@@ -13,42 +17,44 @@ const services = [
     "battery-tire",
 ];
 
+const blogSlugs = ["sober-driver-safety-guarantee"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-    const lastModified = new Date("2026-03-09");
+    const lastModified = new Date("2026-03-26");
     const entries: MetadataRoute.Sitemap = [];
 
-    // Homepage per language
+    // Homepage
     for (const lang of locales) {
         entries.push({
-            url: `${BASE_URL}/${lang}`,
+            url: u(lang, "/"),
             lastModified,
             changeFrequency: "weekly",
             priority: 1.0,
             alternates: {
                 languages: {
-                    ka: `${BASE_URL}/ka`,
-                    en: `${BASE_URL}/en`,
-                    ru: `${BASE_URL}/ru`,
-                    "x-default": `${BASE_URL}/ka`,
+                    ka: u("ka", "/"),
+                    en: u("en", "/"),
+                    ru: u("ru", "/"),
+                    "x-default": u("ka", "/"),
                 },
             },
         });
     }
 
-    // Service pages per language
+    // Service pages
     for (const service of services) {
         for (const lang of locales) {
             entries.push({
-                url: `${BASE_URL}/${lang}/services/${service}`,
+                url: u(lang, `/services/${service}`),
                 lastModified,
                 changeFrequency: "monthly",
                 priority: 0.8,
                 alternates: {
                     languages: {
-                        ka: `${BASE_URL}/ka/services/${service}`,
-                        en: `${BASE_URL}/en/services/${service}`,
-                        ru: `${BASE_URL}/ru/services/${service}`,
-                        "x-default": `${BASE_URL}/ka/services/${service}`,
+                        ka: u("ka", `/services/${service}`),
+                        en: u("en", `/services/${service}`),
+                        ru: u("ru", `/services/${service}`),
+                        "x-default": u("ka", `/services/${service}`),
                     },
                 },
             });
@@ -58,28 +64,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Blog index
     for (const lang of locales) {
         entries.push({
-            url: `${BASE_URL}/${lang}/blog`,
+            url: u(lang, "/blog"),
             lastModified,
             changeFrequency: "weekly",
             priority: 0.7,
+            alternates: {
+                languages: {
+                    ka: u("ka", "/blog"),
+                    en: u("en", "/blog"),
+                    ru: u("ru", "/blog"),
+                    "x-default": u("ka", "/blog"),
+                },
+            },
         });
     }
 
     // Blog articles
-    const blogSlugs = ["sober-driver-safety-guarantee"];
     for (const slug of blogSlugs) {
         for (const lang of locales) {
             entries.push({
-                url: `${BASE_URL}/${lang}/blog/${slug}`,
+                url: u(lang, `/blog/${slug}`),
                 lastModified,
                 changeFrequency: "monthly",
                 priority: 0.6,
                 alternates: {
                     languages: {
-                        ka: `${BASE_URL}/ka/blog/${slug}`,
-                        en: `${BASE_URL}/en/blog/${slug}`,
-                        ru: `${BASE_URL}/ru/blog/${slug}`,
-                        "x-default": `${BASE_URL}/ka/blog/${slug}`,
+                        ka: u("ka", `/blog/${slug}`),
+                        en: u("en", `/blog/${slug}`),
+                        ru: u("ru", `/blog/${slug}`),
+                        "x-default": u("ka", `/blog/${slug}`),
                     },
                 },
             });

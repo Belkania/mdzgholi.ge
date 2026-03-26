@@ -22,12 +22,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         title: titles[lang] ?? titles.ka, 
         description: descs[lang] ?? descs.ka,
         alternates: {
-            canonical: `https://www.mdzgholi.ge/${lang}/blog`,
+            canonical: lang === "ka"
+                ? "https://www.mdzgholi.ge/blog"
+                : `https://www.mdzgholi.ge/${lang}/blog`,
             languages: {
-                ka: "https://www.mdzgholi.ge/ka/blog",
+                ka: "https://www.mdzgholi.ge/blog",
                 en: "https://www.mdzgholi.ge/en/blog",
                 ru: "https://www.mdzgholi.ge/ru/blog",
-                "x-default": "https://www.mdzgholi.ge/ka/blog",
+                "x-default": "https://www.mdzgholi.ge/blog",
             },
         },
     };
