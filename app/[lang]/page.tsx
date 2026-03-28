@@ -30,7 +30,7 @@ export default async function HomePage({
             <section
                 id="top"
                 style={{
-                    minHeight: "100vh",
+                    minHeight: "100dvh",
                     display: "flex",
                     flexDirection: "column",
                     position: "relative",
@@ -47,8 +47,8 @@ export default async function HomePage({
                     <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
                 </div>
 
-                {/* Flex Spacer 1: Accounts for the 56px fixed header so the visual space stays equal to Spacer 2 */}
-                <div style={{ flex: 1, minHeight: "calc(56px + clamp(15px, 3vh, 40px))" }} />
+                {/* Flex Spacer 1: Flex-basis explicitly offsets the 56px header so it perfectly matches Spacer 2's growth */}
+                <div style={{ flex: "1 0 56px", minHeight: "calc(56px + clamp(15px, 3vh, 40px))" }} />
 
                 {/* Phone number — positioned exactly halfway between header and badge */}
                 <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
@@ -60,8 +60,8 @@ export default async function HomePage({
                     </a>
                 </div>
 
-                {/* Flex Spacer 2: Has the identical flex ratio, pushing phone number halfway */}
-                <div style={{ flex: 1, minHeight: "clamp(15px, 3vh, 40px)" }} />
+                {/* Flex Spacer 2: Has no 56px base, matching exactly the visible gap of Spacer 1 */}
+                <div style={{ flex: "1 0 0px", minHeight: "clamp(15px, 3vh, 40px)" }} />
 
                 {/* Main Content Box */}
                 <div style={{ width: "100%", maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
