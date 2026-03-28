@@ -18,7 +18,31 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         en: "mdzgholi.ge battery and tire change — specialist comes to your location. 24/7. Call: +995 568 83 47 07",
         ru: "Аккумулятор и замена шин mdzgholi.ge — специалист приедет на место. 24/7. Звоните: +995 568 83 47 07",
     };
-    return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
+    const base = "https://www.mdzgholi.ge";
+    const path = "/services/battery-tire";
+    const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
+
+    return {
+        title: titles[lang] ?? titles.ka,
+        description: descs[lang] ?? descs.ka,
+        keywords: "აკუმულატორი თბილისი, საბურავის შეცვლა, battery jump start Tbilisi, tire change Tbilisi, mdzgholi.ge",
+        alternates: {
+            canonical,
+            languages: {
+                ka: `${base}${path}`,
+                en: `${base}/en${path}`,
+                ru: `${base}/ru${path}`,
+                "x-default": `${base}${path}`,
+            },
+        },
+        openGraph: {
+            title: titles[lang] ?? titles.ka,
+            description: descs[lang] ?? descs.ka,
+            url: canonical,
+            siteName: "mdzgholi.ge",
+            type: "website",
+        },
+    };
 }
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {

@@ -18,7 +18,31 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         en: "mdzgholi.ge airport transfer & intercity routes — Batumi, Kutaisi. Punctual, comfortable. 24/7. Call: +995 568 83 47 07",
         ru: "Трансфер в аэропорт и междугородний mdzgholi.ge — Батуми, Кутаиси. Пунктуальный, комфортный. 24/7. Звоните: +995 568 83 47 07",
     };
-    return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
+    const base = "https://www.mdzgholi.ge";
+    const path = "/services/airport-transfer";
+    const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
+
+    return {
+        title: titles[lang] ?? titles.ka,
+        description: descs[lang] ?? descs.ka,
+        keywords: "აეროპორტის ტრანსფერი თბილისი, airport transfer Tbilisi, ბათუმი ტრანსფერი, intercity Georgia, mdzgholi.ge",
+        alternates: {
+            canonical,
+            languages: {
+                ka: `${base}${path}`,
+                en: `${base}/en${path}`,
+                ru: `${base}/ru${path}`,
+                "x-default": `${base}${path}`,
+            },
+        },
+        openGraph: {
+            title: titles[lang] ?? titles.ka,
+            description: descs[lang] ?? descs.ka,
+            url: canonical,
+            siteName: "mdzgholi.ge",
+            type: "website",
+        },
+    };
 }
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {

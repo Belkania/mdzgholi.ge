@@ -22,6 +22,16 @@ export async function generateMetadata({
         keywords: d.meta.keywords,
         robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 
+        alternates: {
+            canonical: lang === "ka" ? "https://www.mdzgholi.ge/" : `https://www.mdzgholi.ge/${lang}`,
+            languages: {
+                "ka": "https://www.mdzgholi.ge/",
+                "en": "https://www.mdzgholi.ge/en",
+                "ru": "https://www.mdzgholi.ge/ru",
+                "x-default": "https://www.mdzgholi.ge/",
+            },
+        },
+
         openGraph: {
             title: d.meta.title,
             description: d.meta.description,

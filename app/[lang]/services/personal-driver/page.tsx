@@ -18,7 +18,31 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         en: "mdzgholi.ge Personal Driver in Tbilisi — full-time or part-time. Reliable, experienced drivers for your comfort. Call us: +995 568 83 47 07",
         ru: "mdzgholi.ge Личный водитель в Тбилиси — полная или частичная занятость. Надежные, опытные водители. Звоните: +995 568 83 47 07",
     };
-    return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
+    const base = "https://www.mdzgholi.ge";
+    const path = "/services/personal-driver";
+    const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
+
+    return {
+        title: titles[lang] ?? titles.ka,
+        description: descs[lang] ?? descs.ka,
+        keywords: "პირადი მძღოლი თბილისი, personal driver Tbilisi, მძღოლი განაკვეთით, driver hire Georgia, mdzgholi.ge",
+        alternates: {
+            canonical,
+            languages: {
+                ka: `${base}${path}`,
+                en: `${base}/en${path}`,
+                ru: `${base}/ru${path}`,
+                "x-default": `${base}${path}`,
+            },
+        },
+        openGraph: {
+            title: titles[lang] ?? titles.ka,
+            description: descs[lang] ?? descs.ka,
+            url: canonical,
+            siteName: "mdzgholi.ge",
+            type: "website",
+        },
+    };
 }
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {

@@ -18,7 +18,31 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         en: "mdzgholi.ge sober driver service: enjoy your evening, we drive you home in your own car. 24/7. +995 568 83 47 07",
         ru: "Трезвый водитель mdzgholi.ge: отдыхайте, мы довезём вас домой на вашей машине. 24/7. +995 568 83 47 07",
     };
-    return { title: titles[lang] ?? titles.ka, description: descs[lang] ?? descs.ka };
+    const base = "https://www.mdzgholi.ge";
+    const path = "/services/sober-driver";
+    const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
+
+    return {
+        title: titles[lang] ?? titles.ka,
+        description: descs[lang] ?? descs.ka,
+        keywords: "sober driver Tbilisi, ფხიზელი მძღოლი, ნასვამი მძღოლი, mdzgholi.ge, sober driver service Georgia",
+        alternates: {
+            canonical,
+            languages: {
+                ka: `${base}${path}`,
+                en: `${base}/en${path}`,
+                ru: `${base}/ru${path}`,
+                "x-default": `${base}${path}`,
+            },
+        },
+        openGraph: {
+            title: titles[lang] ?? titles.ka,
+            description: descs[lang] ?? descs.ka,
+            url: canonical,
+            siteName: "mdzgholi.ge",
+            type: "website",
+        },
+    };
 }
 
 const content: Record<string, { h1: string; description: string; benefits: string[]; faq: { q: string; a: string }[] }> = {
