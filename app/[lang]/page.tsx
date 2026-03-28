@@ -48,7 +48,7 @@ export default async function HomePage({
                 </div>
 
                 {/* Flex Spacer 1: Accounts for the 56px fixed header so the visual space stays equal to Spacer 2 */}
-                <div style={{ flex: 1, minHeight: "calc(56px + 40px)" }} />
+                <div style={{ flex: 1, minHeight: "calc(56px + clamp(15px, 3vh, 40px))" }} />
 
                 {/* Phone number — positioned exactly halfway between header and badge */}
                 <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
@@ -61,7 +61,7 @@ export default async function HomePage({
                 </div>
 
                 {/* Flex Spacer 2: Has the identical flex ratio, pushing phone number halfway */}
-                <div style={{ flex: 1, minHeight: "40px" }} />
+                <div style={{ flex: 1, minHeight: "clamp(15px, 3vh, 40px)" }} />
 
                 {/* Main Content Box */}
                 <div style={{ width: "100%", maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
@@ -118,7 +118,7 @@ export default async function HomePage({
 
 
                 {/* Bottom spacer to vertically balance the hero section correctly */}
-                <div style={{ flex: 1.5, minHeight: "80px" }} />
+                <div style={{ flex: 1.5, minHeight: "clamp(20px, 8vh, 80px)" }} />
 
                 {/* Wave */}
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
