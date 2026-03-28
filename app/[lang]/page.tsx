@@ -30,8 +30,7 @@ export default async function HomePage({
             <section
                 id="top"
                 style={{
-                    minHeight: "100dvh",
-                    paddingTop: "56px", /* Starts layout strictly beneath header */
+                    minHeight: "calc(100dvh - 56px)",
                     display: "flex",
                     flexDirection: "column",
                     position: "relative",
