@@ -32,10 +32,10 @@ export default async function HomePage({
                 style={{
                     minHeight: "100vh",
                     display: "flex",
-                    alignItems: "center",
+                    flexDirection: "column",
                     position: "relative",
                     overflow: "hidden",
-                    padding: "100px 16px 80px",
+                    padding: "0 16px",
                 }}
                 className="hero-gradient"
             >
@@ -47,16 +47,24 @@ export default async function HomePage({
                     <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px)", backgroundSize: "60px 60px" }} />
                 </div>
 
-                <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
-                    {/* Phone number — above badge */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, marginBottom: 40 }}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
-                        </svg>
-                        <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.15rem", textDecoration: "none" }}>
-                            {PHONE_DISPLAY}
-                        </a>
-                    </div>
+                {/* Flex Spacer 1: Accounts for the 56px fixed header so the visual space stays equal to Spacer 2 */}
+                <div style={{ flex: 1, minHeight: "calc(56px + 40px)" }} />
+
+                {/* Phone number — positioned exactly halfway between header and badge */}
+                <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+                    </svg>
+                    <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.15rem", textDecoration: "none" }}>
+                        {PHONE_DISPLAY}
+                    </a>
+                </div>
+
+                {/* Flex Spacer 2: Has the identical flex ratio, pushing phone number halfway */}
+                <div style={{ flex: 1, minHeight: "40px" }} />
+
+                {/* Main Content Box */}
+                <div style={{ width: "100%", maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
 
                     {/* Badge */}
                     <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.25)", borderRadius: 50, padding: "6px 18px", marginBottom: 28 }}>
@@ -107,6 +115,12 @@ export default async function HomePage({
 
                     <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", marginTop: 10 }}>{d.hero.trust}</p>
                 </div>
+
+                {/* End Main Content Box */}
+                </div>
+
+                {/* Bottom spacer to vertically balance the hero section correctly */}
+                <div style={{ flex: 1.5, minHeight: "80px" }} />
 
                 {/* Wave */}
                 <div style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
