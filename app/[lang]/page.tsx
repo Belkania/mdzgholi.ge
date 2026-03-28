@@ -48,6 +48,16 @@ export default async function HomePage({
                 </div>
 
                 <div style={{ maxWidth: 800, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
+                    {/* Phone number — above badge */}
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, marginBottom: 20 }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
+                        </svg>
+                        <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.15rem", textDecoration: "none" }}>
+                            {PHONE_DISPLAY}
+                        </a>
+                    </div>
+
                     {/* Badge */}
                     <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.25)", borderRadius: 50, padding: "6px 18px", marginBottom: 28 }}>
                         <span style={{ width: 7, height: 7, borderRadius: "50%", background: "#4ade80", display: "inline-block", boxShadow: "0 0 6px #4ade80" }} />
@@ -95,15 +105,6 @@ export default async function HomePage({
                         </a>
                     </div>
 
-                    {/* Phone display */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z" />
-                        </svg>
-                        <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.15rem", textDecoration: "none" }}>
-                            {PHONE_DISPLAY}
-                        </a>
-                    </div>
                     <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", marginTop: 10 }}>{d.hero.trust}</p>
                 </div>
 
