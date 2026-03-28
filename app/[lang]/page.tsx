@@ -116,8 +116,6 @@ export default async function HomePage({
                     <p style={{ color: "rgba(255,255,255,0.4)", fontSize: "0.82rem", marginTop: 10 }}>{d.hero.trust}</p>
                 </div>
 
-                {/* End Main Content Box */}
-                </div>
 
                 {/* Bottom spacer to vertically balance the hero section correctly */}
                 <div style={{ flex: 1.5, minHeight: "80px" }} />
