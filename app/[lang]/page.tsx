@@ -125,69 +125,6 @@ export default async function HomePage({
                 </div>
             </section>
 
-            {/* ─── SERVICES ─── */}
-            <section id="services" style={{ background: "#0a0f1e", padding: "70px 16px" }}>
-                <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-                    <div style={{ textAlign: "center", marginBottom: 56 }}>
-                        <span className="section-label">{d.services.label}</span>
-                        <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 900, color: "#fff", marginBottom: 14 }}>
-                            {d.services.heading}
-                        </h2>
-                        <p style={{ color: "var(--text-muted)", maxWidth: 520, margin: "0 auto", lineHeight: 1.7 }}>
-                            {d.services.subtitle}
-                        </p>
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-                        {d.services.items.map((svc) => (
-                            <Link
-                                key={svc.slug}
-                                href={`/${lang}/services/${svc.slug}`}
-                                style={{ textDecoration: "none" }}
-                            >
-                                <div
-                                    className="card"
-                                    style={{ padding: "28px 24px", height: "100%", display: "flex", flexDirection: "column", gap: 12, cursor: "pointer" }}
-                                >
-                                    <div style={{ fontSize: "2.5rem", lineHeight: 1 }}>{svc.icon}</div>
-                                    <h3 style={{ color: "#fff", fontWeight: 800, fontSize: "1.15rem", margin: 0 }}>{svc.title}</h3>
-                                    <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.65, margin: 0, flex: 1 }}>{svc.desc}</p>
-                                    <span style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "0.85rem" }}>{d.services.readMore}</span>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ─── WHY MDZGHOLI ─── */}
-            <section id="why-us" style={{ background: "#080d1a", padding: "70px 16px" }}>
-                <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-                    <div style={{ textAlign: "center", marginBottom: 56 }}>
-                        <span className="section-label">{d.why.label}</span>
-                        <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 900, color: "#fff", marginBottom: 0 }}>
-                            {d.why.heading}
-                        </h2>
-                    </div>
-
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
-                        {d.why.items.map((item) => (
-                            <div
-                                key={item.title}
-                                className="card"
-                                style={{ padding: "24px 20px", display: "flex", gap: 16, alignItems: "flex-start" }}
-                            >
-                                <div style={{ fontSize: "1.8rem", lineHeight: 1, flexShrink: 0 }}>{item.icon}</div>
-                                <div>
-                                    <h3 style={{ color: "#fff", fontWeight: 700, fontSize: "1rem", margin: "0 0 6px" }}>{item.title}</h3>
-                                    <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
             {/* ─── HOW IT WORKS ─── */}
             <section id="how-it-works" style={{ background: "#0a0f1e", padding: "70px 16px" }}>
                 <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
@@ -221,6 +158,36 @@ export default async function HomePage({
                     </div>
                 </div>
             </section>
+            {/* ─── WHY MDZGHOLI ─── */}
+            <section id="why-us" style={{ background: "#080d1a", padding: "70px 16px" }}>
+                <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+                    <div style={{ textAlign: "center", marginBottom: 56 }}>
+                        <span className="section-label">{d.why.label}</span>
+                        <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 900, color: "#fff", marginBottom: 0 }}>
+                            {d.why.heading}
+                        </h2>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
+                        {d.why.items.map((item) => (
+                            <div
+                                key={item.title}
+                                className="card"
+                                style={{ padding: "24px 20px", display: "flex", gap: 16, alignItems: "flex-start" }}
+                            >
+                                <div style={{ fontSize: "1.8rem", lineHeight: 1, flexShrink: 0 }}>{item.icon}</div>
+                                <div>
+                                    <h3 style={{ color: "#fff", fontWeight: 700, fontSize: "1rem", margin: "0 0 6px" }}>{item.title}</h3>
+                                    <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: 1.6, margin: 0 }}>{item.desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+
+
 
 
             {/* ─── CALL TO ACTION STRIP ─── */}
@@ -254,8 +221,43 @@ export default async function HomePage({
                             transition: "transform 0.2s",
                         }}
                     >
-                        ☎ {PHONE_DISPLAY}
+                        ☎ {lang === "ka" ? "მძღოლის გამოძახება" : lang === "ru" ? "Вызвать водителя" : "Call a Driver"}
                     </a>
+                </div>
+            </section>
+
+            {/* ─── SERVICES ─── */}
+            <section id="services" style={{ background: "#0a0f1e", padding: "70px 16px" }}>
+                <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+                    <div style={{ textAlign: "center", marginBottom: 56 }}>
+                        <span className="section-label">{d.services.label}</span>
+                        <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 900, color: "#fff", marginBottom: 14 }}>
+                            {d.services.heading}
+                        </h2>
+                        <p style={{ color: "var(--text-muted)", maxWidth: 520, margin: "0 auto", lineHeight: 1.7 }}>
+                            {d.services.subtitle}
+                        </p>
+                    </div>
+
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
+                        {d.services.items.map((svc) => (
+                            <Link
+                                key={svc.slug}
+                                href={`/${lang}/services/${svc.slug}`}
+                                style={{ textDecoration: "none" }}
+                            >
+                                <div
+                                    className="card"
+                                    style={{ padding: "28px 24px", height: "100%", display: "flex", flexDirection: "column", gap: 12, cursor: "pointer" }}
+                                >
+                                    <div style={{ fontSize: "2.5rem", lineHeight: 1 }}>{svc.icon}</div>
+                                    <h3 style={{ color: "#fff", fontWeight: 800, fontSize: "1.15rem", margin: 0 }}>{svc.title}</h3>
+                                    <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.65, margin: 0, flex: 1 }}>{svc.desc}</p>
+                                    <span style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "0.85rem" }}>{d.services.readMore}</span>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </section>
 

@@ -20,7 +20,7 @@ const services = [
 const blogSlugs = ["sober-driver-safety-guarantee"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const lastModified = new Date("2026-03-26");
+    const lastModified = new Date("2026-04-19");
     const entries: MetadataRoute.Sitemap = [];
 
     // Homepage

@@ -1,12 +1,9 @@
-import type { Metadata } from "next";
 import Script from "next/script";
 import { headers } from "next/headers";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "mdzgholi.ge",
-  description: "mdzgholi.ge — Professional driver services in Georgia",
-};
+// Root layout intentionally has NO metadata export.
+// Each page/[lang]/layout.tsx defines its own dynamic metadata per language.
 
 export default async function RootLayout({
   children,
