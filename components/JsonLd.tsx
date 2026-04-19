@@ -27,10 +27,12 @@ export function localBusinessSchema(lang: string) {
         "@type": "LocalBusiness",
         "@id": `${langPath(lang)}#business`,
         name: "mdzgholi.ge",
-        alternateName: "mdzgholi.ge Georgia",
+        alternateName: lang === "ka"
+            ? ["ფხიზელი მძღოლი", "მძღოლი გამოძახებით", "მძღოლის გამოძახება"]
+            : ["sober driver Tbilisi", "mdzgholi Georgia"],
         description:
             lang === "ka"
-                ? "mdzgholi.ge — ფხიზელი მძღოლი, ევაკუატორი, მანქანის რეცხვა, აეროპორტის ტრანსფერი თბილისში. 24/7."
+                ? "ფხიზელი მძღოლი გამოძახებით — mdzgholi.ge. მძღოლის გამოძახება 24/7 თბილისში. ნასვამი მძღოლი, ევაკუატორი, მანქანის რეცხვა, აეროპორტის ტრანსფერი თბილისში."
                 : lang === "ru"
                     ? "mdzgholi.ge — трезвый водитель, эвакуатор, мойка машин, трансфер в аэропорт в Тбилиси. 24/7."
                     : "mdzgholi.ge — sober driver, tow truck, car wash, airport transfer in Tbilisi. 24/7.",

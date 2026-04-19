@@ -153,7 +153,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                             fontSize: "1.1rem",
                         }}
                     >
-                        ☎ {PHONE_DISPLAY}
+                        ☎ {lang === "ka" ? "მძღოლის გამოძახება" : lang === "ru" ? "Вызвать водителя" : "Call a Driver"}
                     </a>
                 </div>
             </section>

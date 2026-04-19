@@ -11,15 +11,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const { lang } = await params;
     
     const metaDescs: Record<string, string> = {
-        ka: "ეძებთ ფხიზელ მძღოლს? mdzgholi.ge გთავაზობთ პროფესიონალი მძღოლების გამოძახების სერვისს 24/7. უსაფრთხოება, კომფორტი და დაბალი ფასები. დაგვიკავშირდით!",
-        en: "Looking for a sober driver in Georgia? mdzgholi.ge offers professional driver on call services 24/7. Safety, comfort, and affordable prices. Contact us!",
-        ru: "Ищете трезвого водителя в Грузии? mdzgholi.ge предлагает услуги профессиональных водителей 24/7. Безопасность, комфорт и доступные цены. Звоните!"
+        ka: "ფხიზელი მძღოლის გამოძახება — mdzgholi.ge. მძღოლი გამოძახებით 24/7 თბილისში, 15-20 წუთში ჩამოვა. პროფესიონალი, უსაფრთხოები და გამჭვირვალი ფასი. დაგვირეკეთ: +995 568 83 47 07",
+        en: "Sober driver on call in Tbilisi — mdzgholi.ge. Driver arrives in 15-20 min, 24/7. Professional, safe and affordable. Call: +995 568 83 47 07",
+        ru: "Трезвый водитель на вызов — mdzgholi.ge. Водитель приедет за 15-20 минут, 24/7. Профессионально, безопасно, доступно. Звоните: +995 568 83 47 07"
     };
 
     const titles: Record<string, string> = {
-        ka: "ფხიზელი მძღოლის მომსახურება | ბლოგი | mdzgholi.ge",
-        en: "Sober Driver Service | Blog | mdzgholi.ge",
-        ru: "Услуга трезвого водителя | Блог | mdzgholi.ge",
+        ka: "ფხიზელი მძღოლი გამოძახებით — მძღოლის გამოძახება | mdzgholi.ge",
+        en: "Sober Driver on Call — Driver Booking Service | mdzgholi.ge",
+        ru: "Трезвый водитель на вызов — Услуга водителя | mdzgholi.ge",
     };
 
     return { 

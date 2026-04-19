@@ -261,6 +261,37 @@ export default async function HomePage({
                 </div>
             </section>
 
+            {/* ─── SEO TEXT BLOCK ─── */}
+            <section style={{ background: "#080d1a", padding: "60px 16px" }}>
+                <div style={{ maxWidth: 900, margin: "0 auto" }}>
+                    {lang === "ka" && (
+                        <>
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.5rem,3vw,2rem)", marginBottom: 20 }}>
+                                ფხიზელი მძღოლი გამოძახებით — mdzgholi.ge
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 16, fontSize: "0.97rem" }}>
+                                <strong style={{ color: "#fff" }}>მძღოლის გამოძახება</strong> — ეს არის სიმარტივე, უსაფრთხოება და კომფორტი ერთ სერვისში.
+                                mdzgholi.ge გთავაზობთ <strong style={{ color: "#fff" }}>ფხიზელი მძღოლის</strong> სერვისს 24 საათის განმავლობაში, კვირის 7 დღე.
+                                ჩვენი <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> ჩამოდის 15–20 წუთში, მართავს შენი მანქანით და მიგიყვანს სახლამდე —
+                                ასე გრძნობ კომფორტს საკუთარ ავტომობილში და გინარჩუნებ მანქანა სახლთან.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 16, fontSize: "0.97rem" }}>
+                                <strong style={{ color: "#fff" }}>ფხიზელი მძღოლის გამოძახება</strong> განსაკუთრებით მოსახერხებელია წვეულების, კორპორატიული
+                                საღამოს ან ოჯახური ზეიმის შემდეგ. ნაცვლად იმისა, რომ ითხოვო ტაქსი და მომდევნო დღეს დაბრუნდე მანქანისთვის,
+                                უბრალოდ დაგვირეკე — და <strong style={{ color: "#fff" }}>მძღოლის გამოძახება</strong> ათავსებს ყველაფერს: შენ ისვენებ,
+                                ჩვენ ვმართავთ. თბილისში <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> სერვისი ხელმისაწვდომია ყველა უბანში.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, fontSize: "0.97rem" }}>
+                                mdzgholi.ge-ს <strong style={{ color: "#fff" }}>ფხიზელი მძღოლი</strong> ათვლის გზით მოდის, ასე რომ გაქვს გარანტია
+                                სახლამდე მშვიდი მგზავრობის. <strong style={{ color: "#fff" }}>მძღოლის გამოძახებისთვის</strong> ზარი +995 568 83 47 07-ზე
+                                ან WhatsApp — და ჩვენი <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> გამოეშურება შენსკენ.
+                            </p>
+                        </>
+                    )}
+                </div>
+            </section>
+
+
             {/* ─── CONTACT ─── */}
             <section id="contact" style={{ background: "#0a0f1e", padding: "70px 16px" }}>
                 <div style={{ maxWidth: 1100, margin: "0 auto" }}>
