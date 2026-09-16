@@ -15,6 +15,7 @@ export const ka = {
         carWash: "მანქანის რეცხვა",
         airportTransfer: "აეროპორტის ტრანსფერი",
         batteryTire: "აკუმულატორი / საბურავი",
+        services: "სერვისები",
         pricing: "ფასები",
         about: "ჩვენს შესახებ",
         blog: "ბლოგი",

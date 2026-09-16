@@ -15,6 +15,7 @@ export const ru = {
         carWash: "Мойка машин",
         airportTransfer: "Аэропорт",
         batteryTire: "Акб / Шины",
+        services: "Услуги",
         pricing: "Цены",
         about: "О нас",
         blog: "Блог",

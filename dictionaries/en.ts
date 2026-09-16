@@ -15,6 +15,7 @@ export const en = {
         carWash: "Car Wash",
         airportTransfer: "Airport Transfer",
         batteryTire: "Battery / Tire",
+        services: "Services",
         pricing: "Pricing",
         about: "About Us",
         blog: "Blog",
