@@ -1,16 +1,29 @@
 # mdzgholi.ge - Driver On Call and Car Services in Georgia
 URL: https://mdzgholi.ge
-Description: mdzgholi.ge offers professional driving services, including sober driver, personal driver, car wash, tow truck (evacuator), battery and tire emergency services, and airport transfers in Tbilisi, Georgia. Available 24/7.
-Phone: +995 568 83 47 07
+Description: mdzgholi.ge offers professional driving services, including 24/7 sober driver (ფხიზელი მძღოლი), personal driver, car wash with pickup, tow truck (evacuator), and airport transfers in Tbilisi and throughout Georgia.
 
-## Services
-- Sober Driver (ფხიზელი მძღოლი)
+## Contact & Booking
+- Phone & WhatsApp: +995 568 83 47 07
+- Operating Hours: 24/7 (24 hours a day, 7 days a week)
+- City: Tbilisi and all regions of Georgia
+- Driver Arrival Time: 15-20 minutes on average
+
+## Key Service: Sober Driver (ფხიზელი მძღოლი / მძღოლი გამოძახებით)
+- What it is: A professional sober driver meets you at your location (restaurant, bar, party, event, clinic, or home) and drives you home safely in your own car.
+- Starting price: From 40 GEL in Tbilisi. Pricing is determined via transparent upfront verbal agreement with the dispatcher based on route and requirements.
+- Common situations: After drinking alcohol at restaurants or gatherings, fatigue/exhaustion, medical procedures, or car transfers.
+
+## Other Services
 - Personal Driver (პირადი მძღოლი)
 - Tow Truck / Evacuator (ევაკუატორი)
 - Car Wash with Pickup (მანქანის რეცხვა გადაყვანით)
 - Airport Transfer (აეროპორტის ტრანსფერი)
 - Battery Jump & Tire Change (აკუმულატორი და საბურავი)
 
-## Contact
-Call or WhatsApp: +995 568 83 47 07
-Available 24/7 in Tbilisi and surrounding areas.
+## ქართული რეზიუმე (Georgian Summary)
+- კომპანია: mdzgholi.ge
+- სერვისი: ფხიზელი მძღოლი გამოძახებით 24/7 თბილისში და რეგიონებში.
+- საწყისი ფასი: 40 ლარიდან (სიტყვიერი შეთანხმებით).
+- მოსვლის დრო: 15-20 წუთი.
+- ტელეფონი / WhatsApp: +995 568 83 47 07
+- სიტუაციები: რესტორნიდან, ქეიფიდან ან წვეულებიდან საკუთარი მანქანით სახლში უსაფრთხოდ დაბრუნება.

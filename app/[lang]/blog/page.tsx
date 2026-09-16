@@ -59,6 +59,21 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
 
     const posts = [
         {
+            slug: "when-to-call-sober-driver",
+            date: "16 სექტემბერი, 2026",
+            title: {
+                ka: "როდის არის საჭირო ფხიზელი მძღოლი? სიტუაციები, რესტორნიდან გამოძახება და ფასები",
+                en: "When to Hire a Sober Driver? Situations, Restaurant Pickup & Pricing",
+                ru: "Когда нужен трезвый водитель? Ситуации, вызов из ресторана и цены",
+            }[lang],
+            excerpt: {
+                ka: "რა სიტუაციებშია ეფექტური ფხიზელი მძღოლის გამოძახება? რესტორანი, წვეულება, გადაღლილობა. საწყისი ფასი 40 ლარიდან შეთანხმებით...",
+                en: "In what situations do you need a sober driver? Restaurants, parties, fatigue. Starting price from 40 GEL by agreement...",
+                ru: "В каких ситуациях нужен трезвый водитель? Рестораны, праздники, усталость. Начальная цена от 40 лари по договоренности...",
+            }[lang],
+            image: "/images/blog/when-to-call-sober-driver.jpg"
+        },
+        {
             slug: "sober-driver-safety-guarantee",
             date: "26 მარტი, 2026",
             title: {

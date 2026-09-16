@@ -17,10 +17,13 @@ const services = [
     "battery-tire",
 ];
 
-const blogSlugs = ["sober-driver-safety-guarantee"];
+const blogSlugs = [
+    "when-to-call-sober-driver",
+    "sober-driver-safety-guarantee",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const lastModified = new Date("2026-04-19");
+    const lastModified = new Date();
     const entries: MetadataRoute.Sitemap = [];
 
     // Homepage

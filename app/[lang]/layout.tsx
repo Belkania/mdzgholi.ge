@@ -21,6 +21,11 @@ export async function generateMetadata({
         description: d.meta.description,
         keywords: d.meta.keywords,
         robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+        verification: {
+            other: {
+                "msvalidate.01": "EBE0ABA25B0947DC4B99821D404164E0",
+            },
+        },
 
         alternates: {
             canonical: lang === "ka" ? "https://www.mdzgholi.ge/" : `https://www.mdzgholi.ge/${lang}`,
