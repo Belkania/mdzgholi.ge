@@ -12,15 +12,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const { lang } = await params;
 
     const titles: Record<string, string> = {
-        ka: "როდის არის საჭირო ფხიზელი მძღოლი? სიტუაციები, რესტორნიდან გამოძახება და ფასები | mdzgholi.ge",
-        en: "When to Hire a Sober Driver? Situations, Restaurant Pickup & Pricing | mdzgholi.ge",
-        ru: "Когда нужен трезвый водитель? Ситуации, вызов из ресторана и цены | mdzgholi.ge",
+        ka: "ფხიზელი მძღოლი: როდის გამოვიძახო? | mdzgholi.ge",
+        en: "When to Call a Sober Driver? Tips & Prices | mdzgholi.ge",
+        ru: "Когда нужен трезвый водитель? Советы и цены | mdzgholi.ge",
     };
 
     const metaDescs: Record<string, string> = {
-        ka: "რა სიტუაციებშია ეფექტური ფხიზელი მძღოლის გამოძახება? რესტორანი, წვეულება, გადაღლილობა. საწყისი ფასი 40 ლარიდან შეთანხმებით. მძღოლის მოსვლა 15-20 წუთში: ☎ +995 568 83 47 07",
-        en: "In what situations do you need a sober driver? Restaurants, parties, fatigue. Starting price from 40 GEL by agreement. Driver arrives in 15-20 min: ☎ +995 568 83 47 07",
-        ru: "В каких ситуациях нужен трезвый водитель? Рестораны, праздники, усталость. Начальная цена от 40 лари по договоренности. Приезд за 15-20 минут: ☎ +995 568 83 47 07",
+        ka: "როდის გამოვიძახოთ ფხიზელი მძღოლი? რესტორანი, წვეულება, გადაღლილობა. საწყისი ფასი 40 ლარიდან. მოვალთ 15-20 წუთში: ☎ +995 568 83 47 07",
+        en: "When to hire a sober driver? Restaurants, celebrations, fatigue. Starting from 40 GEL. Driver arrives in 15-20 min: ☎ +995 568 83 47 07",
+        ru: "Когда вызывать трезвого водителя? Ресторан, праздники, усталость. От 40 лари, приезд за 15-20 минут: ☎ +995 568 83 47 07",
     };
 
     return {
@@ -61,7 +61,7 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
 
     const content = {
         ka: {
-            title: "როდის არის საჭირო ფხიზელი მძღოლი? სიტუაციები, რესტორნიდან გამოძახება და ფასები",
+            title: "როდის არის საჭირო ფხიზელი მძღოლი? სიტუაციები და ფასები",
             badge: "სასარგებლო გზამკვლევი • mdzgholi.ge",
             date: "2026 წლის სექტემბერი",
             intro1: "საკუთარი ავტომობილით გადაადგილება უდიდესი კომფორტია, თუმცა ცხოვრებაში უამრავი გაუთვალისწინებელი ან დაგეგმილი სიტუაცია ხდება, როდესაც საჭესთან დაჯდომა არც მიზანშეწონილია და არც უსაფრთხო. ასეთ დროს საუკეთესო გამოსავალი ფხიზელი მძღოლის გამოძახებაა.",
@@ -133,7 +133,7 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
             ctaWa: "WhatsApp-ით დაკავშირება",
         },
         en: {
-            title: "When to Hire a Sober Driver? Situations, Restaurant Pickup & Pricing",
+            title: "When to Hire a Sober Driver? Situations & Pricing",
             badge: "Helpful Guide • mdzgholi.ge",
             date: "September 2026",
             intro1: "Driving your own car offers great freedom, but unexpected moments arise when getting behind the wheel is neither wise nor safe. In such cases, calling a professional sober driver is the optimal solution.",
@@ -205,7 +205,7 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
             ctaWa: "Connect via WhatsApp",
         },
         ru: {
-            title: "Когда нужен трезвый водитель? Ситуации, вызов из ресторана и цены",
+            title: "Когда нужен трезвый водитель? Ситуации и цены",
             badge: "Полезный гид • mdzgholi.ge",
             date: "Сентябрь 2026",
             intro1: "Передвижение на собственном автомобиле — это максимальный комфорт, однако бывают ситуации, когда садиться за руль нежелательно и небезопасно. В таких случаях вызов трезвого водителя — оптимальное решение.",
@@ -235,7 +235,7 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
                 }
             ],
 
-            h2_pricing: "Сколько стоит услуга трезвого водителя? (Ценовая политика)",
+            h2_pricing: "Сколько стоит услуга трезвого водителя? (Цены)",
             pricing_intro: "Услуга трезвого водителя — это не обычное такси, а ответственное управление вашим личным автомобилем. Поэтому цена не зависит от автоматических повышающих коэффициентов погоды или таксометра.",
             pricing_highlight: "По Тбилиси начальная цена услуги трезвого водителя составляет от 40 лари.",
             pricing_details: "Итоговая стоимость определяется по предварительной устной договоренности с оператором при звонке, без скрытых переплат.",
@@ -293,9 +293,10 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
                         <Image 
                             src="/images/blog/when-to-call-sober-driver.jpg" 
                             alt="ფხიზელი მძღოლი რესტორნიდან გამოძახებით თბილისი"
-                            fill
+                            width={1000}
+                            height={420}
                             priority
-                            style={{ objectFit: "cover", objectPosition: "center" }}
+                            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
                         />
                         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 50%, rgba(10,15,30,0.95) 100%)" }} />
                     </div>
@@ -402,7 +403,7 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
 
                         {/* Back Link */}
                         <div style={{ textAlign: "center", marginTop: 36 }}>
-                            <Link href={`/${lang}/blog`} style={{ color: "var(--yellow)", textDecoration: "none", fontWeight: 600 }}>
+                            <Link href={lang === "ka" ? "/blog" : `/${lang}/blog`} style={{ color: "var(--yellow)", textDecoration: "none", fontWeight: 600 }}>
                                 ← {lang === "ka" ? "ბლოგზე დაბრუნება" : lang === "ru" ? "Вернуться в блог" : "Back to Blog"}
                             </Link>
                         </div>

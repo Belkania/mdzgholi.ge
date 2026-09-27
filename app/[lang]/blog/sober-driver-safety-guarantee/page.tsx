@@ -11,15 +11,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const { lang } = await params;
     
     const metaDescs: Record<string, string> = {
-        ka: "ფხიზელი მძღოლის გამოძახება — mdzgholi.ge. მძღოლი გამოძახებით 24/7 თბილისში, 15-20 წუთში ჩამოვა. პროფესიონალი, უსაფრთხოები და გამჭვირვალი ფასი. დაგვირეკეთ: +995 568 83 47 07",
-        en: "Sober driver on call in Tbilisi — mdzgholi.ge. Driver arrives in 15-20 min, 24/7. Professional, safe and affordable. Call: +995 568 83 47 07",
-        ru: "Трезвый водитель на вызов — mdzgholi.ge. Водитель приедет за 15-20 минут, 24/7. Профессионально, безопасно, доступно. Звоните: +995 568 83 47 07"
+        ka: "ფხიზელი მძღოლის გამოძახება 24/7 თბილისში — mdzgholi.ge. მძღოლი 15-20 წუთში მოვა. უსაფრთხოება და გამჭვირვალე ფასები. ☎ +995 568 83 47 07",
+        en: "Sober driver in Tbilisi — mdzgholi.ge. Arrives in 15-20 min, 24/7. Safe, professional and affordable. Call: +995 568 83 47 07",
+        ru: "Трезвый водитель mdzgholi.ge — приезд за 15-20 мин, 24/7. Безопасно, надежно и по доступным ценам. Звоните: +995 568 83 47 07"
     };
 
     const titles: Record<string, string> = {
-        ka: "ფხიზელი მძღოლი გამოძახებით — მძღოლის გამოძახება | mdzgholi.ge",
-        en: "Sober Driver on Call — Driver Booking Service | mdzgholi.ge",
-        ru: "Трезвый водитель на вызов — Услуга водителя | mdzgholi.ge",
+        ka: "ფხიზელი მძღოლი: უსაფრთხოება | mdzgholi.ge",
+        en: "Sober Driver: Safety Guarantee in Tbilisi | mdzgholi.ge",
+        ru: "Трезвый водитель: Гарантия безопасности | mdzgholi.ge",
     };
 
     return { 
@@ -42,15 +42,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function BlogPostPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     const d = getDictionary(lang);
+    const getPath = (p: string) => (lang === "ka" ? p : `/${lang}${p}`);
 
     const content = {
         ka: {
-            title: "ფხიზელი მძღოლის მომსახურება: რატომ არის ეს თქვენი უსაფრთხოების გარანტია?",
+            title: "ფხიზელი მძღოლის მომსახურება — უსაფრთხოების გარანტია",
             intro1: "დღევანდელ დინამიკურ სამყაროში, სადაც დრო ყველაზე ძვირფასი რესურსია, კომფორტი და უსაფრთხოება პრიორიტეტული ხდება. ხშირად ხდება სიტუაციები, როდესაც საკუთარი ავტომობილით გადაადგილება აუცილებელია, თუმცა გარკვეული მიზეზების გამო საჭესთან დაჯდომას ვერ ახერხებთ. სწორედ აქ შემოდის ასპარეზზე ფხიზელი მძღოლის მომსახურება — სერვისი, რომელიც საქართველოში სულ უფრო პოპულარული ხდება.",
             intro2: "ამ სტატიაში დეტალურად განვიხილავთ, თუ რა უპირატესობები აქვს ამ სერვისს, როდის უნდა ისარგებლოთ მძღოლის გამოძახებით და რატომ არის mdzgholi.ge საუკეთესო არჩევანი თქვენი მშვიდი მგზავრობისთვის.",
             h2_1: "რა არის ფხიზელი მძღოლის სერვისი?",
-            p_1: <>ბევრს ჰგონია, რომ ფხიზელი მძღოლი მხოლოდ ალკოჰოლის მიღების შემთხვევაშია საჭირო. სინამდვილეში, ეს არის პროფესიონალური <Link href={`/${lang}/#services`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>მომსახურება</Link>, რომელიც გულისხმობს კვალიფიციური მძღოლის მოსვლას თქვენს მისამართზე, რომელიც თქვენივე ავტომობილით მიგიყვანთ დანიშნულების ადგილამდე.</>,
-            h2_2: "ძირითადი მიზეზები, რის გამოც ადამიანები იძახებენ ფხიზელ მძღოლს:",
+            p_1: <>ბევრს ჰგონია, რომ ფხიზელი მძღოლი მხოლოდ ალკოჰოლის მიღების შემთხვევაშია საჭირო. სინამდვილეში, ეს არის პროფესიონალური <Link href={getPath("/#services")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>მომსახურება</Link>, რომელიც გულისხმობს კვალიფიციური მძღოლის მოსვლას თქვენს მისამართზე, რომელიც თქვენივე ავტომობილით მიგიყვანთ დანიშნულების ადგილამდე.</>,
+            h2_2: "რატომ იძახებენ ფხიზელ მძღოლს?",
             list_1: [
                 "ალკოჰოლის მიღება: ყველაზე გავრცელებული მიზეზი. წვეულების, დაბადების დღის ან კორპორატიული საღამოს შემდეგ საჭესთან დაჯდომა არა მხოლოდ კანონდარღვევა, არამედ სიცოცხლისთვის საშიშია.",
                 "დაღლილობა ან სტრესი: მძიმე სამუშაო დღის შემდეგ კონცენტრაციის უნარი ქვეითდება.",
@@ -76,7 +77,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             ],
             p_4: "იცოდით თუ არა? საქართველოში კანონმდებლობა საკმაოდ მკაცრია არაფხიზელ მდგომარეობაში მართვაზე. ჯარიმები მაღალია, ხოლო განმეორების შემთხვევაში მართვის უფლების ჩამორთმევა გარდაუვალია. ფხიზელი მძღოლის მომსახურება ბევრად უფრო იაფია, ვიდრე ნებისმიერი ჯარიმა.",
             h2_5: "როგორ მუშაობს სერვისი? (ნაბიჯ-ნაბიჯ ინსტრუქცია)",
-            p_5: <><Link href={`/${lang}/services/sober-driver`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>mdzgholi.ge-ზე მძღოლის დაქირავების</Link> პროცესი მაქსიმალურად გამარტივებულია:</>,
+            p_5: <><Link href={getPath("/services/sober-driver")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>mdzgholi.ge-ზე მძღოლის დაქირავების</Link> პროცესი მაქსიმალურად გამარტივებულია:</>,
             list_4: [
                 "შედით საიტზე ან დარეკეთ: აირჩიეთ თქვენთვის სასურველი მძღოლი ან დაუკავშირდით ოპერატორს.",
                 "მიუთითეთ ლოკაცია: გვითხარით სად იმყოფებით და სად გსურთ წასვლა.",
@@ -91,7 +92,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             ],
             h2_7: "დასკვნა",
             p_6: "ავტომობილის მართვა დიდი პასუხისმგებლობაა. ნუ დააყენებთ საფრთხის ქვეშ საკუთარ თავს და სხვებს. ფხიზელი მძღოლი არ არის ფუფუნება, ეს არის თანამედროვე, პასუხისმგებლიანი ადამიანის არჩევანი.",
-            p_7: <>გახსოვდეთ, მძღოლის გამოძახება ყოველთვის უფრო გონივრული გადაწყვეტილებაა, ვიდრე რისკზე წასვლა. <Link href={`/${lang}/#contact`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>დაგვიკავშირდით</Link> mdzgholi.ge-ს და მიიღეთ უმაღლესი ხარისხის მომსახურება დღესვე!</>,
+            p_7: <>გახსოვდეთ, მძღოლის გამოძახება ყოველთვის უფრო გონივრული გადაწყვეტილებაა, ვიდრე რისკზე წასვლა. <Link href={getPath("/#contact")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>დაგვიკავშირდით</Link> mdzgholi.ge-ს და მიიღეთ უმაღლესი ხარისხის მომსახურება დღესვე!</>,
             internalLinkText: "იხილეთ ჩვენი სხვა სერვისები ან დაგვიკავშირდით პირდაპირ.",
             internalLink1: "ჩვენი სერვისები",
             internalLink2: "კონტაქტი"
@@ -101,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             intro1: "In today's dynamic world, where time is the most valuable resource, comfort and safety become a priority. Situations often arise where traveling in your own car is necessary, but for certain reasons, you cannot literally get behind the wheel. This is where the sober driver service comes into play — a service that is becoming increasingly popular in Georgia.",
             intro2: "In this article, we will discuss in detail what advantages this service provides, when you should use a driver on call, and why mdzgholi.ge is the best choice for a peaceful journey.",
             h2_1: "What is a sober driver service?",
-            p_1: <>Many think that a sober driver is only needed after consuming alcohol. In reality, it is a professional <Link href={`/${lang}/#services`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>service</Link> that involves a qualified driver arriving at your location to drive you to your destination in your own car.</>,
+            p_1: <>Many think that a sober driver is only needed after consuming alcohol. In reality, it is a professional <Link href={getPath("/#services")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>service</Link> that involves a qualified driver arriving at your location to drive you to your destination in your own car.</>,
             h2_2: "Primary reasons why people call a sober driver:",
             list_1: [
                 "Alcohol consumption: The most common reason. Driving after a party, birthday, or corporate evening is not just a violation of the law, but life-threatening.",
@@ -128,7 +129,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             ],
             p_4: "Did you know? Legislation in Georgia is quite strict regarding driving under the influence. Fines are high, and in the case of a repeat offense, the revocation of driving privileges is inevitable. A sober driver service is far cheaper than any fine.",
             h2_5: "How does the service work? (Step-by-step guide)",
-            p_5: <>The process of hiring a <Link href={`/${lang}/services/sober-driver`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>driver on mdzgholi.ge</Link> is maximally simplified:</>,
+            p_5: <>The process of hiring a <Link href={getPath("/services/sober-driver")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>driver on mdzgholi.ge</Link> is maximally simplified:</>,
             list_4: [
                 "Visit the site or call: Choose your preferred service or contact a dispatcher directly.",
                 "Specify your location: Tell us where you are and where you want to go.",
@@ -143,7 +144,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             ],
             h2_7: "Conclusion",
             p_6: "Driving a car is a huge responsibility. Do not put yourself and others at risk. A sober driver is not a luxury; it is the choice of a modern, responsible person.",
-            p_7: <>Remember, calling a driver is always a much wiser decision than taking a risk. <Link href={`/${lang}/#contact`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>Contact mdzgholi.ge</Link> and receive the highest quality service today!</>,
+            p_7: <>Remember, calling a driver is always a much wiser decision than taking a risk. <Link href={getPath("/#contact")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>Contact mdzgholi.ge</Link> and receive the highest quality service today!</>,
             internalLinkText: "View our other services or contact us directly.",
             internalLink1: "Our Services",
             internalLink2: "Contact"
@@ -153,7 +154,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             intro1: "В современном динамичном мире, где время — самый ценный ресурс, комфорт и безопасность выходят на первый план. Часто возникают ситуации, когда поездка на собственном автомобиле необходима, но по определенным причинам вы физически не можете сесть за руль. Именно здесь приходит на помощь услуга трезвого водителя — сервис, который становится все более популярным в Грузии.",
             intro2: "В этой статье мы подробно рассмотрим, какие преимущества дает этот сервис, когда стоит вызывать водителя и почему mdzgholi.ge — лучший выбор для спокойной поездки.",
             h2_1: "Что такое услуга трезвого водителя?",
-            p_1: <>Многие думают, что трезвый водитель нужен только после употребления алкоголя. На самом деле это профессиональная <Link href={`/${lang}/#services`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>услуга</Link>, заключающаяся в том, что квалифицированный водитель приезжает к вам и доставляет вас к месту назначения на вашем же автомобиле.</>,
+            p_1: <>Многие думают, что трезвый водитель нужен только после употребления алкоголя. На самом деле это профессиональная <Link href={getPath("/#services")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>услуга</Link>, заключающаяся в том, что квалифицированный водитель приезжает к вам и доставляет вас к месту назначения на вашем же автомобиле.</>,
             h2_2: "Основные причины, почему люди вызывают трезвого водителя:",
             list_1: [
                 "Употребление алкоголя: Самая частая причина. Вождение после вечеринки, дня рождения или корпоратива не только незаконно, но и опасно для жизни.",
@@ -180,7 +181,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             ],
             p_4: "Знаете ли вы? Законодательство в Грузии довольно строго относится к вождению в нетрезвом виде. Штрафы высоки, а при повторном нарушении лишение водительских прав неизбежно. Услуга трезвого водителя обходится гораздо дешевле любого штрафа.",
             h2_5: "Как работает сервис? (Пошаговая инструкция)",
-            p_5: <>Процесс найма <Link href={`/${lang}/services/sober-driver`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>водителя на mdzgholi.ge</Link> максимально упрощен:</>,
+            p_5: <>Процесс найма <Link href={getPath("/services/sober-driver")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>водителя на mdzgholi.ge</Link> максимально упрощен:</>,
             list_4: [
                 "Зайдите на сайт или позвоните: Выберите подходящую услугу или свяжитесь с оператором.",
                 "Укажите местоположение: Скажите, где вы находитесь и куда хотите поехать.",
@@ -195,7 +196,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
             ],
             h2_7: "Заключение",
             p_6: "Вождение автомобиля — это огромная ответственность. Не подвергайте опасности себя и других. Трезвый водитель — это не роскошь, это выбор современного, ответственного человека.",
-            p_7: <>Помните, что вызов водителя всегда более разумное решение, чем риск. <Link href={`/${lang}/#contact`} style={{ textDecoration: "underline", color: "var(--yellow)" }}>Свяжитесь с mdzgholi.ge</Link> и получите высококачественный сервис уже сегодня!</>,
+            p_7: <>Помните, что вызов водителя всегда более разумное решение, чем риск. <Link href={getPath("/#contact")} style={{ textDecoration: "underline", color: "var(--yellow)" }}>Свяжитесь с mdzgholi.ge</Link> и получите высококачественный сервис уже сегодня!</>,
             internalLinkText: "Распространяется на все наши услуги или свяжитесь с нами напрямую.",
             internalLink1: "Наши услуги",
             internalLink2: "Контакты"
@@ -215,8 +216,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                     <Image 
                         src="/images/blog/sober-driver.jpg" 
                         alt={altText}
-                        fill
-                        style={{ objectFit: "cover", objectPosition: "center" }}
+                        width={1000}
+                        height={400}
+                        priority
+                        style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
                     />
                 </div>
 
@@ -279,10 +282,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                     <div style={{ textAlign: "center" }}>
                         <p style={{ marginBottom: 20 }}>{c.internalLinkText}</p>
                         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-                            <Link href={`/${lang}/#services`} className="btn-outline" style={{ textDecoration: "none", display: "inline-flex", padding: "12px 24px" }}>
+                            <Link href={getPath("/#services")} className="btn-outline" style={{ textDecoration: "none", display: "inline-flex", padding: "12px 24px" }}>
                                 {c.internalLink1}
                             </Link>
-                            <Link href={`/${lang}/#contact`} className="btn-yellow" style={{ textDecoration: "none", display: "inline-flex", padding: "12px 24px" }}>
+                            <Link href={getPath("/#contact")} className="btn-yellow" style={{ textDecoration: "none", display: "inline-flex", padding: "12px 24px" }}>
                                 {c.internalLink2}
                             </Link>
                         </div>

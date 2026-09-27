@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         ru: "Мойка машин в Тбилиси | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "mdzgholi.ge მანქანის რეცხვის სერვისი თბილისში — მოვდივართ თქვენს ლოკაციაზე, წავიყვანთ ავტომობილს, ვრეცხავთ შიგნიდან და გარედან იდეალურად და მივიყვანთ თქვენს მიერ მითითებულ მისამართზე. დაგვირეკეთ: +995 568 83 47 07",
-        en: "mdzgholi.ge car wash service in Tbilisi — we pick up your car, wash it inside and out to perfection, and deliver it to any location you specify. Call us: +995 568 83 47 07",
-        ru: "Мойка машин mdzgholi.ge в Тбилиси — забираем автомобиль, моем внутри и снаружи до идеала и доставляем по указанному вами адресу. Звоните: +995 568 83 47 07",
+        ka: "mdzgholi.ge მანქანის რეცხვა თბილისში — მოვალთ, წავიყვანთ, იდეალურად გავრეცხავთ და დაგიბრუნებთ მანქანას. დაგვირეკეთ: +995 568 83 47 07",
+        en: "mdzgholi.ge car wash pickup in Tbilisi — we pick up your car, wash it thoroughly, and deliver it back. Call: +995 568 83 47 07",
+        ru: "Мойка авто mdzgholi.ge в Тбилиси — заберем машину, идеально вымоем и доставим обратно. Звоните: +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/car-wash";

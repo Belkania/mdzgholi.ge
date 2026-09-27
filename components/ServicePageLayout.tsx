@@ -33,7 +33,8 @@ interface ServicePageLayoutProps {
 
 export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) {
     const otherServices = Object.values(ALL_SERVICES).filter((s) => s.slug !== content.slug);
-    const otherSectionTitle = lang === "ka" ? "სხვა სერვისები" : lang === "ru" ? "Другие услуги" : "Other Services";
+    const svcName = ALL_SERVICES[content.slug]?.[lang as "ka" | "en" | "ru"] ?? ALL_SERVICES[content.slug]?.ka ?? "";
+    const otherSectionTitle = lang === "ka" ? "სხვა ხელმისაწვდომი სერვისები" : lang === "ru" ? "Другие доступные услуги" : "Explore Other Services";
 
     return (
         <>
@@ -41,8 +42,8 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             <JsonLd data={serviceSchema({ lang, slug: content.slug, name: content.h1, description: content.description })} />
             <JsonLd data={faqSchema(content.faq)} />
             <JsonLd data={breadcrumbSchema([
-                { name: "mdzgholi.ge", url: `${BASE}/${lang}` },
-                { name: content.h1, url: `${BASE}/${lang}/services/${content.slug}` },
+                { name: "mdzgholi.ge", url: lang === "ka" ? BASE : `${BASE}/${lang}` },
+                { name: content.h1, url: lang === "ka" ? `${BASE}/services/${content.slug}` : `${BASE}/${lang}/services/${content.slug}` },
             ])} />
             {/* Hero */}
             <section
@@ -97,7 +98,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         {lang === "ka" ? "უპირატესობები" : lang === "ru" ? "Преимущества" : "Benefits"}
                     </span>
                     <h2 style={{ color: "#fff", fontWeight: 800, fontSize: "1.8rem", marginBottom: 36 }}>
-                        {lang === "ka" ? "რატომ mdzgholi.ge?" : lang === "ru" ? "Почему mdzgholi.ge?" : "Why mdzgholi.ge?"}
+                        {lang === "ka" ? `რატომ mdzgholi.ge — ${svcName}?` : lang === "ru" ? `Почему mdzgholi.ge — ${svcName}?` : `Why mdzgholi.ge — ${svcName}?`}
                     </h2>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 14 }}>
                         {content.benefits.map((benefit, i) => (
@@ -136,7 +137,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             >
                 <div style={{ maxWidth: 650, margin: "0 auto" }}>
                     <h2 style={{ color: "#0a0f1e", fontWeight: 900, fontSize: "1.7rem", marginBottom: 18 }}>
-                        {lang === "ka" ? "ახლავე დაგვიკავშირდით — 24/7 ვართ" : lang === "ru" ? "Свяжитесь с нами — работаем 24/7" : "Contact us now — available 24/7"}
+                        {lang === "ka" ? `გამოიძახეთ ${svcName} 24/7` : lang === "ru" ? `Закажите ${svcName} 24/7` : `Book ${svcName} 24/7`}
                     </h2>
                     <a
                         href={`tel:${PHONE_TEL}`}
@@ -163,7 +164,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                 <div style={{ maxWidth: 800, margin: "0 auto" }}>
                     <span className="section-label">FAQ</span>
                     <h2 style={{ color: "#fff", fontWeight: 800, fontSize: "1.8rem", marginBottom: 36 }}>
-                        {lang === "ka" ? "ხშირი კითხვები" : lang === "ru" ? "Частые вопросы" : "Frequently Asked Questions"}
+                        {lang === "ka" ? `ხშირი კითხვები: ${svcName}` : lang === "ru" ? `Частые вопросы: ${svcName}` : `FAQ: ${svcName}`}
                     </h2>
                     <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
                         {content.faq.map((item, i) => (
@@ -194,7 +195,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         {otherServices.map((svc) => (
                             <Link
                                 key={svc.slug}
-                                href={`/${lang}/services/${svc.slug}`}
+                                href={lang === "ka" ? `/services/${svc.slug}` : `/${lang}/services/${svc.slug}`}
                                 className="card"
                                 style={{
                                     padding: "16px 18px",
@@ -217,7 +218,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             {/* Back + Final CTA */}
             <section style={{ background: "#0a0f1e", padding: "40px 16px", textAlign: "center" }}>
                 <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
-                    <Link href={`/${lang}`} className="btn-outline" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>
+                    <Link href={lang === "ka" ? "/" : `/${lang}`} className="btn-outline" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>
                         ← {d.nav.home}
                     </Link>
                     <a href={`tel:${PHONE_TEL}`} className="btn-yellow" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>

@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         ru: "Личный водитель в Тбилиси | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "mdzgholi.ge პირადი მძღოლი თბილისში — სრული ან ნახევარი განაკვეთი. სანდო, გამოცდილი მძღოლები თქვენი კომფორტისთვის. დაგვირეკეთ: +995 568 83 47 07",
-        en: "mdzgholi.ge Personal Driver in Tbilisi — full-time or part-time. Reliable, experienced drivers for your comfort. Call us: +995 568 83 47 07",
-        ru: "mdzgholi.ge Личный водитель в Тбилиси — полная или частичная занятость. Надежные, опытные водители. Звоните: +995 568 83 47 07",
+        ka: "პირადი მძღოლი თბილისში mdzgholi.ge — სრული ან ნახევარი განაკვეთი. სანდო და გამოცდილი მძღოლები. ☎ 568 83 47 07",
+        en: "Personal driver in Tbilisi mdzgholi.ge — full or part-time. Reliable and experienced drivers. Call: +995 568 83 47 07",
+        ru: "Личный водитель в Тбилиси mdzgholi.ge — полная или частичная занятость. Опытные водители. Звоните: +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/personal-driver";

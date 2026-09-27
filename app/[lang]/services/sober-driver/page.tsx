@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "ფხიზელი მძღოლი გამოძახებით თბილისში | mdzgholi.ge",
+        ka: "ფხიზელი მძღოლი თბილისში | mdzgholi.ge",
         en: "Sober Driver on Call in Tbilisi | mdzgholi.ge",
         ru: "Трезвый водитель вызов в Тбилиси | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "mdzgholi.ge — ფხიზელი მძღოლის გამოძახება 24/7. მძღოლი გამოძახებით ჩამოვა 15-20 წთ-ში, შენი მანქანით მიგიყვანს სახლამდე. +995 568 83 47 07",
-        en: "mdzgholi.ge sober driver on call 24/7 — a professional driver arrives in 15-20 min and drives you home in your own car. +995 568 83 47 07",
-        ru: "Трезвый водитель на вызов от mdzgholi.ge 24/7 — приедет за 15-20 мин и довезёт на вашей машине. +995 568 83 47 07",
+        ka: "ფხიზელი მძღოლის გამოძახება 24/7 — mdzgholi.ge. მძღოლი მოვა 15-20 წუთში, თქვენი მანქანით მიგიყვანთ. ☎ 568 83 47 07",
+        en: "Sober driver on call 24/7 — mdzgholi.ge. Professional driver arrives in 15-20 min, drives your car. Call: +995 568 83 47 07",
+        ru: "Трезвый водитель на вызов mdzgholi.ge 24/7 — приедет за 15-20 мин и довезет на вашей машине. +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/sober-driver";

@@ -24,7 +24,7 @@ export default async function HomePage({
             {/* Structured Data */}
             <JsonLd data={localBusinessSchema(lang)} />
             <JsonLd data={breadcrumbSchema([
-                { name: "mdzgholi.ge", url: `${BASE}/${lang}` },
+                { name: "mdzgholi.ge", url: lang === "ka" ? BASE : `${BASE}/${lang}` },
             ])} />
             {/* ─── HERO ─── */}
             <section

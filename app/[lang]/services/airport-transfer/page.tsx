@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "აეროპორტის ტრანსფერი / საქალაქთაშორისო | mdzgholi.ge",
+        ka: "აეროპორტის ტრანსფერი თბილისი | mdzgholi.ge",
         en: "Airport Transfer & Intercity | mdzgholi.ge",
         ru: "Трансфер в аэропорт / Междугородний | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "mdzgholi.ge აეროპორტის ტრანსფერი და საქალაქთაშორისო მარშრუტები — ბათუმი, ქუთაისი. პუნქტუალური, კომფორტული. 24/7. დაგვირეკეთ: +995 568 83 47 07",
-        en: "mdzgholi.ge airport transfer & intercity routes — Batumi, Kutaisi. Punctual, comfortable. 24/7. Call: +995 568 83 47 07",
-        ru: "Трансфер в аэропорт и междугородний mdzgholi.ge — Батуми, Кутаиси. Пунктуальный, комфортный. 24/7. Звоните: +995 568 83 47 07",
+        ka: "აეროპორტის ტრანსფერი და საქალაქთაშორისო მგზავრობა mdzgholi.ge — ბათუმი, ქუთაისი. კომფორტული. ☎ 568 83 47 07",
+        en: "Airport transfer & intercity routes mdzgholi.ge — Batumi, Kutaisi. Punctual, comfortable 24/7. Call: +995 568 83 47 07",
+        ru: "Трансфер в аэропорт и межгород mdzgholi.ge — Батуми, Кутаиси. Пунктуально и комфортно 24/7. Звоните: +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/airport-transfer";

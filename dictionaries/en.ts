@@ -3,7 +3,7 @@ export const en = {
     meta: {
         title: "Sober Driver Tbilisi 24/7 | mdzgholi.ge",
         description:
-            "Sober driver service in Tbilisi — mdzgholi.ge. Professional driver arrives in 15-20 min, drives you home in your own car. Call now: +995 568 83 47 07",
+            "Sober driver in Tbilisi — mdzgholi.ge. Professional driver arrives in 15-20 min, drives your car. 24/7. Call: +995 568 83 47 07",
         keywords:
             "sober driver Tbilisi, professional driver Georgia, personal driver, mdzgholi.ge, airport transfer Tbilisi, car wash collection, road assistance, tow truck Tbilisi",
     },

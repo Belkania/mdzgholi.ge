@@ -11,14 +11,15 @@ const PHONE_RAW = "995568834707";
 const PHONE_TEL = "+995568834707";
 
 export default function Footer({ d, lang }: FooterProps) {
+    const getPath = (p: string) => (lang === "ka" ? p : `/${lang}${p}`);
     const navLinks = [
-        { label: d.nav.soberDriver, href: `/${lang}/services/sober-driver` },
-        { label: d.nav.personalDriver, href: `/${lang}/services/personal-driver` },
-        { label: d.nav.evacuator, href: `/${lang}/services/evacuator` },
-        { label: d.nav.carWash, href: `/${lang}/services/car-wash` },
-        { label: d.nav.airportTransfer, href: `/${lang}/services/airport-transfer` },
-        { label: d.nav.batteryTire, href: `/${lang}/services/battery-tire` },
-        { label: d.nav.blog, href: `/${lang}/blog` },
+        { label: d.nav.soberDriver, href: getPath("/services/sober-driver") },
+        { label: d.nav.personalDriver, href: getPath("/services/personal-driver") },
+        { label: d.nav.evacuator, href: getPath("/services/evacuator") },
+        { label: d.nav.carWash, href: getPath("/services/car-wash") },
+        { label: d.nav.airportTransfer, href: getPath("/services/airport-transfer") },
+        { label: d.nav.batteryTire, href: getPath("/services/battery-tire") },
+        { label: d.nav.blog, href: getPath("/blog") },
     ];
 
     return (
@@ -43,7 +44,7 @@ export default function Footer({ d, lang }: FooterProps) {
                     {/* Brand */}
                     <div>
                         <Link
-                            href={`/${lang}`}
+                            href={lang === "ka" ? "/" : `/${lang}`}
                             style={{ textDecoration: "none", display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 14 }}
                         >
                             <div
