@@ -124,23 +124,45 @@ A: Yes. Specify this during booking and a child safety seat will be provided.
 
 ---
 
-### 6. Battery Jump Start & Tire Change (აკუმულატორი / საბურავი)
-**URL:** https://www.mdzgholi.ge/services/battery-tire
+### 6. Battery Charging & Jump Start (აკუმულატორის დატენვა და დამუხტვა)
+**URL:** https://www.mdzgholi.ge/services/battery-charging
 
-On-site roadside assistance in Tbilisi: battery jump start, battery replacement, and tire repair or change — no tow truck needed.
+On-site car battery jump start and emergency charging service in Tbilisi 24/7. Powered by digital high-output jump starters (boosters) with anti-surge and polarity protection — 100% safe for modern car electronics and ECUs.
 
-- **Arrival time:** 15–20 minutes on average
-- **Services:** jump start, battery diagnostics, battery replacement, tire repair (plug), tire change with spare
-- **Vehicle types:** all passenger cars, SUVs, and minivans
+- **Primary Keywords (KA):** აკუმულატორის დატენვა, დატენვა, დამჯდარი აკუმულატორის დამუხტვა, დამუხტვა, აკუმულატორის დამუხტვა, აკუმულატორის დაქოქვა, პერემიჩკა გამოძახებით, ბუსტერით დაქოქვა
+- **Arrival time:** 15–20 minutes on average across all districts of Tbilisi
+- **Services:** booster jump start, on-site battery diagnostics, generator/alternator testing, brand-new battery delivery and installation
+- **Vehicle compatibility:** petrol, diesel (all displacements), hybrids (12V auxiliary system), and electric vehicles (12V system)
+- **Pricing:** transparent, agreed upfront with dispatch; no hidden fees
 
-**Q: Can mdzgholi.ge replace a car battery on-site in Tbilisi?**
-A: Yes. If a jump start doesn't work, a specialist can bring and install a new battery at your location.
+**Q: Can mdzgholi.ge charge or jump start a dead car battery on-site in Tbilisi?**
+A: Yes. A mobile technician arrives in 15–20 minutes with digital booster packs to safely jump start and charge the battery on the spot.
 
-**Q: What if I have a flat tire but no spare?**
-A: The specialists can repair the tire on-site using a plug, allowing you to continue your journey safely.
+**Q: Does booster jump starting damage modern vehicle electronics?**
+A: No. Unlike amateur jumper cables from another car, mdzgholi.ge uses digital micro-controlled boosters with built-in surge and reverse-polarity protection, keeping vehicle ECUs completely safe.
 
-**Q: Is the battery/tire service available at night in Tbilisi?**
-A: Yes. mdzgholi.ge's technical team is on duty 24 hours a day, 7 days a week.
+**Q: What if the battery is completely exhausted and cannot hold charge?**
+A: The technician tests battery health and alternator output. If the battery is ruined, mdzgholi.ge can promptly deliver and install a new battery on-site with manufacturer warranty.
+
+**Q: Is the battery charging service available 24/7 at night and during bad weather?**
+A: Yes, mdzgholi.ge operates 24 hours a day, 7 days a week in Tbilisi and surrounding areas.
+
+---
+
+### 7. Mobile Tire Change & Roadside Repair (საბურავის შეცვლა)
+**URL:** https://www.mdzgholi.ge/services/tire-change
+
+Emergency mobile tire change and roadside puncture repair across Tbilisi. No need to tow the car to a stationary vulcanization shop.
+
+- **Arrival time:** 15–20 minutes
+- **Services:** flat tire change with spare wheel, on-site puncture repair (vulcanization plug), wheel bolt removal, tire pressure adjustment with portable compressors
+- **Vehicle compatibility:** sedans, crossovers, SUVs, and light commercial vehicles
+
+**Q: What if I have a punctured tire but no spare wheel?**
+A: Technicians can repair tread punctures directly on the spot using high-durability tire plugs without removing the wheel.
+
+**Q: Is tire change available 24/7 in Tbilisi?**
+A: Yes, the mobile tire assistance team is available round the clock 24/7.
 
 ---
 
@@ -158,6 +180,7 @@ mdzgholi.ge was established to provide safe, reliable, and convenient driver and
 
 ## Blog & Resources
 
+- **Car Battery Charging Guide (დამჯდარი აკუმულატორის დამუხტვა):** https://www.mdzgholi.ge/blog/car-battery-charging-guide
 - **When to Call a Sober Driver:** https://www.mdzgholi.ge/blog/when-to-call-sober-driver
 - **Sober Driver Safety Guarantee:** https://www.mdzgholi.ge/blog/sober-driver-safety-guarantee
 - **All Blog Posts:** https://www.mdzgholi.ge/blog

@@ -32,6 +32,25 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/services/battery-tire",
+        destination: "/services/battery-charging",
+        permanent: true,
+      },
+      {
+        source: "/ka/services/battery-tire",
+        destination: "/services/battery-charging",
+        permanent: true,
+      },
+      {
+        source: "/:lang(en|ru)/services/battery-tire",
+        destination: "/:lang/services/battery-charging",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

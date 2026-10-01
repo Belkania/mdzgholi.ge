@@ -14,10 +14,12 @@ const services = [
     "evacuator",
     "car-wash",
     "airport-transfer",
-    "battery-tire",
+    "battery-charging",
+    "tire-change",
 ];
 
 const blogSlugs = [
+    "car-battery-charging-guide",
     "when-to-call-sober-driver",
     "sober-driver-safety-guarantee",
 ];

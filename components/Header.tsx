@@ -40,8 +40,10 @@ export default function Header({ d, lang }: HeaderProps) {
 
     // Close menus on route change
     useEffect(() => {
+        /* eslint-disable react-hooks/set-state-in-effect */
         setMenuOpen(false);
         setServicesOpen(false);
+        /* eslint-enable react-hooks/set-state-in-effect */
     }, [pathname]);
 
     // Build a path for a given locale — Georgian (ka) has no prefix in URL
@@ -63,14 +65,8 @@ export default function Header({ d, lang }: HeaderProps) {
         { label: d.nav.evacuator, href: localePath("/services/evacuator"), icon: "🚛" },
         { label: d.nav.carWash, href: localePath("/services/car-wash"), icon: "🚿" },
         { label: d.nav.airportTransfer, href: localePath("/services/airport-transfer"), icon: "✈️" },
-        { label: d.nav.batteryTire, href: localePath("/services/battery-tire"), icon: "🔋" },
-    ];
-
-    const mainNav = [
-        { label: d.nav.home, href: localePath("") },
-        { label: d.nav.blog, href: localePath("/blog") },
-        { label: d.nav.about, href: `${localePath("")}#why-us` },
-        { label: d.nav.contact, href: `${localePath("")}#contact` },
+        { label: d.nav.batteryCharging, href: localePath("/services/battery-charging"), icon: "🔋" },
+        { label: d.nav.tireChange, href: localePath("/services/tire-change"), icon: "🛞" },
     ];
 
     return (

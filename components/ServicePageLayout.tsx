@@ -13,7 +13,8 @@ const ALL_SERVICES: Record<string, { slug: string; icon: string; ka: string; en:
     "evacuator": { slug: "evacuator", icon: "🚛", ka: "ევაკუატორი", en: "Tow Truck", ru: "Эвакуатор" },
     "car-wash": { slug: "car-wash", icon: "🚿", ka: "მანქანის რეცხვა", en: "Car Wash", ru: "Мойка машин" },
     "airport-transfer": { slug: "airport-transfer", icon: "✈️", ka: "აეროპორტის ტრანსფერი", en: "Airport Transfer", ru: "Трансфер" },
-    "battery-tire": { slug: "battery-tire", icon: "🔋", ka: "აკუმულატორი / საბურავი", en: "Battery & Tire", ru: "Аккумулятор / Шины" },
+    "battery-charging": { slug: "battery-charging", icon: "🔋", ka: "აკუმულატორის დატენვა", en: "Battery Charging", ru: "Зарядка аккумулятора" },
+    "tire-change": { slug: "tire-change", icon: "🛞", ka: "საბურავის შეცვლა", en: "Tire Change", ru: "Замена шин" },
 };
 
 interface ServiceContent {

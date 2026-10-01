@@ -17,7 +17,8 @@ const ALL_URLS = [
     `${BASE}/services/evacuator`,
     `${BASE}/services/car-wash`,
     `${BASE}/services/airport-transfer`,
-    `${BASE}/services/battery-tire`,
+    `${BASE}/services/battery-charging`,
+    `${BASE}/services/tire-change`,
 
     // Service pages — EN
     `${BASE}/en/services/sober-driver`,
@@ -25,7 +26,8 @@ const ALL_URLS = [
     `${BASE}/en/services/evacuator`,
     `${BASE}/en/services/car-wash`,
     `${BASE}/en/services/airport-transfer`,
-    `${BASE}/en/services/battery-tire`,
+    `${BASE}/en/services/battery-charging`,
+    `${BASE}/en/services/tire-change`,
 
     // Service pages — RU
     `${BASE}/ru/services/sober-driver`,
@@ -33,7 +35,8 @@ const ALL_URLS = [
     `${BASE}/ru/services/evacuator`,
     `${BASE}/ru/services/car-wash`,
     `${BASE}/ru/services/airport-transfer`,
-    `${BASE}/ru/services/battery-tire`,
+    `${BASE}/ru/services/battery-charging`,
+    `${BASE}/ru/services/tire-change`,
 
     // Blog index
     `${BASE}/blog`,
@@ -41,14 +44,17 @@ const ALL_URLS = [
     `${BASE}/ru/blog`,
 
     // Blog articles — KA
+    `${BASE}/blog/car-battery-charging-guide`,
     `${BASE}/blog/when-to-call-sober-driver`,
     `${BASE}/blog/sober-driver-safety-guarantee`,
 
     // Blog articles — EN
+    `${BASE}/en/blog/car-battery-charging-guide`,
     `${BASE}/en/blog/when-to-call-sober-driver`,
     `${BASE}/en/blog/sober-driver-safety-guarantee`,
 
     // Blog articles — RU
+    `${BASE}/ru/blog/car-battery-charging-guide`,
     `${BASE}/ru/blog/when-to-call-sober-driver`,
     `${BASE}/ru/blog/sober-driver-safety-guarantee`,
 ];

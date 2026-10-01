@@ -243,7 +243,7 @@ export default async function HomePage({
                         {d.services.items.map((svc) => (
                             <Link
                                 key={svc.slug}
-                                href={`/${lang}/services/${svc.slug}`}
+                                href={lang === "ka" ? `/services/${svc.slug}` : `/${lang}/services/${svc.slug}`}
                                 style={{ textDecoration: "none" }}
                             >
                                 <div

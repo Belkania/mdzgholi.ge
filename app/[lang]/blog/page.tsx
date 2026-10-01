@@ -60,6 +60,25 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
 
     const posts = [
         {
+            slug: "car-battery-charging-guide",
+            date: {
+                ka: "1 ოქტომბერი, 2026",
+                en: "October 1, 2026",
+                ru: "1 октября, 2026",
+            }[lang] || "1 ოქტომბერი, 2026",
+            title: {
+                ka: "დამჯდარი აკუმულატორის დამუხტვა და დატენვა: სრული გზამკვლევი",
+                en: "Dead Car Battery Charging & Jump Start: Complete Guide",
+                ru: "Зарядка и запуск севшего аккумулятора авто: Полный гид",
+            }[lang],
+            excerpt: {
+                ka: "რატომ ჯდება ავტომობილის აკუმულატორი, რატომ არის სახიფათო მოძველებული „პერემიჩკა“ და როგორ ხდება დამჯდარი აკუმულატორის დამუხტვა და დატენვა უსაფრთხოდ...",
+                en: "Why do car batteries die, why traditional jumper cables pose serious risks to modern electronics, and how to safely jump start a dead battery...",
+                ru: "Почему садится аккумулятор авто, чем опасен кустарный «прикуриватель» и как правильно запустить и зарядить севший аккумулятор бустером...",
+            }[lang],
+            image: "/images/blog/car-battery-charging-guide.jpg"
+        },
+        {
             slug: "when-to-call-sober-driver",
             date: "16 სექტემბერი, 2026",
             title: {

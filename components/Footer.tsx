@@ -18,7 +18,8 @@ export default function Footer({ d, lang }: FooterProps) {
         { label: d.nav.evacuator, href: getPath("/services/evacuator") },
         { label: d.nav.carWash, href: getPath("/services/car-wash") },
         { label: d.nav.airportTransfer, href: getPath("/services/airport-transfer") },
-        { label: d.nav.batteryTire, href: getPath("/services/battery-tire") },
+        { label: d.nav.batteryCharging, href: getPath("/services/battery-charging") },
+        { label: d.nav.tireChange, href: getPath("/services/tire-change") },
         { label: d.nav.blog, href: getPath("/blog") },
     ];
 
