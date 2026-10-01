@@ -138,7 +138,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             >
                 <div style={{ maxWidth: 650, margin: "0 auto" }}>
                     <h2 style={{ color: "#0a0f1e", fontWeight: 900, fontSize: "1.7rem", marginBottom: 18 }}>
-                        {lang === "ka" ? `გამოიძახეთ ${svcName} 24/7` : lang === "ru" ? `Закажите ${svcName} 24/7` : `Book ${svcName} 24/7`}
+                        {lang === "ka" ? `${svcName} — გამოიძახეთ 24/7` : lang === "ru" ? `Вызвать ${svcName} 24/7` : `Book ${svcName} 24/7`}
                     </h2>
                     <a
                         href={`tel:${PHONE_TEL}`}
@@ -155,7 +155,17 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                             fontSize: "1.1rem",
                         }}
                     >
-                        ☎ {lang === "ka" ? "მძღოლის გამოძახება" : lang === "ru" ? "Вызвать водителя" : "Call a Driver"}
+                        ☎ {lang === "ka"
+                            ? (content.slug === "battery-charging" ? "გამოიძახეთ ბუსტერი"
+                                : content.slug === "tire-change" ? "გამოიძახეთ ოსტატი"
+                                : "მძღოლის გამოძახება")
+                            : lang === "ru"
+                            ? (content.slug === "battery-charging" ? "Вызвать бустер"
+                                : content.slug === "tire-change" ? "Вызвать мастера"
+                                : "Вызвать водителя")
+                            : (content.slug === "battery-charging" ? "Call a Technician"
+                                : content.slug === "tire-change" ? "Call a Technician"
+                                : "Call a Driver")}
                     </a>
                 </div>
             </section>

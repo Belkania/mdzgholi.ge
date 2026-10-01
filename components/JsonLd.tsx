@@ -75,7 +75,8 @@ export function localBusinessSchema(lang: string) {
                 { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tow Truck / Evacuator" } },
                 { "@type": "Offer", itemOffered: { "@type": "Service", name: "Car Wash" } },
                 { "@type": "Offer", itemOffered: { "@type": "Service", name: "Airport Transfer & Intercity" } },
-                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Battery & Tire Change" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Battery Charging & Jump Start" } },
+                { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile Tire Change & Repair" } },
             ],
         },
     };
