@@ -272,19 +272,42 @@ export default async function HomePage({
                             <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 16, fontSize: "0.97rem" }}>
                                 <strong style={{ color: "#fff" }}>მძღოლის გამოძახება</strong> — ეს არის სიმარტივე, უსაფრთხოება და კომფორტი ერთ სერვისში.
                                 mdzgholi.ge გთავაზობთ <strong style={{ color: "#fff" }}>ფხიზელი მძღოლის</strong> სერვისს 24 საათის განმავლობაში, კვირის 7 დღე.
-                                ჩვენი <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> ჩამოდის 15–20 წუთში, მართავს შენი მანქანით და მიგიყვანს სახლამდე —
-                                ასე გრძნობ კომფორტს საკუთარ ავტომობილში და გინარჩუნებ მანქანა სახლთან.
+                                ჩვენი <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> ჩამოდის 15–20 წუთში, მართავს შენი მანქანით და მიგიყვანს სახლამდე.
                             </p>
-                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 16, fontSize: "0.97rem" }}>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 40, fontSize: "0.97rem" }}>
                                 <strong style={{ color: "#fff" }}>ფხიზელი მძღოლის გამოძახება</strong> განსაკუთრებით მოსახერხებელია წვეულების, კორპორატიული
-                                საღამოს ან ოჯახური ზეიმის შემდეგ. ნაცვლად იმისა, რომ ითხოვო ტაქსი და მომდევნო დღეს დაბრუნდე მანქანისთვის,
-                                უბრალოდ დაგვირეკე — და <strong style={{ color: "#fff" }}>მძღოლის გამოძახება</strong> ათავსებს ყველაფერს: შენ ისვენებ,
-                                ჩვენ ვმართავთ. თბილისში <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> სერვისი ხელმისაწვდომია ყველა უბანში.
+                                საღამოს ან ოჯახური ზეიმის შემდეგ. <strong style={{ color: "#fff" }}>მძღოლის გამოძახებისთვის</strong> დაგვირეკეთ +995 568 83 47 07-ზე
+                                ან WhatsApp — და ჩვენი <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> გამოეშურება შენსკენ.
+                            </p>
+
+                            {/* Battery Charging SEO Block */}
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.4rem,2.8vw,1.85rem)", marginBottom: 16 }}>
+                                აკუმულატორის დატენვა და დამჯდარი აკუმულატორის დამუხტვა თბილისში 24/7
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                mdzgholi.ge-ის ერთ-ერთი ყველაზე მოთხოვნადი სერვისია{" "}
+                                <Link href="/services/battery-charging" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    <strong>აკუმულატორის დატენვა</strong>
+                                </Link>
+                                {" "}— <strong style={{ color: "#fff" }}>დამჯდარი აკუმულატორის დამუხტვა</strong> ადგილზევე, ევაკუატორის გარეშე.
+                                დამჯდა ძრავი? არარეაგირებს სტარტერი? ჩვენი ეკიპაჟი ჩამოდის{" "}
+                                <strong style={{ color: "#fff" }}>15-20 წუთში</strong> და პროფესიონალური ბუსტერით (Jump Starter) ადგილზევე
+                                მოაქოქებს ავტომობილს — ყოველგვარი ზიანის გარეშე ელექტრონიკისთვის.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                <strong style={{ color: "#fff" }}>აკუმულატორის დამუხტვა</strong> და <strong style={{ color: "#fff" }}>დატენვა გამოძახებით</strong> ხელმისაწვდომია
+                                თბილისის ყველა უბანში: ვაკე, საბურთალო, დიდუბე, გლდანი, ისანი, ნაძალადევი, სამგორი, ჩუღურეთი — 24 საათი, კვირის 7 დღე.
+                                ჩვენ ვამოწმებთ <strong style={{ color: "#fff" }}>გენერატორს (დინამოს)</strong> და <strong style={{ color: "#fff" }}>აკუმულატორის ვარგისიანობას</strong> ადგილზევე,
+                                საჭიროების შემთხვევაში კი ახალ, გარანტიან აკუმულატორს მოგიტანთ.
                             </p>
                             <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, fontSize: "0.97rem" }}>
-                                mdzgholi.ge-ს <strong style={{ color: "#fff" }}>ფხიზელი მძღოლი</strong> ათვლის გზით მოდის, ასე რომ გაქვს გარანტია
-                                სახლამდე მშვიდი მგზავრობის. <strong style={{ color: "#fff" }}>მძღოლის გამოძახებისთვის</strong> ზარი +995 568 83 47 07-ზე
-                                ან WhatsApp — და ჩვენი <strong style={{ color: "#fff" }}>მძღოლი გამოძახებით</strong> გამოეშურება შენსკენ.
+                                ე.წ. <strong style={{ color: "#fff" }}>„პერემიჩკა" — კაბელები</strong> თანამედროვე ავტომობილებისთვის საფრთხილოა: ძაბვის ნახტომი
+                                ანადგურებს ბორტ-კომპიუტერს. mdzgholi.ge-ის სპეციალისტები იყენებენ{" "}
+                                <strong style={{ color: "#fff" }}>ციფრულ ბუსტერებს დაცვის სისტემით</strong> — 100%-ით უსაფრთხო{" "}
+                                <Link href="/services/battery-charging" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    აკუმულატორის დატენვა
+                                </Link>{" "}
+                                თბილისში.
                             </p>
                         </>
                     )}

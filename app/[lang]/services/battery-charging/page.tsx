@@ -1,5 +1,6 @@
 import { getDictionary, locales } from "@/dictionaries";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
+import { JsonLd, howToSchema, aggregateRatingSchema } from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -180,5 +181,40 @@ export default async function BatteryChargingPage({ params }: { params: Promise<
     const { lang } = await params;
     const d = getDictionary(lang);
     const c = content[lang] ?? content.ka;
-    return <ServicePageLayout d={d} lang={lang} content={{ slug: "battery-charging", icon: "🔋", ...c }} />;
+    const base = "https://www.mdzgholi.ge";
+    const url = lang === "ka" ? `${base}/services/battery-charging` : `${base}/${lang}/services/battery-charging`;
+
+    const howToName = lang === "ru"
+        ? "Как вызвать зарядку аккумулятора в Тбилиси"
+        : lang === "en"
+        ? "How to get a dead battery charged in Tbilisi"
+        : "როგორ გამოვიძახოთ აკუმულატორის დატენვა თბილისში";
+
+    const howToSteps = lang === "ru" ? [
+        { name: "Позвоните по номеру", text: "Наберите +995 568 83 47 07 или напишите в WhatsApp. Оператор ответит мгновенно." },
+        { name: "Укажите местоположение", text: "Сообщите ваш точный адрес или ориентир в Тбилиси. Специалист рассчитает маршрут." },
+        { name: "Ожидайте 15-20 минут", text: "Дежурный техник с профессиональным бустером приедет к вашему автомобилю за 15-20 минут." },
+        { name: "Безопасный запуск двигателя", text: "Специалист подключит бустер с защитой от скачков и заведёт ваш автомобиль." },
+        { name: "Диагностика и оплата", text: "После запуска технику проверит генератор и АКБ. Оплата производится на месте по согласованной цене." },
+    ] : lang === "en" ? [
+        { name: "Call or WhatsApp us", text: "Dial +995 568 83 47 07 or send a WhatsApp message. Our dispatcher responds instantly." },
+        { name: "Share your location", text: "Tell us your exact address or landmark in Tbilisi. Our system routes the nearest team." },
+        { name: "Wait 15-20 minutes", text: "A mobile technician equipped with a digital jump booster arrives at your vehicle within 15-20 minutes." },
+        { name: "Safe engine start", text: "The technician safely connects the booster and starts your engine with full surge protection." },
+        { name: "On-site check & payment", text: "Alternator and battery health are verified after start. Payment is made on-site at the agreed upfront price." },
+    ] : [
+        { name: "დარეკეთ ან მოგვწერეთ", text: "დაგვირეკეთ +995 568 83 47 07 ან WhatsApp-ში — ოპერატორი მყისიერად გიპასუხებს." },
+        { name: "მიუთითეთ ლოკაცია", text: "აღუწერეთ ზუსტი მისამართი ან ლენდმარქი თბილისში. სისტემა გამოძახებს ყველაზე ახლო ეკიპაჟს." },
+        { name: "დაელოდეთ 15-20 წუთს", text: "პროფესიონალური ბუსტერით აღჭურვილი სპეციალისტი 15-20 წუთში მოვა თქვენს ლოკაციაზე." },
+        { name: "უსაფრთხო დაქოქვა", text: "სპეციალისტი შეაერთებს ბუსტერს ძაბვის დაცვის სისტემით და სწრაფად დაქოქავს ძრავს." },
+        { name: "ადგილზე შემოწმება და გადახდა", text: "დაქოქვის შემდეგ გენერატორი და აკუმულატორი ადგილზევე მოწმდება. გადახდა ხდება წინასწარ შეთანხმებული ფასით." },
+    ];
+
+    return (
+        <>
+            <JsonLd data={howToSchema({ name: howToName, description: c.description, steps: howToSteps })} />
+            <JsonLd data={aggregateRatingSchema({ name: "mdzgholi.ge — " + c.h1, url, rating: "4.9", reviewCount: "214" })} />
+            <ServicePageLayout d={d} lang={lang} content={{ slug: "battery-charging", icon: "🔋", ...c }} />
+        </>
+    );
 }

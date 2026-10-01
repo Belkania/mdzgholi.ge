@@ -98,12 +98,80 @@ export function serviceSchema(opts: {
             "@type": "LocalBusiness",
             name: "mdzgholi.ge",
             telephone: PHONE,
+            url: BASE,
             address: { "@type": "PostalAddress", addressLocality: "Tbilisi", addressCountry: "GE" },
+            aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                reviewCount: "214",
+                bestRating: "5",
+                worstRating: "1",
+            },
         },
-        areaServed: { "@type": "City", name: "Tbilisi" },
+        areaServed: [
+            { "@type": "City", name: "Tbilisi" },
+            { "@type": "Place", name: "Vake" },
+            { "@type": "Place", name: "Saburtalo" },
+            { "@type": "Place", name: "Didube" },
+            { "@type": "Place", name: "Isani" },
+            { "@type": "Place", name: "Gldani" },
+            { "@type": "Place", name: "Nadzaladevi" },
+            { "@type": "Place", name: "Samgori" },
+        ],
+        offers: {
+            "@type": "Offer",
+            priceCurrency: "GEL",
+            priceRange: "40-120",
+            availability: "https://schema.org/InStock",
+            seller: { "@type": "LocalBusiness", name: "mdzgholi.ge", telephone: PHONE },
+        },
         availableChannel: {
             "@type": "ServiceChannel",
             servicePhone: { "@type": "ContactPoint", telephone: PHONE, contactType: "customer service", availableLanguage: ["ka", "en", "ru"] },
+        },
+    };
+}
+
+export function howToSchema(opts: {
+    name: string;
+    description: string;
+    steps: { name: string; text: string }[];
+}) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: opts.name,
+        description: opts.description,
+        totalTime: "PT20M",
+        estimatedCost: { "@type": "MonetaryAmount", currency: "GEL", value: "40" },
+        step: opts.steps.map((s, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: s.name,
+            text: s.text,
+        })),
+    };
+}
+
+export function aggregateRatingSchema(opts: {
+    name: string;
+    url: string;
+    rating: string;
+    reviewCount: string;
+}) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: opts.name,
+        url: opts.url,
+        telephone: PHONE,
+        address: { "@type": "PostalAddress", addressLocality: "Tbilisi", addressCountry: "GE" },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: opts.rating,
+            reviewCount: opts.reviewCount,
+            bestRating: "5",
+            worstRating: "1",
         },
     };
 }
