@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { locales } from "@/dictionaries";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -48,10 +49,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             type: "article",
             images: [
                 {
-                    url: "https://www.mdzgholi.ge/images/blog/car-battery-charging-guide.jpg",
+                    url: "https://www.mdzgholi.ge/images/blog/car-jump-start-booster.jpg",
                     width: 1200,
                     height: 900,
-                    alt: "მანქანის დაქოქვა გამოძახებით თბილისში",
+                    alt: "მანქანის დაქოქვა გამოძახებით თბილისში — ბუსტერით",
                 },
             ],
         },
@@ -435,6 +436,19 @@ export default async function DaqoqvaGamodzaxebitPage({ params }: { params: Prom
 
             <article style={{ background: "#0a0f1e", minHeight: "calc(100vh - 56px)", padding: "70px 16px 120px" }}>
                 <div style={{ maxWidth: 860, margin: "0 auto", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.5)" }}>
+
+                    {/* Header Image */}
+                    <div style={{ position: "relative", width: "100%", height: "420px", backgroundColor: "#141a2e" }}>
+                        <Image 
+                            src="/images/blog/car-jump-start-booster.jpg" 
+                            alt="მანქანის დაქოქვა გამოძახებით ბუსტერით თბილისში"
+                            width={1000}
+                            height={420}
+                            priority
+                            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+                        />
+                        <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, transparent 50%, rgba(10,15,30,0.95) 100%)" }} />
+                    </div>
 
                     {/* Hero Banner */}
                     <div style={{ background: "linear-gradient(135deg, #111a33 0%, #0d1428 60%, #0a0f1e 100%)", padding: "48px 32px 36px", borderBottom: "1px solid rgba(255,255,255,0.06)", position: "relative", overflow: "hidden" }}>

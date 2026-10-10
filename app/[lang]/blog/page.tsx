@@ -95,7 +95,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                 en: "Car won't start? Recognize battery failure signs, understand risks for automatics, and discover why digital boosters are the safest choice...",
                 ru: "Машина не заводится? Признаки севшей АКБ, риски прикуривания автомата и почему профессиональный бустер безопаснее эвакуатора...",
             }[lang],
-            image: "/images/blog/car-battery-charging-guide.jpg"
+            image: "/images/blog/car-jump-start-booster.jpg"
         },
         {
             slug: "when-to-call-sober-driver",
