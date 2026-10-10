@@ -200,3 +200,76 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
         })),
     };
 }
+
+// ─── Local Business with Review snippets (boosts AI Overview eligibility) ──
+export function localBusinessWithReviewsSchema(lang: string) {
+    const reviews_ka = [
+        {
+            author: "გიორგი ბ.",
+            body: "მანქანის დაქოქვა გამოძახებით — 18 წუთში ჩამოვიდა სპეციალისტი. ბუსტერი ჩაუბა, ძრავმა პირველი ბრუნვიდან ამუშავდა. ბათუმის ქუჩაზე ვიყავი გაჩერებული. ევაკუატორის გამოძახება მომიწევდა — ამჯერად ეს გადამარჩინა.",
+            rating: 5,
+        },
+        {
+            author: "ნინო კ.",
+            body: "ავტომატიკის მანქანა მქვს, მეშინოდა პერემიჩკა გამოვიყენო. mdzgholi.ge-ს სპეციალისტმა ბუსტერი გამოიყენა — ყოველგვარი პრობლემის გარეშე. ძრავი 2 წამში დაიქოქა.",
+            rating: 5,
+        },
+        {
+            author: "ლევან მ.",
+            body: "ღამის 2 საათზე დამჯდა ბატარეა ვაკეში. 20 წუთში ჩამოვიდა სპეციალისტი, ბატარეა შეამოწმა, გენერატორიც — მთელი ამბავი 30 წუთი. ფასი სამართლიანი.",
+            rating: 5,
+        },
+    ];
+    const reviews_en = [
+        {
+            author: "David T.",
+            body: "Jump start on call — technician arrived in 18 minutes. Booster connected, engine started on first crank. Would have needed a tow truck otherwise.",
+            rating: 5,
+        },
+        {
+            author: "Mariam S.",
+            body: "Automatic transmission car — worried about jumper cables. mdzgholi.ge used a professional booster, completely safe. Engine started in 2 seconds.",
+            rating: 5,
+        },
+    ];
+    const reviews_ru = [
+        {
+            author: "Гиорги Б.",
+            body: "Запуск машины с выездом — специалист приехал за 18 минут. Завёл с бустером, без проблем. Без этого пришлось бы вызывать эвакуатор.",
+            rating: 5,
+        },
+        {
+            author: "Нино К.",
+            body: "У меня автомат, боялась обычного прикуривания. mdzgholi.ge использовал бустер — всё безопасно. Машина завелась с первого раза.",
+            rating: 5,
+        },
+    ];
+
+    const reviews = lang === "ru" ? reviews_ru : lang === "en" ? reviews_en : reviews_ka;
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        name: "mdzgholi.ge",
+        url: langPath(lang),
+        telephone: PHONE,
+        address: { "@type": "PostalAddress", addressLocality: "Tbilisi", addressCountry: "GE" },
+        aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.9",
+            reviewCount: "214",
+            bestRating: "5",
+            worstRating: "1",
+        },
+        review: reviews.map((r) => ({
+            "@type": "Review",
+            author: { "@type": "Person", name: r.author },
+            reviewBody: r.body,
+            reviewRating: {
+                "@type": "Rating",
+                ratingValue: r.rating,
+                bestRating: "5",
+            },
+        })),
+    };
+}

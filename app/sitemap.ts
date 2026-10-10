@@ -19,6 +19,7 @@ const services = [
 ];
 
 const blogSlugs = [
+    "manqanis-daqoqva-gamodzaxebit",
     "car-battery-charging-guide",
     "when-to-call-sober-driver",
     "sober-driver-safety-guarantee",
