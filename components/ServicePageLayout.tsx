@@ -258,7 +258,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                         <a
                             href={`https://wa.me/${PHONE_RAW}`}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="nofollow noopener noreferrer"
                             className="btn-outline"
                             style={{ fontSize: "0.95rem", padding: "13px 24px", minWidth: 160, justifyContent: "center" }}
                         >

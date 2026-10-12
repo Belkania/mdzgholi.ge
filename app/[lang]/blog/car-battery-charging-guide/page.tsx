@@ -433,7 +433,7 @@ export default async function CarBatteryChargingGuidePage({ params }: { params: 
                                 <a href="tel:+995568834707" className="btn-yellow" style={{ fontSize: "1rem", padding: "14px 28px" }}>
                                     {c.ctaBtn}
                                 </a>
-                                <a href="https://wa.me/995568834707" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: "1rem", padding: "14px 28px" }}>
+                                <a href="https://wa.me/995568834707" target="_blank" rel="nofollow noopener noreferrer" className="btn-outline" style={{ fontSize: "1rem", padding: "14px 28px" }}>
                                     💬 {c.ctaWa}
                                 </a>
                             </div>

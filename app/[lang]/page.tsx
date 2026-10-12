@@ -149,7 +149,7 @@ export default async function HomePage({
                         <a
                             href={`https://wa.me/${PHONE_WA}`}
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="nofollow noopener noreferrer"
                             className="btn-outline"
                             style={{ fontSize: "1.05rem", padding: "15px 32px" }}
                         >
@@ -562,7 +562,7 @@ export default async function HomePage({
                                 <a
                                     href={`https://wa.me/${PHONE_WA}`}
                                     target="_blank"
-                                    rel="noopener noreferrer"
+                                    rel="nofollow noopener noreferrer"
                                     className="btn-blue"
                                     style={{ flex: 1, justifyContent: "center" }}
                                 >

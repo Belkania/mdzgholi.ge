@@ -12,7 +12,7 @@ export default function FloatingCall() {
             <a
                 href={WA_URL}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow noopener noreferrer"
                 className="floating-btn floating-btn-wa"
                 aria-label="Chat on WhatsApp"
                 title="WhatsApp"

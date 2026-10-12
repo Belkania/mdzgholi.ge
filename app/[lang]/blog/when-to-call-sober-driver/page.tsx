@@ -394,7 +394,7 @@ export default async function WhenToCallSoberDriverPage({ params }: { params: Pr
                                 <a href="tel:+995568834707" className="btn-yellow" style={{ textDecoration: "none", padding: "14px 28px", fontWeight: 800 }}>
                                     {c.ctaBtn}
                                 </a>
-                                <a href="https://wa.me/995568834707" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ textDecoration: "none", padding: "14px 28px", fontWeight: 700 }}>
+                                <a href="https://wa.me/995568834707" target="_blank" rel="nofollow noopener noreferrer" className="btn-outline" style={{ textDecoration: "none", padding: "14px 28px", fontWeight: 700 }}>
                                     {c.ctaWa}
                                 </a>
                             </div>

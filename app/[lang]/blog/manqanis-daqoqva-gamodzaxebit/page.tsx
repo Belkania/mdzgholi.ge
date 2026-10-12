@@ -409,12 +409,10 @@ export default async function DaqoqvaGamodzaxebitPage({ params }: { params: Prom
                     name: "mdzgholi.ge",
                     telephone: "+995568834707",
                     url: "https://www.mdzgholi.ge",
-                    aggregateRating: {
-                        "@type": "AggregateRating",
-                        ratingValue: "4.9",
-                        reviewCount: "214",
-                        bestRating: "5",
-                        worstRating: "1",
+                    address: {
+                        "@type": "PostalAddress",
+                        addressLocality: "Tbilisi",
+                        addressCountry: "GE",
                     },
                 },
                 areaServed: [
@@ -422,9 +420,11 @@ export default async function DaqoqvaGamodzaxebitPage({ params }: { params: Prom
                     ...DISTRICTS_KA.map(d => ({ "@type": "AdministrativeArea", name: d })),
                 ],
                 offers: {
-                    "@type": "Offer",
-                    price: "40",
+                    "@type": "AggregateOffer",
                     priceCurrency: "GEL",
+                    lowPrice: "40",
+                    highPrice: "70",
+                    offerCount: "1",
                     availability: "https://schema.org/InStock",
                     url: serviceUrl,
                 },
@@ -472,7 +472,7 @@ export default async function DaqoqvaGamodzaxebitPage({ params }: { params: Prom
                             <a href="tel:+995568834707" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--yellow)", color: "#000", padding: "12px 24px", borderRadius: 10, fontWeight: 800, fontSize: "1rem", textDecoration: "none" }}>
                                 ☎ {c.ctaBtn}
                             </a>
-                            <a href="https://wa.me/995568834707" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(34,197,94,0.15)", color: "rgba(34,197,94,0.9)", border: "1px solid rgba(34,197,94,0.3)", padding: "12px 24px", borderRadius: 10, fontWeight: 700, fontSize: "1rem", textDecoration: "none" }}>
+                            <a href="https://wa.me/995568834707" target="_blank" rel="nofollow noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "rgba(34,197,94,0.15)", color: "rgba(34,197,94,0.9)", border: "1px solid rgba(34,197,94,0.3)", padding: "12px 24px", borderRadius: 10, fontWeight: 700, fontSize: "1rem", textDecoration: "none" }}>
                                 💬 {c.ctaWa}
                             </a>
                         </div>
@@ -596,7 +596,7 @@ export default async function DaqoqvaGamodzaxebitPage({ params }: { params: Prom
                             <p style={{ color: "var(--text-muted)", maxWidth: 540, margin: "0 auto 28px", fontSize: "1.02rem" }}>{c.ctaDesc}</p>
                             <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
                                 <a href="tel:+995568834707" className="btn-yellow" style={{ fontSize: "1rem", padding: "14px 28px" }}>{c.ctaBtn}</a>
-                                <a href="https://wa.me/995568834707" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: "1rem", padding: "14px 28px" }}>
+                                <a href="https://wa.me/995568834707" target="_blank" rel="nofollow noopener noreferrer" className="btn-outline" style={{ fontSize: "1rem", padding: "14px 28px" }}>
                                     💬 {c.ctaWa}
                                 </a>
                             </div>

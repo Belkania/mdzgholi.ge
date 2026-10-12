@@ -98,7 +98,7 @@ export default function Footer({ d, lang }: FooterProps) {
                             <a
                                 href={`https://wa.me/${PHONE_RAW}`}
                                 target="_blank"
-                                rel="noopener noreferrer"
+                                rel="nofollow noopener noreferrer"
                                 style={{
                                     background: "#25D366",
                                     color: "#fff",
