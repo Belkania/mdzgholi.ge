@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getDictionary, locales } from "@/dictionaries";
 import Link from "next/link";
 import { JsonLd, localBusinessSchema, breadcrumbSchema } from "@/components/JsonLd";
@@ -9,6 +10,55 @@ const BASE = "https://www.mdzgholi.ge";
 
 export function generateStaticParams() {
     return locales.map((lang) => ({ lang }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+    const { lang } = await params;
+    const d = getDictionary(lang);
+    const titles: Record<string, string> = {
+        ka: "ფხიზელი მძღოლი გამოძახებით | mdzgholi.ge",
+        en: "Sober Driver Tbilisi 24/7 | mdzgholi.ge",
+        ru: "Трезвый водитель Тбилиси 24/7 | mdzgholi.ge",
+    };
+    const descs: Record<string, string> = {
+        ka: "ფხიზელი მძღოლი გამოძახებით 24/7 თბილისში — mdzgholi.ge. მძღოლი მოვა 15-20 წუთში თქვენი მანქანით. ☎ 568 83 47 07",
+        en: "Sober driver in Tbilisi — mdzgholi.ge. Professional driver arrives in 15-20 min, drives your car. 24/7. Call: +995 568 83 47 07",
+        ru: "Трезвый водитель в Тбилиси — mdzgholi.ge. Приезд за 15-20 мин, отвезем на вашем авто. 24/7. Звоните: +995 568 83 47 07",
+    };
+    const canonical = lang === "ka" ? "https://www.mdzgholi.ge/" : `https://www.mdzgholi.ge/${lang}`;
+
+    return {
+        title: titles[lang] ?? titles.ka,
+        description: descs[lang] ?? descs.ka,
+        keywords: d.meta.keywords,
+        robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
+        alternates: {
+            canonical,
+            languages: {
+                ka: "https://www.mdzgholi.ge/",
+                en: "https://www.mdzgholi.ge/en",
+                ru: "https://www.mdzgholi.ge/ru",
+                "x-default": "https://www.mdzgholi.ge/",
+            },
+        },
+        openGraph: {
+            title: titles[lang] ?? titles.ka,
+            description: descs[lang] ?? descs.ka,
+            url: canonical,
+            siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
+            type: "website",
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: titles[lang] ?? titles.ka,
+            description: descs[lang] ?? descs.ka,
+        },
+    };
 }
 
 export default async function HomePage({

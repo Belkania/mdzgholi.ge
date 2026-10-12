@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "აეროპორტის ტრანსფერი თბილისი | mdzgholi.ge",
-        en: "Airport Transfer & Intercity | mdzgholi.ge",
-        ru: "Трансфер в аэропорт / Междугородний | mdzgholi.ge",
+        ka: "აეროპორტის ტრანსფერი და საქალაქთაშორისო მგზავრობა | mdzgholi.ge",
+        en: "Airport Transfer & Intercity Travel Georgia | mdzgholi.ge",
+        ru: "Трансфер в аэропорт Тбилиси и Междугородний трансфер | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "აეროპორტის ტრანსფერი და საქალაქთაშორისო მგზავრობა mdzgholi.ge — ბათუმი, ქუთაისი. კომფორტული. ☎ 568 83 47 07",
-        en: "Airport transfer & intercity routes mdzgholi.ge — Batumi, Kutaisi. Punctual, comfortable 24/7. Call: +995 568 83 47 07",
-        ru: "Трансфер в аэропорт и межгород mdzgholi.ge — Батуми, Кутаиси. Пунктуально и комфортно 24/7. Звоните: +995 568 83 47 07",
+        ka: "კომფორტული ტრანსფერი თბილისის, ქუთაისისა და ბათუმის აეროპორტებში — mdzgholi.ge. დახვედრა აბრით, რეისის მონიტორინგი, ფიქსირებული ფასები. ☎ 568 83 47 07",
+        en: "Private airport transfers to Tbilisi, Kutaisi, and Batumi airports by mdzgholi.ge. Meet & greet in arrivals hall, flight delay monitoring, fixed rates. Call: +995 568 83 47 07",
+        ru: "Трансфер в аэропорты Тбилиси, Кутаиси, Батуми и межгород по Грузии — mdzgholi.ge. Встреча с табличкой, отслеживание рейсов, честные цены. ☎ +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/airport-transfer";

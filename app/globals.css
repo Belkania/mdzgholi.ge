@@ -340,3 +340,46 @@ body {
     padding: 4px 12px;
   }
 }
+
+/* ─── Service Page Clean Utility Classes ─── */
+.service-section {
+  padding: 60px 16px;
+  background: #0a0f1e;
+}
+.service-section-alt {
+  padding: 60px 16px;
+  background: #080d1a;
+}
+.service-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.service-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.service-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.step-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.district-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px;
+}

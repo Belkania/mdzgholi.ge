@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "პირადი მძღოლი თბილისში | mdzgholi.ge",
-        en: "Personal Driver in Tbilisi | mdzgholi.ge",
-        ru: "Личный водитель в Тбилиси | mdzgholi.ge",
+        ka: "პირადი მძღოლი თბილისში — დაქირავება და გამოძახება | mdzgholi.ge",
+        en: "Personal Driver in Tbilisi — Full & Part Time Chauffeur | mdzgholi.ge",
+        ru: "Личный водитель в Тбилиси — Услуги персонального водителя | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "პირადი მძღოლი თბილისში mdzgholi.ge — სრული ან ნახევარი განაკვეთი. სანდო და გამოცდილი მძღოლები. ☎ 568 83 47 07",
-        en: "Personal driver in Tbilisi mdzgholi.ge — full or part-time. Reliable and experienced drivers. Call: +995 568 83 47 07",
-        ru: "Личный водитель в Тбилиси mdzgholi.ge — полная или частичная занятость. Опытные водители. Звоните: +995 568 83 47 07",
+        ka: "პირადი მძღოლის მომსახურება თბილისში — mdzgholi.ge. სრული ან ნახევარი განაკვეთი, სანდო და გამოცდილი მძღოლები თქვენი კომფორტული მგზავრობისთვის. ☎ 568 83 47 07",
+        en: "Hire a dedicated personal driver in Tbilisi with mdzgholi.ge — full or part-time. Reliable and vetted chauffeurs for business and family. Call: +995 568 83 47 07",
+        ru: "Услуги личного водителя в Тбилиси от mdzgholi.ge — полная или частичная занятость. Опытные и проверенные водители для бизнеса и семьи. Звоните: +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/personal-driver";

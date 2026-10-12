@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "მანქანის რეცხვა თბილისში | mdzgholi.ge",
-        en: "Car Wash Service in Tbilisi | mdzgholi.ge",
-        ru: "Мойка машин в Тбилиси | mdzgholi.ge",
+        ka: "მანქანის რეცხვა გამოძახებით თბილისში — წაყვანა-მოყვანით | mdzgholi.ge",
+        en: "Car Wash Pickup & Delivery in Tbilisi | mdzgholi.ge",
+        ru: "Мойка авто с доставкой в Тбилиси — Забор и возврат | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "mdzgholi.ge მანქანის რეცხვა თბილისში — მოვალთ, წავიყვანთ, იდეალურად გავრეცხავთ და დაგიბრუნებთ მანქანას. დაგვირეკეთ: +995 568 83 47 07",
-        en: "mdzgholi.ge car wash pickup in Tbilisi — we pick up your car, wash it thoroughly, and deliver it back. Call: +995 568 83 47 07",
-        ru: "Мойка авто mdzgholi.ge в Тбилиси — заберем машину, идеально вымоем и доставим обратно. Звоните: +995 568 83 47 07",
+        ka: "მანქანის რეცხვა მისამართიდან წაყვანითა და დაბრუნებით — mdzgholi.ge. დაზოგეთ დრო: ჩავიბარებთ მანქანას, იდეალურად გავრეცხავთ და უკან მოგიყვანთ. ☎ 568 83 47 07",
+        en: "Door-to-door car wash service in Tbilisi by mdzgholi.ge. We pick up your vehicle, provide premium interior/exterior detailing, and return it clean. Call: +995 568 83 47 07",
+        ru: "Мойка машин с забором и доставкой в Тбилиси — mdzgholi.ge. Заберем авто от дома или офиса, вымоем до блеска и вернем в удобное время. ☎ +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/car-wash";

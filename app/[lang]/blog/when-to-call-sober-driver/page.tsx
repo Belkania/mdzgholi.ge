@@ -1,4 +1,4 @@
-import { getDictionary, locales } from "@/dictionaries";
+import { locales } from "@/dictionaries";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -57,7 +57,6 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 
 export default async function WhenToCallSoberDriverPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
-    const d = getDictionary(lang);
 
     const content = {
         ka: {

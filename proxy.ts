@@ -15,12 +15,12 @@ export function proxy(req: NextRequest) {
         (loc) => pathname === `/${loc}` || pathname.startsWith(`/${loc}/`)
     );
 
-    // /ka/... → permanent 308 redirect to /... (clean canonical URL, fixes 91 "307 temporary redirect" SEO warnings)
+    // /ka/... → permanent 301 redirect to /... (clean canonical URL, fixes temporary redirect warnings)
     if (pathnameLocale === DEFAULT) {
         const rest = pathname.replace(/^\/ka/, "") || "/";
         const url = req.nextUrl.clone();
         url.pathname = rest;
-        const response = NextResponse.redirect(url, 308);
+        const response = NextResponse.redirect(url, 301);
         response.headers.set("x-lang", DEFAULT);
         return response;
     }

@@ -139,8 +139,14 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
             pillar2Desc: "ჩვენი მძღოლები და ტექნიკური ეკიპაჟები თბილისის სხვადასხვა უბანში მორიგეობენ. ზარიდან 15-20 წუთში თქვენთან ვართ — დღისით, ღამით, შაბათ-კვირასა და დღესასწაულებზე.",
             pillar3Title: "სამართლიანი და ფიქსირებული ფასი",
             pillar3Desc: "ფასს წინასწარ, დარეკვისას ვათანხმებთ. არანაირი ტაქსისებური მოულოდნელი ტარიფები, წუთობრივი გადასახადი ან საცობის კოეფიციენტი.",
+            pillar4Title: "გზისპირა ტექნიკური დახმარება",
+            pillar4Desc: "აკუმულატორი დაჯდა თუ საბურავი დაზიანდა? ჩვენი ტექნიკური ეკიპაჟი ჩამოვა ბუსტერით, დომკრატითა და ხელსაწყოებით და ადგილზევე მოაგვარებს პრობლემას 15–20 წუთში.",
+            pillar5Title: "ტრანსფერები და რეგიონები",
+            pillar5Desc: "თბილისის, ქუთაისისა და ბათუმის აეროპორტების ტრანსფერი, ასევე საქალაქთაშორისო მარშრუტები მთელ საქართველოში ფიქსირებული ტარიფითა და მაქსიმალური კომფორტით.",
+            pillar6Title: "სრული პასუხისმგებლობა და გარანტია",
+            pillar6Desc: "ჩვენთვის მთავარია თქვენი უსაფრთხოება და ნდობა. ყველა მძღოლი არის შემოწმებული პროფესიონალი, კომპანია კი იღებს სრულ პასუხისმგებლობას გაწეულ სერვისზე.",
             ctaText: "გჭირდებათ გამოცდილი მძღოლი ახლავე?",
-            callBtn: "☎ დაგვირეკეთ: 568 83 47 07",
+            callBtn: "☎ დაგვირეკეთ: +995 568 83 47 07",
         },
         en: {
             title: "Why is mdzgholi.ge the Top Choice?",
@@ -151,6 +157,12 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
             pillar2Desc: "Our qualified drivers reach any district in Tbilisi within 15-20 minutes. We operate round the clock, every day of the week, including weekends and holidays.",
             pillar3Title: "Transparent & Fair Pricing",
             pillar3Desc: "No unpredictable metering or surge surcharges. Pricing is agreed upfront when you speak with our dispatch team, ensuring full clarity and peace of mind.",
+            pillar4Title: "Emergency Roadside Assistance",
+            pillar4Desc: "Dead battery or flat tire? Our mobile technician arrives equipped with safe digital jump starters, hydraulic jacks, and vulcanization plugs to resolve emergencies on-site.",
+            pillar5Title: "Airport & Intercity Transfers",
+            pillar5Desc: "Punctual meet & greet transfers to Tbilisi, Kutaisi, and Batumi airports, plus intercity trips to Kazbegi, Gudauri, and Batumi with fixed transparent rates.",
+            pillar6Title: "Professional Liability & Care",
+            pillar6Desc: "Your car and personal safety are handled by background-checked chauffeurs with 5+ years experience. We uphold the highest safety and etiquette standards.",
             ctaText: "Need a professional driver right now?",
             callBtn: "☎ Call Now: +995 568 83 47 07",
         },
@@ -163,6 +175,12 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
             pillar2Desc: "Наши опытные водители прибывают в любую точку Тбилиси за 15-20 минут. Сервис доступен круглосуточно, в будни, выходные и праздничные дни.",
             pillar3Title: "Прозрачные и честные тарифы",
             pillar3Desc: "Никаких скрытых платежей или непонятных счетчиков. Стоимость согласовывается заранее с оператором, что гарантирует спокойную поездку.",
+            pillar4Title: "Техпомощь на дороге и бустер",
+            pillar4Desc: "Сел аккумулятор или пробито колесо? Наша мобильная бригада быстро прибудет с безопасным цифровым бустером и ремкомплектом для устранения поломки на месте.",
+            pillar5Title: "Трансферы в аэропорты и межгород",
+            pillar5Desc: "Пунктуальная встреча в аэропортах Тбилиси, Кутаиси и Батуми, а также междугородние поездки по всей Грузии с фиксированной стоимостью.",
+            pillar6Title: "Ответственность и надежность",
+            pillar6Desc: "Ваша безопасность — наш главный ориентир. Проверенные водители с опытом от 5 лет и гарантия бережного отношения к вашему автомобилю.",
             ctaText: "Нужен профессиональный водитель прямо сейчас?",
             callBtn: "☎ Позвонить: +995 568 83 47 07",
         },
@@ -175,8 +193,58 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
         pillar2Desc: "",
         pillar3Title: "",
         pillar3Desc: "",
+        pillar4Title: "",
+        pillar4Desc: "",
+        pillar5Title: "",
+        pillar5Desc: "",
+        pillar6Title: "",
+        pillar6Desc: "",
         ctaText: "",
         callBtn: "",
+    };
+
+    const blogTips = {
+        ka: {
+            heading: "პრაქტიკული რჩევები მძღოლებისთვის საქართველოში",
+            tips: [
+                { title: "აკუმულატორის სეზონური შემოწმება", desc: "ზამთარსა და ზაფხულში ტემპერატურის მკვეთრი ცვალებადობა აკუმულატორის რესურსს ამცირებს. რეგულარულად შეამოწმეთ ტერმინალები და გენერატორის მუშაობა, რათა გზაზე მოულოდნელად არ გაჩერდეთ." },
+                { title: "საბურავის წნევის კონტროლი", desc: "არასწორი წნევა ზრდის საწვავის ხარჯს და აუარესებს დამუხრუჭების დისტანციას. თვეში ერთხელ აუცილებლად შეამოწმეთ წნევა მანომეტრით ცივ საბურავზე." },
+                { title: "ნასვამ მდგომარეობაში საჭესთან არ დაჯდომა", desc: "საქართველოში მოქმედებს მკაცრი კანონმდებლობა და მაღალი სანქციები ალკოჰოლზე. ფხიზელი მძღოლის გამოძახება იცავს თქვენს სიცოცხლეს, ავტომობილს და გარიდებთ მართვის მოწმობის ჩამორთმევას." },
+                { title: "გადაუდებელი საავარიო კომპლექტი", desc: "საბარგულში ყოველთვის იქონიეთ გამართული სათადარიგო ბორბალი, ჰიდრავლიკური დომკრატი, პირველადი დახმარების აფთიაქი, მანათობელი ჟილეტი და საავარიო სამკუთხედი." },
+                { title: "ტექნიკური სითხეებისა და ზეთის კონტროლი", desc: "ძრავის ზეთის, ანტიფრიზისა და სამუხრუჭე სითხის დონის რეგულარული მონიტორინგი თავიდან აგარიდებთ ძრავის გადახურებასა და ძვირადღირებულ რემონტს." },
+                { title: "გზისპირა დახმარების ნომრის შენახვა", desc: "ყოველთვის შეინახეთ ტელეფონში საიმედო სერვისის კონტაქტი (+995 568 83 47 07). mdzgholi.ge-ის ეკიპაჟი 24/7 მზადაა დაგეხმაროთ თბილისსა და მის შემოგარენში." },
+            ],
+        },
+        en: {
+            heading: "Practical Safe Driving Tips for Georgia",
+            tips: [
+                { title: "Seasonal Car Battery Maintenance", desc: "Freezing winter mornings and scorching summer heat deplete battery capacity quickly. Routinely test charging voltage and terminal contacts to avoid morning breakdowns." },
+                { title: "Tire Pressure & Tread Inspection", desc: "Incorrect tire pressure increases fuel burn and harms emergency braking distance. Check cold tire PSI and inspect tread depth at least once per month." },
+                { title: "Never Drive Under the Influence", desc: "Georgia enforces strict legal alcohol limits with zero leniency. Booking a designated sober driver guarantees a secure trip home and keeps your record clean." },
+                { title: "Emergency Roadside Essentials", desc: "Keep an inflated spare wheel, tested hydraulic jack, first-aid kit, reflective vest, and emergency warning triangle inside your vehicle at all times." },
+                { title: "Fluid Levels & Engine Care", desc: "Consistently inspect motor oil, coolant (antifreeze), and brake fluid levels to prevent unexpected overheating and catastrophic powertrain wear." },
+                { title: "Save Rapid Assistance Contacts", desc: "Keep our 24/7 roadside hotline (+995 568 83 47 07) saved in your phone. Quick dispatch across Tbilisi brings instant peace of mind." },
+            ],
+        },
+        ru: {
+            heading: "Полезные советы для водителей в Грузии",
+            tips: [
+                { title: "Сезонная диагностика аккумулятора", desc: "Мороз зимой и сильная жара летом ускоряют износ АКБ. Регулярно проверяйте чистоту клемм и напряжение генератора, чтобы избежать внезапного разряда." },
+                { title: "Контроль давления и состояния шин", desc: "Пониженное давление повышает расход топлива и удлиняет тормозной путь. Измеряйте давление манометром минимум раз в месяц на холодных шинах." },
+                { title: "Безопасность и отказ от нетрезвого вождения", desc: "В Грузии действуют жесткие штрафы и лишение прав за алкоголь за рулем. Вызов трезвого водителя — единственный безопасный и разумный выбор после застолья." },
+                { title: "Аварийный набор в багажнике", desc: "Всегда возите с собой исправное запасное колесо, домкрат, знак аварийной остановки, светоотражающий жилет и аптечку первой помощи." },
+                { title: "Контроль технических жидкостей", desc: "Регулярно проверяйте уровень моторного масла, антифриза и тормозной жидкости для предотвращения перегрева и дорогостоящего ремонта двигателя." },
+                { title: "Сохраните контакт техпомощи", desc: "Сохраните в телефоне номер дежурной службы mdzgholi.ge (+995 568 83 47 07). Мы оперативно поможем вам в Тбилиси и окрестностях в любое время суток." },
+            ],
+        },
+    }[lang] ?? {
+        heading: "პრაქტიკული რჩევები მძღოლებისთვის საქართველოში",
+        tips: [
+            { title: "აკუმულატორის სეზონური შემოწმება", desc: "რეგულარულად შეამოწმეთ ტერმინალები და გენერატორის მუშაობა." },
+            { title: "საბურავის წნევის კონტროლი", desc: "თვეში ერთხელ აუცილებლად შეამოწმეთ წნევა მანომეტრით ცივ საბურავზე." },
+            { title: "ნასვამ მდგომარეობაში საჭესთან არ დაჯდომა", desc: "ფხიზელი მძღოლის გამოძახება იცავს თქვენს სიცოცხლეს." },
+            { title: "გადაუდებელი საავარიო კომპლექტი", desc: "საბარგულში ყოველთვის იქონიეთ გამართული სათადარიგო ბორბალი." },
+        ],
     };
 
     return (
@@ -213,8 +281,27 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                     ))}
                 </div>
 
+                {/* Practical Driving Tips Grid */}
+                <div style={{ marginBottom: 40 }}>
+                    <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: 24, textAlign: "center" }}>
+                        💡 {blogTips.heading}
+                    </h2>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 16 }}>
+                        {blogTips.tips.map((t, idx) => (
+                            <div key={idx} className="card" style={{ padding: "22px 20px" }}>
+                                <h3 style={{ color: "var(--yellow)", fontSize: "1rem", fontWeight: 700, marginBottom: 8 }}>
+                                    {t.title}
+                                </h3>
+                                <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>
+                                    {t.desc}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Comprehensive Informational Section (Enriches page content & SEO) */}
-                <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 16, padding: "40px 28px", marginTop: 40 }}>
+                <div style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 16, padding: "40px 28px", marginTop: 20 }}>
                     <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "#fff", marginBottom: 16, textAlign: "center" }}>
                         {guideContent.title}
                     </h2>
@@ -222,7 +309,7 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                         {guideContent.desc}
                     </p>
 
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, marginBottom: 36 }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20, marginBottom: 36 }}>
                         <div style={{ background: "rgba(255,255,255,0.03)", padding: "20px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.04)" }}>
                             <h3 style={{ color: "var(--yellow)", fontSize: "1.05rem", fontWeight: 700, marginBottom: 8 }}>{guideContent.pillar1Title}</h3>
                             <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>{guideContent.pillar1Desc}</p>
@@ -234,6 +321,18 @@ export default async function BlogIndexPage({ params }: { params: Promise<{ lang
                         <div style={{ background: "rgba(255,255,255,0.03)", padding: "20px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.04)" }}>
                             <h3 style={{ color: "var(--yellow)", fontSize: "1.05rem", fontWeight: 700, marginBottom: 8 }}>{guideContent.pillar3Title}</h3>
                             <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>{guideContent.pillar3Desc}</p>
+                        </div>
+                        <div style={{ background: "rgba(255,255,255,0.03)", padding: "20px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.04)" }}>
+                            <h3 style={{ color: "var(--yellow)", fontSize: "1.05rem", fontWeight: 700, marginBottom: 8 }}>{guideContent.pillar4Title}</h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>{guideContent.pillar4Desc}</p>
+                        </div>
+                        <div style={{ background: "rgba(255,255,255,0.03)", padding: "20px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.04)" }}>
+                            <h3 style={{ color: "var(--yellow)", fontSize: "1.05rem", fontWeight: 700, marginBottom: 8 }}>{guideContent.pillar5Title}</h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>{guideContent.pillar5Desc}</p>
+                        </div>
+                        <div style={{ background: "rgba(255,255,255,0.03)", padding: "20px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.04)" }}>
+                            <h3 style={{ color: "var(--yellow)", fontSize: "1.05rem", fontWeight: 700, marginBottom: 8 }}>{guideContent.pillar6Title}</h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>{guideContent.pillar6Desc}</p>
                         </div>
                     </div>
 

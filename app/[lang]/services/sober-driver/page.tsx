@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "ფხიზელი მძღოლი თბილისში | mdzgholi.ge",
-        en: "Sober Driver on Call in Tbilisi | mdzgholi.ge",
-        ru: "Трезвый водитель вызов в Тбилиси | mdzgholi.ge",
+        ka: "ფხიზელი მძღოლი თბილისში — გამოძახება 24/7 | mdzgholi.ge",
+        en: "Sober Driver on Call in Tbilisi 24/7 | mdzgholi.ge",
+        ru: "Трезвый водитель в Тбилиси — Вызов 24/7 | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "ფხიზელი მძღოლის გამოძახება 24/7 — mdzgholi.ge. მძღოლი მოვა 15-20 წუთში, თქვენი მანქანით მიგიყვანთ. ☎ 568 83 47 07",
-        en: "Sober driver on call 24/7 — mdzgholi.ge. Professional driver arrives in 15-20 min, drives your car. Call: +995 568 83 47 07",
-        ru: "Трезвый водитель на вызов mdzgholi.ge 24/7 — приедет за 15-20 мин и довезет на вашей машине. +995 568 83 47 07",
+        ka: "ფხიზელი მძღოლის სერვისი თბილისში — mdzgholi.ge. მოვალთ 15-20 წუთში, თქვენივე ავტომობილით უსაფრთხოდ მიგიყვანთ სახლამდე. ფიქსირებული ტარიფი. ☎ 568 83 47 07",
+        en: "Designated sober driver service in Tbilisi by mdzgholi.ge. Rapid 15-20 min dispatch, safe ride home in your vehicle, transparent pricing. ☎ +995 568 83 47 07",
+        ru: "Служба трезвого водителя в Тбилиси — mdzgholi.ge. Приезд за 15-20 минут, безопасная доставка до дома на вашей машине. Фиксированный тариф. ☎ +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/sober-driver";

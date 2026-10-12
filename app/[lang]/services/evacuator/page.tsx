@@ -9,14 +9,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
     const { lang } = await params;
     const titles: Record<string, string> = {
-        ka: "ევაკუატორი თბილისში | mdzgholi.ge",
-        en: "Tow Truck / Evacuator in Tbilisi | mdzgholi.ge",
-        ru: "Эвакуатор в Тбилиси | mdzgholi.ge",
+        ka: "ევაკუატორი თბილისში — გამოძახება 24/7 იაფად | mdzgholi.ge",
+        en: "Tow Truck in Tbilisi — 24/7 Car Evacuator Service | mdzgholi.ge",
+        ru: "Эвакуатор в Тбилиси — Круглосуточный вызов 24/7 | mdzgholi.ge",
     };
     const descs: Record<string, string> = {
-        ka: "mdzgholi.ge ევაკუატორი — მანქანა გაფუჭდა? სწრაფი და უსაფრთხო ევაკუაცია 24/7. დაგვირეკეთ: +995 568 83 47 07",
-        en: "mdzgholi.ge tow truck service — car broke down? Fast and safe evacuation 24/7. Call us: +995 568 83 47 07",
-        ru: "Эвакуатор mdzgholi.ge — машина сломалась? Быстрая и безопасная эвакуация 24/7. Звоните: +995 568 83 47 07",
+        ka: "ევაკუატორის გამოძახება თბილისში 24/7 — mdzgholi.ge. 15-20 წუთში მისვლა, უსაფრთხო გადაყვანა ნებისმიერ მისამართზე. ფიქსირებული ფასი. ☎ 568 83 47 07",
+        en: "Fast tow truck and evacuator service in Tbilisi 24/7 by mdzgholi.ge. Quick 15-20 min dispatch, safe platform loading, upfront rates. Call: +995 568 83 47 07",
+        ru: "Услуги эвакуатора в Тбилиси круглосуточно 24/7 — mdzgholi.ge. Быстрая подача за 15-20 мин, бережная погрузка и честные цены. Звоните: +995 568 83 47 07",
     };
     const base = "https://www.mdzgholi.ge";
     const path = "/services/evacuator";
