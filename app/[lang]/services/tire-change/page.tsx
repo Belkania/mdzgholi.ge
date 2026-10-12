@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/tire-change";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "საბურავის შეცვლა, საბურავის შეკეთება ადგილზე, საბურავის გამოცვლა, დაშვებული საბურავი, სათადარიგო საბურავი, ვულკანიზაცია გამოძახებით, tire change Tbilisi, საბურავის შეცვლა თბილისში",
+        en: "mobile tire change Tbilisi, flat tire repair Georgia, roadside tire service, spare wheel mounting Tbilisi, 24/7 tire assist, mdzgholi.ge",
+        ru: "замена колеса на выезде Тбилиси, ремонт прокола шин на месте, мобильный шиномонтаж Грузия, выездная вулканизация, mdzgholi.ge",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "საბურავის შეცვლა, საბურავის შეკეთება ადგილზე, საბურავის გამოცვლა, დაშვებული საბურავი, სათადარიგო საბურავი, ვულკანიზაცია გამოძახებით, tire change Tbilisi, საბურავის შეცვლა თბილისში",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -40,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },
     };

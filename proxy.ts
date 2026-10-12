@@ -27,7 +27,13 @@ export function proxy(req: NextRequest) {
 
     // /en/... or /ru/... → pass through, set lang header for root layout
     if (pathnameLocale) {
-        const response = NextResponse.next();
+        const requestHeaders = new Headers(req.headers);
+        requestHeaders.set("x-lang", pathnameLocale);
+        const response = NextResponse.next({
+            request: {
+                headers: requestHeaders,
+            },
+        });
         response.headers.set("x-lang", pathnameLocale);
         return response;
     }
@@ -35,7 +41,13 @@ export function proxy(req: NextRequest) {
     // No locale prefix → internally rewrite to /ka/... (serves Georgian at clean URL)
     const url = req.nextUrl.clone();
     url.pathname = `/${DEFAULT}${pathname}`;
-    const response = NextResponse.rewrite(url);
+    const requestHeaders = new Headers(req.headers);
+    requestHeaders.set("x-lang", DEFAULT);
+    const response = NextResponse.rewrite(url, {
+        request: {
+            headers: requestHeaders,
+        },
+    });
     response.headers.set("x-lang", DEFAULT);
     return response;
 }

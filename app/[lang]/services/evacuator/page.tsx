@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/evacuator";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "ევაკუატორი თბილისი, ევაკუატორის გამოძახება, ავტოევაკუატორი, tow truck Tbilisi, evacuator Georgia, ევაკუატორი იაფად, mdzgholi.ge",
+        en: "tow truck Tbilisi, car evacuator Georgia, 24/7 towing service, breakdown recovery Tbilisi, roadside assistance Georgia, mdzgholi.ge",
+        ru: "эвакуатор Тбилиси, вызов эвакуатора 24/7, буксировка авто Грузия, техпомощь на дороге Тбилиси, недорогой эвакуатор, mdzgholi.ge",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "ევაკუატორი თბილისი, tow truck Tbilisi Georgia, ავარიი დახმარება, roadside assistance, mdzgholi.ge",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -40,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },
     };

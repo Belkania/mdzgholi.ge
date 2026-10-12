@@ -2,6 +2,7 @@ import { locales } from "@/dictionaries";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { JsonLd, faqSchema } from "@/components/JsonLd";
 
 export function generateStaticParams() {
     return locales.map((lang) => ({ lang }));
@@ -208,7 +209,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
     const altText = ["fxizeli mdzgoli", "მძღოლის გამოძახება", "mdzgoli ge"].join(", ");
 
     return (
-        <article style={{ background: "#0a0f1e", minHeight: "calc(100vh - 56px)", padding: "70px 16px 120px" }}>
+        <>
+            <JsonLd data={faqSchema(c.faq)} />
+            <article style={{ background: "#0a0f1e", minHeight: "calc(100vh - 56px)", padding: "70px 16px 120px" }}>
             <div style={{ maxWidth: 800, margin: "0 auto", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.05)", borderRadius: 16, overflow: "hidden" }}>
                 {/* Image Header with user requested alt text */}
                 <div style={{ position: "relative", width: "100%", height: "400px", backgroundColor: "#1e2439" }}>
@@ -292,5 +295,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ lang:
                 </div>
             </div>
         </article>
+        </>
     );
 }

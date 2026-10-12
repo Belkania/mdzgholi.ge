@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/personal-driver";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "პირადი მძღოლი თბილისი, personal driver Tbilisi, მძღოლი განაკვეთით, driver hire Georgia, mdzgholi.ge",
+        en: "personal driver Tbilisi, private chauffeur Georgia, executive driver Tbilisi, full time driver Georgia, mdzgholi.ge",
+        ru: "персональный водитель Тбилиси, личный шофер Грузия, нанять водителя Тбилиси, бизнес водитель Грузия, mdzgholi.ge",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "პირადი მძღოლი თბილისი, personal driver Tbilisi, მძღოლი განაკვეთით, driver hire Georgia, mdzgholi.ge",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -40,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },
     };

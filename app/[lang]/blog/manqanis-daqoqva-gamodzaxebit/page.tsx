@@ -414,17 +414,19 @@ export default async function DaqoqvaGamodzaxebitPage({ params }: { params: Prom
                         ratingValue: "4.9",
                         reviewCount: "214",
                         bestRating: "5",
+                        worstRating: "1",
                     },
                 },
                 areaServed: [
                     { "@type": "City", name: "Tbilisi" },
-                    ...DISTRICTS_KA.map(d => ({ "@type": "Place", name: d })),
+                    ...DISTRICTS_KA.map(d => ({ "@type": "AdministrativeArea", name: d })),
                 ],
                 offers: {
                     "@type": "Offer",
+                    price: "40",
                     priceCurrency: "GEL",
                     availability: "https://schema.org/InStock",
-                    availableAtOrFrom: { "@type": "LocalBusiness", name: "mdzgholi.ge" },
+                    url: serviceUrl,
                 },
                 openingHoursSpecification: {
                     "@type": "OpeningHoursSpecification",

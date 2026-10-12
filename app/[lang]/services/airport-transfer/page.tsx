@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/airport-transfer";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "აეროპორტის ტრანსფერი თბილისი, airport transfer Tbilisi, ბათუმი ტრანსფერი, intercity Georgia, mdzgholi.ge",
+        en: "airport transfer Tbilisi, Georgia intercity taxi, Kutaisi airport transfer, Batumi private ride, chauffeur service Georgia, mdzgholi.ge",
+        ru: "трансфер в аэропорт Тбилиси, междугороднее такси Грузия, трансфер в Кутаиси, поездка в Батуми, встреча в аэропорту Тбилиси, mdzgholi.ge",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "აეროპორტის ტრანსფერი თბილისი, airport transfer Tbilisi, ბათუმი ტრანსფერი, intercity Georgia, mdzgholi.ge",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -40,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },
     };

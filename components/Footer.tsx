@@ -23,6 +23,27 @@ export default function Footer({ d, lang }: FooterProps) {
         { label: d.nav.blog, href: getPath("/blog") },
     ];
 
+    const blogArticles = [
+        {
+            href: getPath("/blog/manqanis-daqoqva-gamodzaxebit"),
+            label: lang === "ka" ? "მანქანის დაქოქვა გამოძახებით" : lang === "ru" ? "Запуск авто с выездом" : "Car Jump Start on Call",
+        },
+        {
+            href: getPath("/blog/car-battery-charging-guide"),
+            label: lang === "ka" ? "აკუმულატორის დატენვის გზამკვლევი" : lang === "ru" ? "Гид по зарядке аккумулятора" : "Car Battery Charging Guide",
+        },
+        {
+            href: getPath("/blog/when-to-call-sober-driver"),
+            label: lang === "ka" ? "როდის გამოვიძახოთ ფხიზელი მძღოლი" : lang === "ru" ? "Когда нужен трезвый водитель" : "When to Hire a Sober Driver",
+        },
+        {
+            href: getPath("/blog/sober-driver-safety-guarantee"),
+            label: lang === "ka" ? "უსაფრთხოების გარანტია" : lang === "ru" ? "Гарантия безопасности" : "Safety Guarantees & Care",
+        },
+    ];
+
+    const blogColTitle = lang === "ka" ? "სასარგებლო სტატიები" : lang === "ru" ? "Полезные статьи" : "Helpful Articles";
+
     return (
         <footer
             style={{
@@ -33,12 +54,12 @@ export default function Footer({ d, lang }: FooterProps) {
                 fontFamily: "'Inter', sans-serif",
             }}
         >
-            <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <div style={{ maxWidth: 1200, margin: "0 auto" }}>
                 <div
                     style={{
                         display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                        gap: 40,
+                        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                        gap: 32,
                         marginBottom: 50,
                     }}
                 >
@@ -98,7 +119,7 @@ export default function Footer({ d, lang }: FooterProps) {
                         </div>
                     </div>
 
-                    {/* Quick links */}
+                    {/* Services links */}
                     <div>
                         <h4 style={{ color: "#fff", fontWeight: 700, marginBottom: 16, fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
                             {d.footer.links}
@@ -111,7 +132,7 @@ export default function Footer({ d, lang }: FooterProps) {
                                         style={{
                                             color: "rgba(255,255,255,0.55)",
                                             textDecoration: "none",
-                                            fontSize: "0.9rem",
+                                            fontSize: "0.88rem",
                                             transition: "color 0.2s",
                                         }}
                                         className="footer-link"
@@ -123,12 +144,37 @@ export default function Footer({ d, lang }: FooterProps) {
                         </ul>
                     </div>
 
+                    {/* Blog articles links */}
+                    <div>
+                        <h4 style={{ color: "#fff", fontWeight: 700, marginBottom: 16, fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
+                            {blogColTitle}
+                        </h4>
+                        <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", flexDirection: "column", gap: 10 }}>
+                            {blogArticles.map((art) => (
+                                <li key={art.href}>
+                                    <Link
+                                        href={art.href}
+                                        style={{
+                                            color: "rgba(255,255,255,0.55)",
+                                            textDecoration: "none",
+                                            fontSize: "0.88rem",
+                                            transition: "color 0.2s",
+                                        }}
+                                        className="footer-link"
+                                    >
+                                        {art.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
                     {/* Contact */}
                     <div>
                         <h4 style={{ color: "#fff", fontWeight: 700, marginBottom: 16, fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "0.08em" }}>
                             {d.footer.contact}
                         </h4>
-                        <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: "0.9rem" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: 12, fontSize: "0.88rem" }}>
                             <a href={`tel:${PHONE_TEL}`} style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "none", fontSize: "1.05rem" }}>
                                 {PHONE_DISPLAY}
                             </a>

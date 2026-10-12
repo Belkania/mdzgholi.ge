@@ -5,6 +5,9 @@ const locales = ["ka", "en", "ru"] as const;
 
 // Middleware strips /ka prefix → Georgian canonical has no lang prefix
 function u(lang: string, path: string) {
+    if (path === "/") {
+        return lang === "ka" ? `${BASE}` : `${BASE}/${lang}`;
+    }
     return lang === "ka" ? `${BASE}${path}` : `${BASE}/${lang}${path}`;
 }
 

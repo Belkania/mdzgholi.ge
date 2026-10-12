@@ -388,6 +388,130 @@ export default async function HomePage({
                             </p>
                         </>
                     )}
+
+                    {lang === "en" && (
+                        <>
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.5rem,3vw,2rem)", marginBottom: 20 }}>
+                                Professional Designated Sober Driver Service in Tbilisi — mdzgholi.ge
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 16, fontSize: "0.97rem" }}>
+                                <strong style={{ color: "#fff" }}>Hiring a sober driver in Tbilisi</strong> offers maximum safety, compliance, and convenience in one seamless service.
+                                mdzgholi.ge operates 24 hours a day, 7 days a week, dispatching vetted, experienced chauffeurs across the capital.
+                                Our <strong style={{ color: "#fff" }}>designated driver on call</strong> reaches your venue or restaurant within 15–20 minutes, takes the wheel of your own car, and navigates you safely home with zero stress.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 40, fontSize: "0.97rem" }}>
+                                In Georgia, traffic laws impose strict penalties and immediate license revocation for driving under the influence.
+                                Calling <strong style={{ color: "#fff" }}>mdzgholi.ge sober drivers</strong> eliminates all legal risks, preserves your safety, and leaves your car parked securely in your driveway.
+                                Call us anytime at <strong style={{ color: "#fff" }}>+995 568 83 47 07</strong> or message our 24/7 WhatsApp dispatch for an immediate fixed-rate booking.
+                            </p>
+
+                            {/* Battery Charging SEO Block */}
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.4rem,2.8vw,1.85rem)", marginBottom: 16 }}>
+                                Mobile Car Battery Charging & Jump Start Service in Tbilisi 24/7
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                Stranded with an unresponsive starter or drained battery?{" "}
+                                <Link href="/en/services/battery-charging" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    <strong>Car battery charging and jump starting in Tbilisi</strong>
+                                </Link>
+                                {" "}is one of our flagship roadside assistance offerings.
+                                There is no need to hire an expensive tow truck or flag down passing vehicles for jumper cables.
+                                Our mobile technician arrives at your parking spot in <strong style={{ color: "#fff" }}>15–20 minutes</strong> equipped with commercial-grade digital jump boosters.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                We serve all districts of Tbilisi: Vake, Saburtalo, Didube, Gldani, Isani, Nadzaladevi, Samgori, and suburban areas round the clock.
+                                On arrival, we safely jump start petrol, diesel, and hybrid 12V auxiliary systems, test alternator charging output, and diagnose battery health on-site.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, fontSize: "0.97rem" }}>
+                                Traditional jumper cables can cause extreme voltage spikes that destroy sensitive engine control units (ECU).
+                                mdzgholi.ge uses intelligent boosters with reverse polarity and anti-surge protection — making our{" "}
+                                <Link href="/en/services/battery-charging" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    on-demand battery jump start service
+                                </Link>{" "}
+                                100% safe for all modern luxury and automatic vehicles.
+                            </p>
+
+                            {/* Additional Service Overview */}
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.4rem,2.8vw,1.85rem)", marginBottom: 16, marginTop: 40 }}>
+                                24/7 Roadside Assistance, Tow Trucks & Airport Transfers Across Georgia
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                Beyond sober driver bookings, mdzgholi.ge delivers end-to-end automotive mobility solutions:
+                                emergency <Link href="/en/services/evacuator" style={{ color: "var(--yellow)", fontWeight: 700 }}>tow truck dispatch</Link>,
+                                mobile <Link href="/en/services/tire-change" style={{ color: "var(--yellow)", fontWeight: 700 }}>tire puncture repair</Link>,
+                                door-to-door <Link href="/en/services/car-wash" style={{ color: "var(--yellow)", fontWeight: 700 }}>car wash pickup</Link>,
+                                and punctual <Link href="/en/services/airport-transfer" style={{ color: "var(--yellow)", fontWeight: 700 }}>airport transfers</Link> to Tbilisi, Kutaisi, and Batumi international terminals.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, fontSize: "0.97rem" }}>
+                                Every quote is agreed upfront with clear, transparent pricing.
+                                Enjoy complete peace of mind on Georgian roads with our English-speaking 24/7 support.{" "}
+                                <a href="tel:+995568834707" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    Call our dispatcher now →
+                                </a>
+                            </p>
+                        </>
+                    )}
+
+                    {lang === "ru" && (
+                        <>
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.5rem,3vw,2rem)", marginBottom: 20 }}>
+                                Профессиональная служба «Трезвый водитель» в Тбилиси — mdzgholi.ge
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 16, fontSize: "0.97rem" }}>
+                                <strong style={{ color: "#fff" }}>Вызов трезвого водителя в Тбилиси</strong> — это максимальная безопасность, комфорт и экономия времени.
+                                Служба mdzgholi.ge работает 24 часа в сутки, 7 дней в неделю, предоставляя опытных и проверенных водителей по всему городу.
+                                Наш водитель прибудет по вашему адресу в ресторан, гости или офис за <strong style={{ color: "#fff" }}>15–20 минут</strong>, сядет за руль вашего автомобиля и аккуратно доставит вас домой.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 40, fontSize: "0.97rem" }}>
+                                Законодательство Грузии предусматривает суровые штрафы и лишение прав за вождение в нетрезвом виде.
+                                <strong style={{ color: "#fff" }}>Услуга трезвого водителя от mdzgholi.ge</strong> исключает любые риски, гарантирует бережное отношение к авто и оставляет вашу машину припаркованной во дворе.
+                                Звоните круглосуточно по телефону <strong style={{ color: "#fff" }}>+995 568 83 47 07</strong> или пишите в WhatsApp для мгновенного расчета стоимости.
+                            </p>
+
+                            {/* Battery Charging SEO Block */}
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.4rem,2.8vw,1.85rem)", marginBottom: 16 }}>
+                                Зарядка аккумулятора и запуск авто бустером в Тбилиси 24/7
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                Машина не заводится, щелкает стартер или полностью сел аккумулятор?{" "}
+                                <Link href="/ru/services/battery-charging" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    <strong>Выездная зарядка аккумулятора и прикуривание бустером в Тбилиси</strong>
+                                </Link>
+                                {" "}— одна из ключевых услуг нашей службы техпомощи.
+                                Вам не придется вызывать дорогостоящий эвакуатор или просить прохожих «прикурить» проводами.
+                                Наш мастер прибудет за <strong style={{ color: "#fff" }}>15–20 минут</strong> с профессиональным автономным пусковым устройством.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                Мы обслуживаем все районы Тбилиси: Ваке, Сабуртало, Дидубе, Глдани, Исани, Надзаладеви, Самгори, Чугурети и пригород.
+                                Заводим бензиновые моторы, дизели большого объема, а также автомобили с АКПП и гибриды, проверяя на месте работу генератора.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, fontSize: "0.97rem" }}>
+                                Кустарное прикуривание обычными проводами опасно для современных машин из-за скачков напряжения, способных сжечь ЭБУ.
+                                Мы применяем сертифицированные бустеры со встроенной защитой, гарантируя 100% безопасность электроники.{" "}
+                                <Link href="/ru/services/battery-charging" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    Заказать запуск авто в Тбилиси →
+                                </Link>
+                            </p>
+
+                            {/* Additional Service Overview */}
+                            <h2 style={{ color: "#fff", fontWeight: 900, fontSize: "clamp(1.4rem,2.8vw,1.85rem)", marginBottom: 16, marginTop: 40 }}>
+                                Эвакуатор, мобильный шиномонтаж и трансферы по всей Грузии
+                            </h2>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, marginBottom: 14, fontSize: "0.97rem" }}>
+                                Помимо услуг водителей, mdzgholi.ge предоставляет комплексную дорожную помощь:
+                                круглосуточный <Link href="/ru/services/evacuator" style={{ color: "var(--yellow)", fontWeight: 700 }}>эвакуатор</Link>,
+                                мобильная <Link href="/ru/services/tire-change" style={{ color: "var(--yellow)", fontWeight: 700 }}>замена и ремонт колес на месте</Link>,
+                                мойка авто с <Link href="/ru/services/car-wash" style={{ color: "var(--yellow)", fontWeight: 700 }}>забором и доставкой</Link>,
+                                и комфортные <Link href="/ru/services/airport-transfer" style={{ color: "var(--yellow)", fontWeight: 700 }}>трансферы в аэропорты Тбилиси, Кутаиси и Батуми</Link>.
+                            </p>
+                            <p style={{ color: "rgba(255,255,255,0.7)", lineHeight: 1.9, fontSize: "0.97rem" }}>
+                                Все тарифы фиксируются оператором до выезда экипажа — никаких скрытых доплат за пробки или ночное время.{" "}
+                                <a href="tel:+995568834707" style={{ color: "var(--yellow)", fontWeight: 700, textDecoration: "underline" }}>
+                                    Связаться с диспетчером 24/7 →
+                                </a>
+                            </p>
+                        </>
+                    )}
                 </div>
             </section>
 

@@ -9,7 +9,7 @@ const BASE = "https://www.mdzgholi.ge";
 const ALL_SERVICES: Record<string, { slug: string; icon: string; ka: string; en: string; ru: string }> = {
     "sober-driver": { slug: "sober-driver", icon: "🍷", ka: "ფხიზელი მძღოლი", en: "Sober Driver", ru: "Трезвый водитель" },
     "personal-driver": { slug: "personal-driver", icon: "🧑‍✈️", ka: "პირადი მძღოლი", en: "Personal Driver", ru: "Личный водитель" },
-    "evacuator": { slug: "evacuator", icon: "🚛", ka: "ევაკუატორი", en: "Tow Truck", ru: "Эвакуაтор" },
+    "evacuator": { slug: "evacuator", icon: "🚛", ka: "ევაკუატორი", en: "Tow Truck", ru: "Эвакуатор" },
     "car-wash": { slug: "car-wash", icon: "🚿", ka: "მანქანის რეცხვა", en: "Car Wash", ru: "Мойка машин" },
     "airport-transfer": { slug: "airport-transfer", icon: "✈️", ka: "აეროპორტის ტრანსფერი", en: "Airport Transfer", ru: "Трансфер" },
     "battery-charging": { slug: "battery-charging", icon: "🔋", ka: "აკუმულატორის დატენვა", en: "Battery Charging", ru: "Зарядка аккумулятора" },
@@ -164,6 +164,52 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
         p4Desc: "არანაირი გაურკვეველი ტარიფები. კომპანია იღებს სრულ პასუხისმგებლობას.",
         coverageHeading: "მომსახურების არეალი — თბილისის ყველა უბანი და შემოგარენი",
         coverageDesc: "mdzgholi.ge-ის ეკიპაჟები ოპერატიულად ემსახურებიან თბილისის ნებისმიერ რაიონს:",
+    };
+
+    const detailedInfo = {
+        ka: {
+            title: `სრული ინფორმაცია სერვისის შესახებ — ${svcName}`,
+            p1Title: "სადისპეტჩერო მომსახურება და ოპერატიული მარშრუტიზაცია",
+            p1: `ჩვენი სადისპეტჩერო ცენტრი მუშაობს უწყვეტად 24/7 რეჟიმში. გამოძახების მიღებისთანავე სისტემა აფიქსირებს თქვენს კოორდინატებს და აგზავნის უახლოეს მორიგე ეკიპაჟს. თბილისის ნებისმიერ უბანში (ვაკე, საბურთალო, მთაწმინდა, დიდუბე, გლდანი, ისანი, სამგორი და სხვა) ჩამოსვლის საშუალო დრო შეადგენს 15–20 წუთს. პიკის საათებში ოპერატორი ზარის მომენტშივე გაწვდით ზუსტ ინფორმაციას ჩამოსვლის დროის შესახებ.`,
+            p2Title: "ავტომობილის ტიპები და მართვის გამოცდილება",
+            p2: `ჩვენი მძღოლები და ტექნიკური პერსონალი ფლობენ მრავალწლიან პრაქტიკულ გამოცდილებას ნებისმიერი ტიპის ტრანსპორტზე: მექანიკური, კლასიკური ავტომატიკა, ვარიატორი (CVT), რობოტიზებული კოლოფი, ჰიბრიდები და თანამედროვე ელექტრომობილები. განსაკუთრებული ყურადღება ექცევა პრემიუმ კლასის სედანებსა და დიდი ზომის ყველგანმავლებს.`,
+            p3Title: "ფიქსირებული ტარიფები და გამჭვირვალობა",
+            p3: `mdzgholi.ge-ში ყველა ფასი ფიქსირებულია და თანხმდება წინასწარ, სატელეფონო საუბრისას. ჩვენთან არ მოქმედებს საცობის კოეფიციენტი, ღამის საათების გაურკვეველი დანამატები ან წუთობრივი ტარიფიკაცია. თქვენ იხდით ზუსტად იმ თანხას, რაც ოპერატორმა დაგიდასტურათ.`,
+            p4Title: "კანონმდებლობა, უსაფრთხოება და პასუხისმგებლობა",
+            p4: `საქართველოს საგზაო კანონმდებლობა ითვალისწინებს უმკაცრეს სანქციებს ნასვამ მდგომარეობაში საჭის მართვისთვის. ფხიზელი მძღოლის გამოძახება არის ერთადერთი სწორი, უსაფრთხო და ცივილიზებული გამოსავალი, რომელიც იცავს თქვენს სიცოცხლეს, იცავს თქვენს ავტომობილს და გარიდებთ უდიდეს ფინანსურ თუ სამართლებრივ პრობლემებს.`,
+        },
+        en: {
+            title: `Detailed Service Overview — ${svcName} in Tbilisi`,
+            p1Title: "24/7 Central Dispatch & Rapid District Routing",
+            p1: `Our central dispatch operates 24 hours a day, 365 days a year without interruption. The moment you place a call or WhatsApp request, our routing system dispatches the nearest on-duty unit. Whether you are located in central neighborhoods (Vake, Saburtalo, Mtatsminda, Rustaveli) or outer districts (Gldani, Didi Dighomi, Isani, Samgori), our driver or technician arrives within an average of 15–20 minutes.`,
+            p2Title: "All Transmission Types & Vehicle Classes Supported",
+            p2: `Our chauffeurs and technicians possess extensive commercial experience with all types of powertrains and transmissions: manual gearboxes, classic automatics, dual-clutch systems (DSG), CVTs, hybrids, and full EVs. We regularly handle executive sedans, heavy SUVs, and sports vehicles with utmost mechanical care and delicate maneuvering.`,
+            p3Title: "100% Upfront Pricing Guarantee — No Hidden Surcharges",
+            p3: `At mdzgholi.ge, every rate is fixed and confirmed upfront before dispatch. You will never encounter traffic surge multipliers, sudden nighttime penalty fees, or unpredictable metering. The exact price quoted during your initial call is the only amount you pay upon completion.`,
+            p4Title: "Traffic Law Compliance, Safety & Full Liability",
+            p4: `Georgia enforces strict zero-tolerance regulations for operating a vehicle under the influence of alcohol, carrying heavy mandatory fines and immediate license suspension. Booking an official mdzgholi.ge designated sober driver ensures absolute road safety, protects your vehicle from impoundment, and lets you travel home in total comfort.`,
+        },
+        ru: {
+            title: `Подробная информация об услуге — ${svcName} в Тбилиси`,
+            p1Title: "Круглосуточная диспетчерская 24/7 и оперативный выезд",
+            p1: `Наша диспетчерская служба работает круглосуточно, 365 дней в году. Сразу после вашего звонка или сообщения в WhatsApp дежурный экипаж направляется по вашему адресу. В любой район Тбилиси (Ваке, Сабуртало, Дидубе, Глдани, Исани, Самгори и пригород) специалист прибывает в среднем за 15–20 минут.`,
+            p2Title: "Опыт работы с любыми типами трансмиссий и авто",
+            p2: `Все наши водители обладают стажем вождения от 5 лет и опытом управления автомобилями любого класса: механическая коробка передач, классический автомат, робот, вариатор, гибридные системы и электромобили. Мы бережно относимся к представительским седанам, спорткарам и полноразмерным внедорожникам.`,
+            p3Title: "Прозрачные фиксированные цены без сюрпризов",
+            p3: `Стоимость услуги согласуется диспетчером заранее во время телефонного звонка. В mdzgholi.ge отсутствуют динамические коэффициенты на пробки, доплаты за ночные часы или непонятные счетчики. Вы оплачиваете ровно ту сумму, которая была озвучена при заказе.`,
+            p4Title: "Безопасность, соблюдение ПДД и ответственность",
+            p4: `Законодательство Грузии предусматривает серьезные санкции и лишение прав за вождение в состоянии алкогольного опьянения. Вызов профессионального трезвого водителя — единственный безопасный и надежный способ вернуться домой на собственной машине без риска для здоровья, прав и кошелька.`,
+        },
+    }[lang] ?? {
+        title: `სრული ინფორმაცია სერვისის შესახებ — ${svcName}`,
+        p1Title: "სადისპეტჩერო მომსახურება",
+        p1: "ჩვენი სადისპეტჩერო ცენტრი მუშაობს უწყვეტად 24/7 რეჟიმში.",
+        p2Title: "ავტომობილის ტიპები",
+        p2: "ჩვენი მძღოლები ფლობენ მრავალწლიან გამოცდილებას ნებისმიერი ტიპის ტრანსპორტზე.",
+        p3Title: "ფიქსირებული ტარიფები",
+        p3: "ყველა ფასი ფიქსირებულია და თანხმდება წინასწარ.",
+        p4Title: "უსაფრთხოება",
+        p4: "სრული პასუხისმგებლობა და უსაფრთხოება.",
     };
 
     return (
@@ -427,8 +473,51 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
                 </div>
             </section>
 
-            {/* Other Services — Internal Cross-Linking */}
+            {/* Detailed Service Specifications & Operational Protocols (Expands Text-to-HTML ratio & SEO quality) */}
             <section className="service-section">
+                <div className="service-container">
+                    <h2 style={{ color: "#fff", fontWeight: 800, fontSize: "1.6rem", marginBottom: 28, textAlign: "center" }}>
+                        📖 {detailedInfo.title}
+                    </h2>
+                    <div className="service-grid-2" style={{ marginBottom: 20 }}>
+                        <div className="step-card">
+                            <h3 style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.02rem", margin: 0 }}>
+                                ⏱️ {detailedInfo.p1Title}
+                            </h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.7, margin: 0 }}>
+                                {detailedInfo.p1}
+                            </p>
+                        </div>
+                        <div className="step-card">
+                            <h3 style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.02rem", margin: 0 }}>
+                                🚘 {detailedInfo.p2Title}
+                            </h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.7, margin: 0 }}>
+                                {detailedInfo.p2}
+                            </p>
+                        </div>
+                        <div className="step-card">
+                            <h3 style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.02rem", margin: 0 }}>
+                                🏷️ {detailedInfo.p3Title}
+                            </h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.7, margin: 0 }}>
+                                {detailedInfo.p3}
+                            </p>
+                        </div>
+                        <div className="step-card">
+                            <h3 style={{ color: "var(--yellow)", fontWeight: 700, fontSize: "1.02rem", margin: 0 }}>
+                                ⚖️ {detailedInfo.p4Title}
+                            </h3>
+                            <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: 1.7, margin: 0 }}>
+                                {detailedInfo.p4}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Other Services — Internal Cross-Linking */}
+            <section className="service-section-alt">
                 <div className="service-container">
                     <h2 style={{ color: "#fff", fontWeight: 800, fontSize: "1.5rem", marginBottom: 24, textAlign: "center" }}>
                         {otherSectionTitle}
@@ -458,7 +547,7 @@ export function ServicePageLayout({ d, lang, content }: ServicePageLayoutProps) 
             </section>
 
             {/* Back + Final CTA */}
-            <section style={{ background: "#080d1a", padding: "40px 16px", textAlign: "center" }}>
+            <section className="svc-back-bar">
                 <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
                     <Link href={lang === "ka" ? "/" : `/${lang}`} className="btn-outline" style={{ fontSize: "0.9rem", padding: "12px 24px" }}>
                         ← {d.nav.home}

@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/sober-driver";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "ფხიზელი მძღოლი, მძღოლი გამოძახებით, მძღოლის გამოძახება, ნასვამი მძღოლი, ფხიზელი მძღოლის გამოძახება, sober driver Tbilisi, mdzgholi.ge, sober driver Georgia",
+        en: "sober driver Tbilisi, designated driver Georgia, driver on call Tbilisi, safe ride home, 24/7 driver Georgia, mdzgholi.ge",
+        ru: "трезвый водитель Тбилиси, вызов трезвого водителя, услуга трезвый водитель Грузия, перегон авто Тбилиси, водитель 24/7, mdzgholi.ge",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "ფხიზელი მძღოლი, მძღოლი გამოძახებით, მძღოლის გამოძახება, ნასვამი მძღოლი, ფხიზელი მძღოლის გამოძახება, sober driver Tbilisi, mdzgholi.ge, sober driver Georgia",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -40,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },
     };

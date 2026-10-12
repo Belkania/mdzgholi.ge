@@ -1,6 +1,6 @@
 import { getDictionary, locales } from "@/dictionaries";
 import { ServicePageLayout } from "@/components/ServicePageLayout";
-import { JsonLd, howToSchema, aggregateRatingSchema, faqSchema, localBusinessWithReviewsSchema } from "@/components/JsonLd";
+import { JsonLd, howToSchema, localBusinessWithReviewsSchema } from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -23,10 +23,22 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/battery-charging";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "მანქანის დაქოქვა გამოძახებით, მანქანის დაქოქვა, ავტომობილის დაქოქვა, დაქოქვა გამოძახებით, ძრავის დაქოქვა, მანქანის დაქოქვა თბილისში, მანქანის დაქოქვა ავტომატიკა, მანქანის დაქოქვა ადგილზე, მანქანის პერემიჩკა, პერემიჩკა გამოძახებით, პერემიჩკებით დაქოქვა, ავტომობილის დამუხტვა, აკუმულატორის დატენვა, დამჯდარი აკუმულატორის დამუხტვა, დამუხტვა, დატენვა, აკუმულატორის დამუხტვა, აკუმულატორის დაქოქვა, ბუსტერით დაქოქვა, battery jump start Tbilisi, car jump start Tbilisi, car battery charging Tbilisi, jump start Georgia",
+        en: "car jump start Tbilisi, dead battery charging Georgia, mobile jump starter on call, booster battery start Tbilisi, roadside assistance Georgia, mdzgholi.ge",
+        ru: "запуск авто Тбилиси, прикурить авто бустером, зарядка аккумулятора с выездом, сел аккумулятор Тбилиси, техпомощь 24/7, mdzgholi.ge",
+    };
+
+    const altMap: Record<string, string> = {
+        ka: "აკუმულატორის დატენვა და დამუხტვა თბილისში",
+        en: "Car battery charging and jump start in Tbilisi",
+        ru: "Зарядка аккумулятора и запуск авто в Тбилиси",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "მანქანის დაქოქვა გამოძახებით, მანქანის დაქოქვა, ავტომობილის დაქოქვა, დაქოქვა გამოძახებით, ძრავის დაქოქვა, მანქანის დაქოქვა თბილისში, მანქანის დაქოქვა ავტომატიკა, მანქანის დაქოქვა ადგილზე, მანქანის პერემიჩკა, პერემიჩკა გამოძახებით, პერემიჩკებით დაქოქვა, ავტომობილის დამუხტვა, აკუმულატორის დატენვა, დამჯდარი აკუმულატორის დამუხტვა, დამუხტვა, დატენვა, აკუმულატორის დამუხტვა, აკუმულატორის დაქოქვა, ბუსტერით დაქოქვა, battery jump start Tbilisi, car jump start Tbilisi, car battery charging Tbilisi, jump start Georgia",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -41,13 +53,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
             images: [
                 {
                     url: "https://www.mdzgholi.ge/images/blog/car-battery-charging-guide.jpg",
                     width: 1200,
                     height: 900,
-                    alt: "აკუმულატორის დატენვა და დამუხტვა თბილისში",
+                    alt: altMap[lang] ?? altMap.ka,
                 },
             ],
         },
@@ -217,8 +230,6 @@ export default async function BatteryChargingPage({ params }: { params: Promise<
     return (
         <>
             <JsonLd data={howToSchema({ name: howToName, description: c.description, steps: howToSteps })} />
-            <JsonLd data={aggregateRatingSchema({ name: "mdzgholi.ge — " + c.h1, url, rating: "4.9", reviewCount: "214" })} />
-            <JsonLd data={faqSchema(c.faq)} />
             <JsonLd data={localBusinessWithReviewsSchema(lang)} />
             <ServicePageLayout d={d} lang={lang} content={{ slug: "battery-charging", icon: "🔋", ...c }} />
         </>

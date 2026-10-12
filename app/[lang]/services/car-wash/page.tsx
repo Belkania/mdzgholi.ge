@@ -22,10 +22,16 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     const path = "/services/car-wash";
     const canonical = lang === "ka" ? `${base}${path}` : `${base}/${lang}${path}`;
 
+    const kwMap: Record<string, string> = {
+        ka: "მანქანის რეცხვა თბილისი, car wash Tbilisi home delivery, მისამართზე რეცხვა, ავტოსამრეცხაო გამოძახებით, mdzgholi.ge",
+        en: "car wash Tbilisi pickup, mobile car detailing Georgia, car wash collection Tbilisi, premium auto cleaning, mdzgholi.ge",
+        ru: "мойка авто с забором Тбилиси, детейлинг авто Грузия, выездная автомойка Тбилиси, химчистка салона, mdzgholi.ge",
+    };
+
     return {
         title: titles[lang] ?? titles.ka,
         description: descs[lang] ?? descs.ka,
-        keywords: "მანქანის რეცხვა თბილისი, car wash Tbilisi home delivery, მისამართზე რეცხვა, mdzgholi.ge",
+        keywords: kwMap[lang] ?? kwMap.ka,
         alternates: {
             canonical,
             languages: {
@@ -40,6 +46,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
             description: descs[lang] ?? descs.ka,
             url: canonical,
             siteName: "mdzgholi.ge",
+            locale: lang === "ka" ? "ka_GE" : lang === "ru" ? "ru_GE" : "en_US",
             type: "website",
         },
     };
